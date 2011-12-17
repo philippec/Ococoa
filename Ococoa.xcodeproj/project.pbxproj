@@ -38,21 +38,21 @@
 		375D3CDA149D30460098AFA4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		375D3CDC149D30460098AFA4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		375D3CDE149D30460098AFA4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		375D3CE2149D30460098AFA4 /* Ococoa-Info.plist */ = {isa = PBXFileReference; path = "Ococoa-Info.plist"; sourceTree = "<group>"; };
+		375D3CE2149D30460098AFA4 /* Ococoa-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Ococoa-Info.plist"; sourceTree = "<group>"; };
 		375D3CE4149D30460098AFA4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		375D3CE6149D30460098AFA4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		375D3CE8149D30460098AFA4 /* Ococoa-Prefix.pch */ = {isa = PBXFileReference; path = "Ococoa-Prefix.pch"; sourceTree = "<group>"; };
-		375D3CE9149D30460098AFA4 /* OCAppDelegate.h */ = {isa = PBXFileReference; path = OCAppDelegate.h; sourceTree = "<group>"; };
+		375D3CE8149D30460098AFA4 /* Ococoa-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Ococoa-Prefix.pch"; sourceTree = "<group>"; };
+		375D3CE9149D30460098AFA4 /* OCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCAppDelegate.h; sourceTree = "<group>"; };
 		375D3CEA149D30460098AFA4 /* OCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCAppDelegate.m; sourceTree = "<group>"; };
-		375D3CEC149D30460098AFA4 /* OCViewController.h */ = {isa = PBXFileReference; path = OCViewController.h; sourceTree = "<group>"; };
+		375D3CEC149D30460098AFA4 /* OCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCViewController.h; sourceTree = "<group>"; };
 		375D3CED149D30460098AFA4 /* OCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCViewController.m; sourceTree = "<group>"; };
 		375D3CF0149D30460098AFA4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/OCViewController_iPhone.xib; sourceTree = "<group>"; };
 		375D3CF3149D30460098AFA4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/OCViewController_iPad.xib; sourceTree = "<group>"; };
 		375D3CFA149D30460098AFA4 /* OcocoaTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OcocoaTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		375D3CFB149D30460098AFA4 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		375D3D03149D30460098AFA4 /* OcocoaTests-Info.plist */ = {isa = PBXFileReference; path = "OcocoaTests-Info.plist"; sourceTree = "<group>"; };
+		375D3D03149D30460098AFA4 /* OcocoaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OcocoaTests-Info.plist"; sourceTree = "<group>"; };
 		375D3D05149D30460098AFA4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		375D3D07149D30460098AFA4 /* OcocoaTests.h */ = {isa = PBXFileReference; path = OcocoaTests.h; sourceTree = "<group>"; };
+		375D3D07149D30460098AFA4 /* OcocoaTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OcocoaTests.h; sourceTree = "<group>"; };
 		375D3D08149D30460098AFA4 /* OcocoaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OcocoaTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -325,7 +325,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = (
+					armv6,
+					armv7,
+				);
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
@@ -341,7 +344,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -351,7 +354,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = (
+					armv6,
+					armv7,
+				);
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
@@ -360,7 +366,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -374,6 +380,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Ococoa/Ococoa-Prefix.pch";
 				INFOPLIST_FILE = "Ococoa/Ococoa-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -385,6 +392,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Ococoa/Ococoa-Prefix.pch";
 				INFOPLIST_FILE = "Ococoa/Ococoa-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -443,6 +451,7 @@
 				375D3D0E149D30460098AFA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		375D3D0F149D30460098AFA4 /* Build configuration list for PBXNativeTarget "OcocoaTests" */ = {
 			isa = XCConfigurationList;
@@ -451,6 +460,7 @@
 				375D3D11149D30460098AFA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
