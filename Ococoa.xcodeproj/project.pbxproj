@@ -21,6 +21,7 @@
 		375D3CFE149D30460098AFA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 375D3CDC149D30460098AFA4 /* Foundation.framework */; };
 		375D3D06149D30460098AFA4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 375D3D04149D30460098AFA4 /* InfoPlist.strings */; };
 		375D3D09149D30460098AFA4 /* OcocoaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 375D3D08149D30460098AFA4 /* OcocoaTests.m */; };
+		37BF4B3314AABEC10045936C /* OCPrivateInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BF4B3214AABEC10045936C /* OCPrivateInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		375D3D05149D30460098AFA4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		375D3D07149D30460098AFA4 /* OcocoaTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OcocoaTests.h; sourceTree = "<group>"; };
 		375D3D08149D30460098AFA4 /* OcocoaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OcocoaTests.m; sourceTree = "<group>"; };
+		37BF4B3214AABEC10045936C /* OCPrivateInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCPrivateInfo.m; sourceTree = "<group>"; };
+		37FE17F6149E9E740086D2D8 /* OCPrivateInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCPrivateInfo.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +116,8 @@
 		375D3CE0149D30460098AFA4 /* Ococoa */ = {
 			isa = PBXGroup;
 			children = (
+				37FE17F6149E9E740086D2D8 /* OCPrivateInfo.h */,
+				37BF4B3214AABEC10045936C /* OCPrivateInfo.m */,
 				375D3CE9149D30460098AFA4 /* OCAppDelegate.h */,
 				375D3CEA149D30460098AFA4 /* OCAppDelegate.m */,
 				375D3CEC149D30460098AFA4 /* OCViewController.h */,
@@ -161,6 +166,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 375D3D0C149D30460098AFA4 /* Build configuration list for PBXNativeTarget "Ococoa" */;
 			buildPhases = (
+				37FE17F5149E9CB70086D2D8 /* Create OCPrivateInfo */,
 				375D3CD2149D30460098AFA4 /* Sources */,
 				375D3CD3149D30460098AFA4 /* Frameworks */,
 				375D3CD4149D30460098AFA4 /* Resources */,
@@ -254,6 +260,20 @@
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
+		37FE17F5149E9CB70086D2D8 /* Create OCPrivateInfo */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Create OCPrivateInfo";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ ! -e \"OCocoa/OCPrivateInfo.m\" ]\nthen\necho '#error Delete these lines and enter your UrbanAirship credentials below' > 'OCocoa/OCPrivateInfo.m'\necho 'const NSString *kUrbanAirshipAppKey = @\"Your UrbanAirship Application Key goes here\";' >> 'OCocoa/OCPrivateInfo.m'\necho 'const NSString *kUrbanAirshipAppSecret = @\"Your UrbanAirship Application Secret goes here\";' >> 'OCocoa/OCPrivateInfo.m'\nfi";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -264,6 +284,7 @@
 				375D3CE7149D30460098AFA4 /* main.m in Sources */,
 				375D3CEB149D30460098AFA4 /* OCAppDelegate.m in Sources */,
 				375D3CEE149D30460098AFA4 /* OCViewController.m in Sources */,
+				37BF4B3314AABEC10045936C /* OCPrivateInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

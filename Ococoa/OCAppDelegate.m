@@ -9,6 +9,7 @@
 #import "OCAppDelegate.h"
 
 #import "OCViewController.h"
+#import "OCPrivateInfo.h"
 
 @implementation OCAppDelegate
 
@@ -75,10 +76,11 @@
     }
 
     // Send our Urban Airship credentials
-    NSURLCredential *airshipCredentials = [NSURLCredential credentialWithUser:@"<Your App Key here>"
-                                                                     password:@"<Your App Secret here>"
+    NSURLCredential *airshipCredentials = [NSURLCredential credentialWithUser:kUrbanAirshipAppKey
+                                                                     password:kUrbanAirshipAppSecret
                                                                   persistence:NSURLCredentialPersistenceNone];
     [[challenge sender] useCredential:airshipCredentials forAuthenticationChallenge:challenge];  
+    NSLog(@"Urban Airship credentials sent");
 }
 
 
