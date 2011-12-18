@@ -31,6 +31,12 @@
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
 
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [button addTarget:self action:@selector(ringDoorbell:) forControlEvents:UIControlEventTouchDown];
+    [button setTitle:@"Ring Doorbell" forState:UIControlStateNormal];
+    button.frame = CGRectMake(80.0, 210.0, 160.0, 40.0);
+    [self.viewController.view addSubview:button];
+
     // Let the device know we want to receive push notifications
 	[[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
 
@@ -129,6 +135,13 @@
      Save data if appropriate.
      See also applicationDidEnterBackground:.
      */
+}
+
+#pragma mark IBActions
+
+- (IBAction)ringDoorbell:(id)sender
+{
+    NSLog(@"Ring ring!");
 }
 
 @end

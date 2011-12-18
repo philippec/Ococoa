@@ -13,7 +13,8 @@
 @interface OCAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
 @property (strong, nonatomic) OCViewController *viewController;
+
+- (IBAction)ringDoorbell:(id)sender;
 
 @end
