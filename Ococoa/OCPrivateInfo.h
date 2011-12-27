@@ -10,3 +10,4 @@
 
 extern NSString *kUrbanAirshipAppKey;
 extern NSString *kUrbanAirshipAppSecret;
+extern NSString *kServerString;

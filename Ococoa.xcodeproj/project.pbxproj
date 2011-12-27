@@ -21,8 +21,8 @@
 		375D3CFE149D30460098AFA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 375D3CDC149D30460098AFA4 /* Foundation.framework */; };
 		375D3D06149D30460098AFA4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 375D3D04149D30460098AFA4 /* InfoPlist.strings */; };
 		375D3D09149D30460098AFA4 /* OcocoaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 375D3D08149D30460098AFA4 /* OcocoaTests.m */; };
-		37BF4B3314AABEC10045936C /* OCPrivateInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BF4B3214AABEC10045936C /* OCPrivateInfo.m */; };
 		37AC635514AA192B003A2A25 /* OCDoorbell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AC635414AA192B003A2A25 /* OCDoorbell.m */; };
+		37BF4B3314AABEC10045936C /* OCPrivateInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BF4B3214AABEC10045936C /* OCPrivateInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,9 +56,9 @@
 		375D3D05149D30460098AFA4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		375D3D07149D30460098AFA4 /* OcocoaTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OcocoaTests.h; sourceTree = "<group>"; };
 		375D3D08149D30460098AFA4 /* OcocoaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OcocoaTests.m; sourceTree = "<group>"; };
-		37BF4B3214AABEC10045936C /* OCPrivateInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCPrivateInfo.m; sourceTree = "<group>"; };
 		37AC635314AA192B003A2A25 /* OCDoorbell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCDoorbell.h; sourceTree = "<group>"; };
 		37AC635414AA192B003A2A25 /* OCDoorbell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCDoorbell.m; sourceTree = "<group>"; };
+		37BF4B3214AABEC10045936C /* OCPrivateInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCPrivateInfo.m; sourceTree = "<group>"; };
 		37FE17F6149E9E740086D2D8 /* OCPrivateInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCPrivateInfo.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -277,7 +277,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ ! -e \"OCocoa/OCPrivateInfo.m\" ]\nthen\necho '#error Delete these lines and enter your UrbanAirship credentials below' > 'OCocoa/OCPrivateInfo.m'\necho 'const NSString *kUrbanAirshipAppKey = @\"Your UrbanAirship Application Key goes here\";' >> 'OCocoa/OCPrivateInfo.m'\necho 'const NSString *kUrbanAirshipAppSecret = @\"Your UrbanAirship Application Secret goes here\";' >> 'OCocoa/OCPrivateInfo.m'\nfi";
+			shellScript = "if [ ! -e \"OCocoa/OCPrivateInfo.m\" ]\nthen\necho '#error Delete these lines and enter your UrbanAirship credentials below' > 'OCocoa/OCPrivateInfo.m'\necho 'const NSString *kUrbanAirshipAppKey = @\"Your UrbanAirship Application Key goes here\";' >> 'OCocoa/OCPrivateInfo.m'\necho 'const NSString *kUrbanAirshipAppSecret = @\"Your UrbanAirship Application Secret goes here\";' >> 'OCocoa/OCPrivateInfo.m'\necho 'const NSString *kServerString = @\"http://your.server.com/your/api?msg=%@&key=%@\";' >> 'OCocoa/OCPrivateInfo.m'\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 

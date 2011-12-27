@@ -9,7 +9,13 @@
 #import <Foundation/Foundation.h>
 
 @interface OCDoorbell : NSObject <UIAlertViewDelegate>
-
+{
+@private
+    __strong NSString *_name;
+    __strong NSString *_password;
+    __strong UITextField *_nameTF;
+    __strong UITextField *_passwordTF;
+}
 
 -(void)ring;
 
