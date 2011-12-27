@@ -10,11 +10,13 @@
 
 #import "OCViewController.h"
 #import "OCPrivateInfo.h"
+#import "OCDoorbell.h"
 
 @implementation OCAppDelegate
 
 @synthesize window = _window;
 @synthesize viewController = _viewController;
+@synthesize doorbell = _doorbell;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -30,6 +32,8 @@
     }
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+
+    self.doorbell = [[OCDoorbell alloc] init];
 
     UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [button addTarget:self action:@selector(ringDoorbell:) forControlEvents:UIControlEventTouchDown];
@@ -144,7 +148,7 @@
 
 - (IBAction)ringDoorbell:(id)sender
 {
-    NSLog(@"Ring ring!");
+    [self.doorbell ring];
 }
 
 @end

@@ -9,11 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @class OCViewController;
+@class OCDoorbell;
 
 @interface OCAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) OCViewController *viewController;
+@property (strong, nonatomic) OCDoorbell *doorbell;
 
 - (IBAction)ringDoorbell:(id)sender;
 
