@@ -23,6 +23,9 @@
 		375D3D09149D30460098AFA4 /* OcocoaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 375D3D08149D30460098AFA4 /* OcocoaTests.m */; };
 		37AC635514AA192B003A2A25 /* OCDoorbell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AC635414AA192B003A2A25 /* OCDoorbell.m */; };
 		37BF4B3314AABEC10045936C /* OCPrivateInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BF4B3214AABEC10045936C /* OCPrivateInfo.m */; };
+		37BF4B0C14AA90940045936C /* AppIcon57.png in Resources */ = {isa = PBXBuildFile; fileRef = 37BF4B0914AA90940045936C /* AppIcon57.png */; };
+		37BF4B0D14AA90940045936C /* AppIcon72.png in Resources */ = {isa = PBXBuildFile; fileRef = 37BF4B0A14AA90940045936C /* AppIcon72.png */; };
+		37BF4B0E14AA90940045936C /* AppIcon114.png in Resources */ = {isa = PBXBuildFile; fileRef = 37BF4B0B14AA90940045936C /* AppIcon114.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,10 @@
 		37AC635314AA192B003A2A25 /* OCDoorbell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCDoorbell.h; sourceTree = "<group>"; };
 		37AC635414AA192B003A2A25 /* OCDoorbell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCDoorbell.m; sourceTree = "<group>"; };
 		37BF4B3214AABEC10045936C /* OCPrivateInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCPrivateInfo.m; sourceTree = "<group>"; };
+		37AC636F14AA8E30003A2A25 /* AppIcon.opacity */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppIcon.opacity; path = images/AppIcon.opacity; sourceTree = "<group>"; };
+		37BF4B0914AA90940045936C /* AppIcon57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AppIcon57.png; path = images/AppIcon57.png; sourceTree = "<group>"; };
+		37BF4B0A14AA90940045936C /* AppIcon72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AppIcon72.png; path = images/AppIcon72.png; sourceTree = "<group>"; };
+		37BF4B0B14AA90940045936C /* AppIcon114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AppIcon114.png; path = images/AppIcon114.png; sourceTree = "<group>"; };
 		37FE17F6149E9E740086D2D8 /* OCPrivateInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCPrivateInfo.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,6 +144,10 @@
 		375D3CE1149D30460098AFA4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				37AC636F14AA8E30003A2A25 /* AppIcon.opacity */,
+				37BF4B0914AA90940045936C /* AppIcon57.png */,
+				37BF4B0A14AA90940045936C /* AppIcon72.png */,
+				37BF4B0B14AA90940045936C /* AppIcon114.png */,
 				375D3CE2149D30460098AFA4 /* Ococoa-Info.plist */,
 				375D3CE3149D30460098AFA4 /* InfoPlist.strings */,
 				375D3CE6149D30460098AFA4 /* main.m */,
@@ -238,6 +249,9 @@
 				375D3CE5149D30460098AFA4 /* InfoPlist.strings in Resources */,
 				375D3CF1149D30460098AFA4 /* OCViewController_iPhone.xib in Resources */,
 				375D3CF4149D30460098AFA4 /* OCViewController_iPad.xib in Resources */,
+				37BF4B0C14AA90940045936C /* AppIcon57.png in Resources */,
+				37BF4B0D14AA90940045936C /* AppIcon72.png in Resources */,
+				37BF4B0E14AA90940045936C /* AppIcon114.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,7 +9,25 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFiles</key>
-	<array/>
+	<array>
+		<string>AppIcon57.png</string>
+		<string>AppIcon114.png</string>
+		<string>AppIcon72.png</string>
+	</array>
+	<key>CFBundleIcons</key>
+	<dict>
+		<key>CFBundlePrimaryIcon</key>
+		<dict>
+			<key>CFBundleIconFiles</key>
+			<array>
+				<string>AppIcon57.png</string>
+				<string>AppIcon114.png</string>
+				<string>AppIcon72.png</string>
+			</array>
+			<key>UIPrerenderedIcon</key>
+			<false/>
+		</dict>
+	</dict>
 	<key>CFBundleIdentifier</key>
 	<string>com.casgrain.ococoa</string>
 	<key>CFBundleInfoDictionaryVersion</key>
