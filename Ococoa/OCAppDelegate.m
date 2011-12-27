@@ -92,6 +92,9 @@
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
 {
+    NSDictionary *aps = [userInfo valueForKey:@"aps"];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Doorbell rang" message:[aps valueForKey:@"alert"] delegate:nil cancelButtonTitle:@"Done" otherButtonTitles:nil];
+    [alert show];
     for (id key in userInfo)
     {
         NSLog(@"key: %@, value: %@", key, [userInfo objectForKey:key]);
