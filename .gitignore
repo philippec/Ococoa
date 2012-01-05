@@ -1,1 +1,4 @@
 Ococoa/OCPrivateInfo.m
+server/index.yaml
+server/ococoa-push/PrivateInfo.py
+*.pyc
