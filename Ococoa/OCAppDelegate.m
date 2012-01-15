@@ -11,12 +11,27 @@
 #import "OCViewController.h"
 #import "OCPrivateInfo.h"
 #import "OCDoorbell.h"
+#import "Reachability.h"
 
 @implementation OCAppDelegate
 
 @synthesize window = _window;
 @synthesize viewController = _viewController;
 @synthesize doorbell = _doorbell;
+
+
+//  PHILIPPE: You can drop this Reachability method anywhere  -Greg
+
++(BOOL)reachableURL: (NSString *)url
+{
+    Reachability *r = [Reachability reachabilityWithHostName:url];
+    NetworkStatus internetStatus = [r currentReachabilityStatus];
+    if(internetStatus == NotReachable)
+        return NO;
+	else
+		return YES;
+}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -34,6 +49,8 @@
     [self.window makeKeyAndVisible];
 
     self.doorbell = [[OCDoorbell alloc] init];
+	
+	// PHILIPPE: stylistically I think the button code should be in the View Controller class ???? -Greg
 
     UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [button addTarget:self action:@selector(ringDoorbell:) forControlEvents:UIControlEventTouchDown];
@@ -57,17 +74,28 @@
     [tokenString replaceOccurrencesOfString:@">" withString:@"" options:0 range:NSMakeRange(0, tokenString.length)];
     [tokenString replaceOccurrencesOfString:@" " withString:@"" options:0 range:NSMakeRange(0, tokenString.length)];
 
-    // Create the NSURL for the request
-    NSString *urlFormat = @"https://go.urbanairship.com/api/device_tokens/%@";
-    NSURL *registrationURL = [NSURL URLWithString:[NSString stringWithFormat:urlFormat, tokenString]];
-
-    // Create the registration request
-    NSMutableURLRequest *registrationRequest = [[NSMutableURLRequest alloc] initWithURL:registrationURL];
-    [registrationRequest setHTTPMethod:@"PUT"];
-
-    // And fire it off
-    NSURLConnection *connection = [NSURLConnection connectionWithRequest:registrationRequest delegate:self];
-    [connection start];
+	// Use Reachibility to check to make sure you can connect to urbanairship.com before sending request  -Greg
+	BOOL internetConnectionStatus = [OCAppDelegate reachableURL:@"https://go.urbanairship.com"];
+    if (internetConnectionStatus == NO)
+	{
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Network Status" message:@"Sorry, the network does not appear to be available. Please try again later." delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+        [alert show];
+		[alert release], alert = nil;
+    }
+	else
+	{
+		// Create the NSURL for the request
+		NSString *urlFormat = @"https://go.urbanairship.com/api/device_tokens/%@";
+		NSURL *registrationURL = [NSURL URLWithString:[NSString stringWithFormat:urlFormat, tokenString]];
+		
+		// Create the registration request
+		NSMutableURLRequest *registrationRequest = [[NSMutableURLRequest alloc] initWithURL:registrationURL];
+		[registrationRequest setHTTPMethod:@"PUT"];
+		
+		// And fire it off
+		NSURLConnection *connection = [NSURLConnection connectionWithRequest:registrationRequest delegate:self];
+		[connection start];
+	}
 }
 
 - (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error
@@ -143,6 +171,8 @@
      See also applicationDidEnterBackground:.
      */
 }
+
+// PHILIPPE curious why this is in the App Delegate and not in the View Controller which holds the button ???? -Greg
 
 #pragma mark IBActions
 
