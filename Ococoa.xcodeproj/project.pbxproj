@@ -22,10 +22,12 @@
 		375D3D06149D30460098AFA4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 375D3D04149D30460098AFA4 /* InfoPlist.strings */; };
 		375D3D09149D30460098AFA4 /* OcocoaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 375D3D08149D30460098AFA4 /* OcocoaTests.m */; };
 		37AC635514AA192B003A2A25 /* OCDoorbell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AC635414AA192B003A2A25 /* OCDoorbell.m */; };
-		37BF4B3314AABEC10045936C /* OCPrivateInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BF4B3214AABEC10045936C /* OCPrivateInfo.m */; };
 		37BF4B0C14AA90940045936C /* AppIcon57.png in Resources */ = {isa = PBXBuildFile; fileRef = 37BF4B0914AA90940045936C /* AppIcon57.png */; };
 		37BF4B0D14AA90940045936C /* AppIcon72.png in Resources */ = {isa = PBXBuildFile; fileRef = 37BF4B0A14AA90940045936C /* AppIcon72.png */; };
 		37BF4B0E14AA90940045936C /* AppIcon114.png in Resources */ = {isa = PBXBuildFile; fileRef = 37BF4B0B14AA90940045936C /* AppIcon114.png */; };
+		37BF4B3314AABEC10045936C /* OCPrivateInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BF4B3214AABEC10045936C /* OCPrivateInfo.m */; };
+		37DD91A614C38921007F2F95 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DD91A514C38921007F2F95 /* Reachability.m */; };
+		37DD91C714C38F03007F2F95 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37DD91C614C38F03007F2F95 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,11 +63,14 @@
 		375D3D08149D30460098AFA4 /* OcocoaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OcocoaTests.m; sourceTree = "<group>"; };
 		37AC635314AA192B003A2A25 /* OCDoorbell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCDoorbell.h; sourceTree = "<group>"; };
 		37AC635414AA192B003A2A25 /* OCDoorbell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCDoorbell.m; sourceTree = "<group>"; };
-		37BF4B3214AABEC10045936C /* OCPrivateInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCPrivateInfo.m; sourceTree = "<group>"; };
 		37AC636F14AA8E30003A2A25 /* AppIcon.opacity */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppIcon.opacity; path = images/AppIcon.opacity; sourceTree = "<group>"; };
 		37BF4B0914AA90940045936C /* AppIcon57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AppIcon57.png; path = images/AppIcon57.png; sourceTree = "<group>"; };
 		37BF4B0A14AA90940045936C /* AppIcon72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AppIcon72.png; path = images/AppIcon72.png; sourceTree = "<group>"; };
 		37BF4B0B14AA90940045936C /* AppIcon114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AppIcon114.png; path = images/AppIcon114.png; sourceTree = "<group>"; };
+		37BF4B3214AABEC10045936C /* OCPrivateInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCPrivateInfo.m; sourceTree = "<group>"; };
+		37DD91A414C38921007F2F95 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = Ococoa/Reachability.h; sourceTree = "<group>"; };
+		37DD91A514C38921007F2F95 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = Ococoa/Reachability.m; sourceTree = "<group>"; };
+		37DD91C614C38F03007F2F95 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		37FE17F6149E9E740086D2D8 /* OCPrivateInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCPrivateInfo.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,6 +82,7 @@
 				375D3CDB149D30460098AFA4 /* UIKit.framework in Frameworks */,
 				375D3CDD149D30460098AFA4 /* Foundation.framework in Frameworks */,
 				375D3CDF149D30460098AFA4 /* CoreGraphics.framework in Frameworks */,
+				37DD91C714C38F03007F2F95 /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +104,7 @@
 			children = (
 				375D3CE0149D30460098AFA4 /* Ococoa */,
 				375D3D01149D30460098AFA4 /* OcocoaTests */,
+				37DD91A214C388F9007F2F95 /* Reachability */,
 				375D3CD9149D30460098AFA4 /* Frameworks */,
 				375D3CD7149D30460098AFA4 /* Products */,
 			);
@@ -115,6 +122,7 @@
 		375D3CD9149D30460098AFA4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				37DD91C614C38F03007F2F95 /* SystemConfiguration.framework */,
 				375D3CDA149D30460098AFA4 /* UIKit.framework */,
 				375D3CDC149D30460098AFA4 /* Foundation.framework */,
 				375D3CDE149D30460098AFA4 /* CoreGraphics.framework */,
@@ -173,6 +181,15 @@
 				375D3D04149D30460098AFA4 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		37DD91A214C388F9007F2F95 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				37DD91A414C38921007F2F95 /* Reachability.h */,
+				37DD91A514C38921007F2F95 /* Reachability.m */,
+			);
+			name = Reachability;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,6 +322,7 @@
 				375D3CEE149D30460098AFA4 /* OCViewController.m in Sources */,
 				37BF4B3314AABEC10045936C /* OCPrivateInfo.m in Sources */,
 				37AC635514AA192B003A2A25 /* OCDoorbell.m in Sources */,
+				37DD91A614C38921007F2F95 /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

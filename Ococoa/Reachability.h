@@ -3,7 +3,7 @@
  File: Reachability.h
  Abstract: Basic demonstration of how to use the SystemConfiguration Reachablity APIs.
  
- Version: 2.2
+ Version: 2.2 - ARC-enabled
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple Inc.
  ("Apple") in consideration of your agreement to the following terms, and your
@@ -49,6 +49,8 @@
 #import <Foundation/Foundation.h>
 #import <SystemConfiguration/SystemConfiguration.h>
 
+struct sockaddr_in;
+
 typedef enum {
 	NotReachable = 0,
 	ReachableViaWiFi,
@@ -57,10 +59,6 @@ typedef enum {
 #define kReachabilityChangedNotification @"kNetworkReachabilityChangedNotification"
 
 @interface Reachability: NSObject
-{
-	BOOL localWiFiRef;
-	SCNetworkReachabilityRef reachabilityRef;
-}
 
 //reachabilityWithHostName- Use to check the reachability of a particular host name. 
 + (Reachability*) reachabilityWithHostName: (NSString*) hostName;
