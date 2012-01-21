@@ -7,8 +7,11 @@
 //
 
 #import "OCViewController.h"
+#import "OCDoorbell.h"
 
 @implementation OCViewController
+
+@synthesize doorbell = _doorbell;
 
 - (void)didReceiveMemoryWarning
 {
@@ -21,7 +24,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    self.doorbell = [[OCDoorbell alloc] init];
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [button addTarget:self action:@selector(ringDoorbell:) forControlEvents:UIControlEventTouchDown];
+    [button setTitle:@"Ring Doorbell" forState:UIControlStateNormal];
+    button.frame = CGRectMake(80.0, 210.0, 160.0, 40.0);
+    [self.view addSubview:button];    
 }
 
 - (void)viewDidUnload
@@ -62,6 +72,13 @@
     {
         return YES;
     }
+}
+
+#pragma mark IBActions
+
+- (IBAction)ringDoorbell:(id)sender
+{
+    [self.doorbell ring];
 }
 
 @end

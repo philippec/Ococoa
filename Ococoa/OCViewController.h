@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class OCDoorbell;
+
 @interface OCViewController : UIViewController
+
+@property (strong, nonatomic) OCDoorbell *doorbell;
+
+- (IBAction)ringDoorbell:(id)sender;
 
 @end
