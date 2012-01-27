@@ -12,6 +12,7 @@
 @implementation OCViewController
 
 @synthesize doorbell = _doorbell;
+@synthesize webView = _webView;
 
 - (void)didReceiveMemoryWarning
 {
@@ -23,22 +24,38 @@
 
 - (void)viewDidLoad
 {
+    const CGFloat kButtonSpace = 60.;
+    
     [super viewDidLoad];
 
     self.doorbell = [[OCDoorbell alloc] init];
     
+    CGRect baseRect = self.view.frame;
+    CGRect webRect = baseRect;
+    CGRect btnRect = baseRect;
+    
+    webRect.size.height -= kButtonSpace;
+    self.webView = [[UIWebView alloc] initWithFrame:webRect];
+    self.webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin;
+    [self.view addSubview:self.webView];
+    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://cocoaheads.org/ca/OttawaGatineauOntario/index.html"]]];
+
+    btnRect.size.height = 37.;
+    btnRect.size.width = 123.;
+    btnRect.origin.x = webRect.origin.x + (webRect.size.width - btnRect.size.width) / 2.;
+    btnRect.origin.y = webRect.origin.y + webRect.size.height + (kButtonSpace - btnRect.size.height) / 2.;
     UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [button addTarget:self action:@selector(ringDoorbell:) forControlEvents:UIControlEventTouchDown];
     [button setTitle:@"Ring Doorbell" forState:UIControlStateNormal];
-    button.frame = CGRectMake(80.0, 210.0, 160.0, 40.0);
-    [self.view addSubview:button];    
+    button.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
+    button.frame = btnRect;
+    [self.view addSubview:button];
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+    self.webView = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated

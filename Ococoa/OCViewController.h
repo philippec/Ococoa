@@ -13,6 +13,7 @@
 @interface OCViewController : UIViewController
 
 @property (strong, nonatomic) OCDoorbell *doorbell;
+@property (strong, nonatomic) UIWebView *webView;
 
 - (IBAction)ringDoorbell:(id)sender;
 
