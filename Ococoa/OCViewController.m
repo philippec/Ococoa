@@ -48,7 +48,7 @@
     btnRect.origin.y = webRect.origin.y + webRect.size.height + (kButtonSpace - btnRect.size.height) / 2.;
     UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [button addTarget:self action:@selector(ringDoorbell:) forControlEvents:UIControlEventTouchDown];
-    [button setTitle:@"Ring Doorbell" forState:UIControlStateNormal];
+    [button setTitle:NSLocalizedString(@"Ring Doorbell", nil) forState:UIControlStateNormal];
     button.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
     button.frame = btnRect;
     [self.view addSubview:button];

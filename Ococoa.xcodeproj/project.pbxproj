@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		372F72C614D24F9300F77690 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 372F72C414D24F9300F77690 /* Localizable.strings */; };
 		375D3CDB149D30460098AFA4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 375D3CDA149D30460098AFA4 /* UIKit.framework */; };
 		375D3CDD149D30460098AFA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 375D3CDC149D30460098AFA4 /* Foundation.framework */; };
 		375D3CDF149D30460098AFA4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 375D3CDE149D30460098AFA4 /* CoreGraphics.framework */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		372F72C514D24F9300F77690 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		375D3CD6149D30460098AFA4 /* Ococoa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ococoa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		375D3CDA149D30460098AFA4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		375D3CDC149D30460098AFA4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -160,6 +162,7 @@
 				375D3CE3149D30460098AFA4 /* InfoPlist.strings */,
 				375D3CE6149D30460098AFA4 /* main.m */,
 				375D3CE8149D30460098AFA4 /* Ococoa-Prefix.pch */,
+				372F72C414D24F9300F77690 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				37BF4B0C14AA90940045936C /* AppIcon57.png in Resources */,
 				37BF4B0D14AA90940045936C /* AppIcon72.png in Resources */,
 				37BF4B0E14AA90940045936C /* AppIcon114.png in Resources */,
+				372F72C614D24F9300F77690 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +349,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		372F72C414D24F9300F77690 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				372F72C514D24F9300F77690 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		375D3CE3149D30460098AFA4 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

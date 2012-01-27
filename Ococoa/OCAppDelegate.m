@@ -46,11 +46,11 @@
     NetworkStatus internetStatus = [r currentReachabilityStatus];
     if (internetStatus == NotReachable)
     {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Network Status" 
-                                                        message:@"Sorry, the network does not appear to be available. Please try again later." 
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Network Status", nil)
+                                                        message:NSLocalizedString(@"Network unavailable", nil)
                                                        delegate:nil 
                                               cancelButtonTitle:nil 
-                                              otherButtonTitles:@"OK", nil];
+                                              otherButtonTitles:NSLocalizedString(@"OK", nil), nil];
         [alert show];
     }
     else
@@ -102,7 +102,7 @@
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
 {
     NSDictionary *aps = [userInfo valueForKey:@"aps"];
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Doorbell rang" message:[aps valueForKey:@"alert"] delegate:nil cancelButtonTitle:@"Done" otherButtonTitles:nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Doorbell rang", nil) message:[aps valueForKey:@"alert"] delegate:nil cancelButtonTitle:NSLocalizedString(@"Done", nil) otherButtonTitles:nil];
     [alert show];
     for (id key in userInfo)
     {
