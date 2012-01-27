@@ -44,6 +44,8 @@
 	<string>1.0</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>Site URL</key>
+	<string>http://cocoaheads.org/ca/OttawaGatineauOntario/index.html</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

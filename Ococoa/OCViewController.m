@@ -29,6 +29,8 @@
     [super viewDidLoad];
 
     self.doorbell = [[OCDoorbell alloc] init];
+
+    NSString *strURL = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"Site URL"];
     
     CGRect baseRect = self.view.frame;
     CGRect webRect = baseRect;
@@ -38,7 +40,7 @@
     self.webView = [[UIWebView alloc] initWithFrame:webRect];
     self.webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin;
     [self.view addSubview:self.webView];
-    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://cocoaheads.org/ca/OttawaGatineauOntario/index.html"]]];
+    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:strURL]]];
 
     btnRect.size.height = 37.;
     btnRect.size.width = 123.;
