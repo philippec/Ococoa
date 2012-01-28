@@ -10,11 +10,20 @@
 
 @class OCDoorbell;
 
+typedef enum
+{
+    OCStatus_None,
+    OCStatus_basePageRequest,
+    OCStatus_networkPageRequest,
+    OCStatus_networkPageLoaded,
+} OCPageLoadStatus;
+
 @interface OCViewController : UIViewController <UIWebViewDelegate>
 
 @property (strong, nonatomic) OCDoorbell *doorbell;
 @property (strong, nonatomic) UIWebView *webView;
 @property (strong, nonatomic) UIActivityIndicatorView *spinner;
+@property (assign, nonatomic) OCPageLoadStatus pageLoadStatus;
 
 - (IBAction)ringDoorbell:(id)sender;
 
