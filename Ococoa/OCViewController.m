@@ -8,6 +8,12 @@
 
 #import "OCViewController.h"
 #import "OCDoorbell.h"
+#import "Reachability.h"
+
+@interface OCViewController(private)
+- (void)loadInitialWebPage:(id)sender;
+- (void)loadBasicWebPage:(NSString*)meetingInfo withConnectivity:(NSString*)connInfo;
+@end
 
 @implementation OCViewController
 
@@ -42,10 +48,7 @@
     self.webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin;
     [self.view addSubview:self.webView];
     self.webView.delegate = self;
-    // Load our basic web page
-    self.pageLoadStatus = OCStatus_basePageRequest;
-    NSString *content = [[NSBundle mainBundle] pathForResource:@"cocoaheads" ofType:@"html"];
-    [self.webView loadHTMLString:[NSString stringWithContentsOfFile:content encoding:NSUTF8StringEncoding error:nil] baseURL:nil];
+    [self loadInitialWebPage:nil];
 
     // Overlay a progress spinner, to be disabled when page has loaded
     self.spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
@@ -106,6 +109,28 @@
     }
 }
 
+#pragma mark Utilities
+
+- (void)loadInitialWebPage:(id)sender
+{
+    self.pageLoadStatus = OCStatus_basePageRequest;
+    [self loadBasicWebPage:nil withConnectivity:nil];
+}
+
+- (void)loadBasicWebPage:(NSString*)meetingInfo withConnectivity:(NSString*)connInfo
+{
+    // Load our basic web page, with meeting and connectivity info
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"cocoaheads" ofType:@"html"];
+    NSMutableString *html = [[NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil] mutableCopy];
+    if (meetingInfo)
+        [html replaceOccurrencesOfString:@"<meeting_info/>" withString:meetingInfo options:NSCaseInsensitiveSearch range:NSMakeRange(0, [html length])];
+    if (connInfo)
+        [html replaceOccurrencesOfString:@"<connection_info/>" withString:connInfo options:NSCaseInsensitiveSearch range:NSMakeRange(0, [html length])];
+    
+    [self.webView loadHTMLString:html baseURL:nil];
+}
+
+
 #pragma mark Simplified html view
 
 - (NSUInteger)countOfString:(NSString*)searchString inRange:(NSRange)range forString:(NSString*)fullString
@@ -125,12 +150,12 @@
     return count;
 }
 
-- (void)loadSimplifiedRequest:(NSString*)strURL
+- (void)loadSimplifiedRequest:(NSURL*)url
 {
     @autoreleasepool
     {
         // Load web content
-        NSString *webContent = [NSString stringWithContentsOfURL:[NSURL URLWithString:strURL] encoding:NSUTF8StringEncoding error:nil];
+        NSString *webContent = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil];
         NSString *scheduleContent = nil;
         // Search for '<div id="right-content"'
         NSRange divRange = [webContent rangeOfString:@"<div id=\"right-content\"" options:NSCaseInsensitiveSearch];
@@ -171,13 +196,8 @@
         {
             scheduleContent = [webContent substringWithRange:actualRange];
         }
-        
-        // Load our subset of the content into our specially-formatted html
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"cocoaheads" ofType:@"html"];
-        NSMutableString *html = [[NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil] mutableCopy];
-        [html replaceOccurrencesOfString:@"<meeting_info/>" withString:scheduleContent options:NSCaseInsensitiveSearch range:NSMakeRange(0, [html length])];
-        
-        [self.webView loadHTMLString:html baseURL:nil];
+
+        [self loadBasicWebPage:scheduleContent withConnectivity:nil];
     }
 }
 
@@ -195,12 +215,22 @@
             nextStatus = OCStatus_networkPageRequest;
 
             // Load the whole web page on iPad, or just a subset on iPhone
-            NSString *strURL = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"Site URL"];
-            
-            if ([[UIDevice currentDevice] userInterfaceIdiom]  == UIUserInterfaceIdiomPad)
-                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:strURL]]];
+            NSString *str = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"Site URL"];
+            NSURL *url = [NSURL URLWithString:str];
+            Reachability *r = [Reachability reachabilityWithHostName:[url host]];
+            NetworkStatus internetStatus = [r currentReachabilityStatus];
+            if (internetStatus == NotReachable)
+            {
+                [self loadBasicWebPage:nil withConnectivity:NSLocalizedString(@"Network Unavailable", nil)];
+                [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(loadInitialWebPage:) userInfo:nil repeats:NO];
+            }
             else
-                [NSThread detachNewThreadSelector:@selector(loadSimplifiedRequest:) toTarget:self withObject:strURL];
+            {
+                if ([[UIDevice currentDevice] userInterfaceIdiom]  == UIUserInterfaceIdiomPad)
+                    [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
+                else
+                    [NSThread detachNewThreadSelector:@selector(loadSimplifiedRequest:) toTarget:self withObject:url];                
+            }
             
             break;
         }
