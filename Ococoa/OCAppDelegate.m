@@ -10,7 +10,6 @@
 
 #import "OCViewController.h"
 #import "OCPrivateInfo.h"
-#import "Reachability.h"
 
 @implementation OCAppDelegate
 
@@ -42,37 +41,23 @@
 {
     NSLog(@"My token is: %@", deviceToken);
 
-    Reachability *r = [Reachability reachabilityWithHostName:@"https://go.urbanairship.com/"];
-    NetworkStatus internetStatus = [r currentReachabilityStatus];
-    if (internetStatus == NotReachable)
-    {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Network Status", nil)
-                                                        message:NSLocalizedString(@"Network unavailable", nil)
-                                                       delegate:nil 
-                                              cancelButtonTitle:nil 
-                                              otherButtonTitles:NSLocalizedString(@"OK", nil), nil];
-        [alert show];
-    }
-    else
-    {
-        // Convert the token to a hex string and make sure it's all caps
-        NSMutableString *tokenString = [NSMutableString stringWithString:[[deviceToken description] uppercaseString]];
-        [tokenString replaceOccurrencesOfString:@"<" withString:@"" options:0 range:NSMakeRange(0, tokenString.length)];
-        [tokenString replaceOccurrencesOfString:@">" withString:@"" options:0 range:NSMakeRange(0, tokenString.length)];
-        [tokenString replaceOccurrencesOfString:@" " withString:@"" options:0 range:NSMakeRange(0, tokenString.length)];
+    // Convert the token to a hex string and make sure it's all caps
+    NSMutableString *tokenString = [NSMutableString stringWithString:[[deviceToken description] uppercaseString]];
+    [tokenString replaceOccurrencesOfString:@"<" withString:@"" options:0 range:NSMakeRange(0, tokenString.length)];
+    [tokenString replaceOccurrencesOfString:@">" withString:@"" options:0 range:NSMakeRange(0, tokenString.length)];
+    [tokenString replaceOccurrencesOfString:@" " withString:@"" options:0 range:NSMakeRange(0, tokenString.length)];
 
-        // Create the NSURL for the request
-        NSString *urlFormat = @"https://go.urbanairship.com/api/device_tokens/%@";
-        NSURL *registrationURL = [NSURL URLWithString:[NSString stringWithFormat:urlFormat, tokenString]];
+    // Create the NSURL for the request
+    NSString *urlFormat = @"https://go.urbanairship.com/api/device_tokens/%@";
+    NSURL *registrationURL = [NSURL URLWithString:[NSString stringWithFormat:urlFormat, tokenString]];
 
-        // Create the registration request
-        NSMutableURLRequest *registrationRequest = [[NSMutableURLRequest alloc] initWithURL:registrationURL];
-        [registrationRequest setHTTPMethod:@"PUT"];
+    // Create the registration request
+    NSMutableURLRequest *registrationRequest = [[NSMutableURLRequest alloc] initWithURL:registrationURL];
+    [registrationRequest setHTTPMethod:@"PUT"];
 
-        // And fire it off
-        NSURLConnection *connection = [NSURLConnection connectionWithRequest:registrationRequest delegate:self];
-        [connection start];
-    }
+    // And fire it off
+    NSURLConnection *connection = [NSURLConnection connectionWithRequest:registrationRequest delegate:self];
+    [connection start];
 }
 
 - (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error
