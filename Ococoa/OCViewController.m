@@ -12,7 +12,7 @@
 
 @interface OCViewController(private)
 - (void)loadInitialWebPage:(id)sender;
-- (void)loadBasicWebPage:(NSString*)meetingInfo withConnectivity:(NSString*)connInfo;
+- (void)loadBasicWebPage:(NSString*)pageContent withMeeting:(NSString*)meetingInfo withConnectivity:(NSString*)connInfo;
 @end
 
 @implementation OCViewController
@@ -124,14 +124,18 @@
 - (void)loadInitialWebPage:(id)sender
 {
     self.pageLoadStatus = OCStatus_basePageRequest;
-    [self loadBasicWebPage:nil withConnectivity:nil];
+    [self loadBasicWebPage:nil withMeeting:nil withConnectivity:nil];
 }
 
-- (void)loadBasicWebPage:(NSString*)meetingInfo withConnectivity:(NSString*)connInfo
+- (void)loadBasicWebPage:(NSString*)pageContent withMeeting:(NSString*)meetingInfo withConnectivity:(NSString*)connInfo
 {
-    // Load our basic web page, with meeting and connectivity info
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"cocoaheads" ofType:@"html"];
-    NSMutableString *html = [[NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil] mutableCopy];
+    NSMutableString *html = [pageContent mutableCopy];
+    if (html == nil)
+    {
+        // Load our basic web page, with meeting and connectivity info
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"cocoaheads" ofType:@"html"];   
+        html = [[NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil] mutableCopy];
+    }
     if (meetingInfo)
         [html replaceOccurrencesOfString:@"<meeting_info/>" withString:meetingInfo options:NSCaseInsensitiveSearch range:NSMakeRange(0, [html length])];
     if (connInfo)
@@ -165,7 +169,8 @@
     @autoreleasepool
     {
         // Load web content
-        NSString *webContent = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil];
+        NSError *err = nil;
+        NSString *webContent = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:&err];
         NSString *scheduleContent = nil;
         // Search for '<div id="right-content"'
         NSRange divRange = [webContent rangeOfString:@"<div id=\"right-content\"" options:NSCaseInsensitiveSearch];
@@ -201,13 +206,17 @@
                 }
             }
         }
+        if (err)
+        {
+            NSLog(@"Error {%@} downloading from {%@}", err, url);
+        }
         
         if (openDivCount == closeDivCount)
         {
             scheduleContent = [webContent substringWithRange:actualRange];
         }
 
-        [self loadBasicWebPage:scheduleContent withConnectivity:nil];
+        [self loadBasicWebPage:nil withMeeting:scheduleContent withConnectivity:nil];
     }
 }
 
@@ -231,7 +240,7 @@
             NetworkStatus internetStatus = [r currentReachabilityStatus];
             if (internetStatus == NotReachable)
             {
-                [self loadBasicWebPage:nil withConnectivity:NSLocalizedString(@"Network Unavailable", nil)];
+                [self loadBasicWebPage:nil withMeeting:nil withConnectivity:NSLocalizedString(@"Network Unavailable", nil)];
                 [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(loadInitialWebPage:) userInfo:nil repeats:NO];
             }
             else
