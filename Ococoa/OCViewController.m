@@ -175,7 +175,10 @@
     if (connInfo)
         [html replaceOccurrencesOfString:@"<connection_info/>" withString:connInfo options:NSCaseInsensitiveSearch range:NSMakeRange(0, [html length])];
     
-    [self.webView loadHTMLString:html baseURL:nil];
+    @synchronized(self)
+    {
+        [self.webView loadHTMLString:html baseURL:nil];
+    }
 }
 
 
