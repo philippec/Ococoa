@@ -164,6 +164,27 @@
     return count;
 }
 
+- (NSString*) pageStyle
+{
+    NSString *result = nil;
+    NSString *str = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"Style URL"];
+    NSURL *url = [NSURL URLWithString:str];
+    Reachability *r = [Reachability reachabilityWithHostName:[url host]];
+    NetworkStatus internetStatus = [r currentReachabilityStatus];
+    if (internetStatus != NotReachable)
+    {
+        NSError *err;
+        result = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:&err];
+        if (err)
+        {
+            NSLog(@"Error {%@} downloading from {%@}", err, url);
+            result = nil; // just to be sure
+        }
+    }
+
+    return result;
+}
+
 - (void)loadSimplifiedRequest:(NSURL*)url
 {
     @autoreleasepool
@@ -216,7 +237,7 @@
             scheduleContent = [webContent substringWithRange:actualRange];
         }
 
-        [self loadBasicWebPage:nil withMeeting:scheduleContent withConnectivity:nil];
+        [self loadBasicWebPage:[self pageStyle] withMeeting:scheduleContent withConnectivity:nil];
     }
 }
 

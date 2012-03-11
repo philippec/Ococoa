@@ -48,6 +48,8 @@
 	<true/>
 	<key>Site URL</key>
 	<string>http://cocoaheads.org/ca/OttawaGatineauOntario/index.html</string>
+	<key>Style URL</key>
+	<string>http://ococoa-push.appspot.com/static/cocoaheads.html</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
