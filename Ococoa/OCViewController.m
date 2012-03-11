@@ -18,6 +18,7 @@
 @implementation OCViewController
 
 @synthesize doorbell = _doorbell;
+@synthesize navBar = _navBar;
 @synthesize webView = _webView;
 @synthesize spinner = _spinner;
 @synthesize pageLoadStatus = _pageLoadStatus;
@@ -57,11 +58,11 @@
     // We won't use it for navigation, but as a convenient place to put
     // the "Ring" button contained in the item
     navRect.size.height = kNavBarHeight;
-    UINavigationBar *navBar = [[UINavigationBar alloc] initWithFrame:navRect];
-    navBar.tintColor = [UIColor colorWithRed:0.7 green:0.1 blue:0.1 alpha:1.0];
-    navBar.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
-    [navBar pushNavigationItem:item animated:NO];
-    [self.view addSubview:navBar];
+    self.navBar = [[UINavigationBar alloc] initWithFrame:navRect];
+    self.navBar.tintColor = [UIColor colorWithRed:0.7 green:0.1 blue:0.1 alpha:1.0];
+    self.navBar.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
+    [self.navBar pushNavigationItem:item animated:NO];
+    [self.view addSubview:self.navBar];
     
     // Create a webview
     webRect.size.height -= kNavBarHeight;

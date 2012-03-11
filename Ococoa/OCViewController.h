@@ -21,6 +21,7 @@ typedef enum
 @interface OCViewController : UIViewController <UIWebViewDelegate>
 
 @property (strong, nonatomic) OCDoorbell *doorbell;
+@property (strong, nonatomic) UINavigationBar *navBar;
 @property (strong, nonatomic) UIWebView *webView;
 @property (strong, nonatomic) UIActivityIndicatorView *spinner;
 @property (assign, nonatomic) OCPageLoadStatus pageLoadStatus;
