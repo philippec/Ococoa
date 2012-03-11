@@ -7,14 +7,13 @@
 */
 
 "Someone at the door" = "%@ is at the door";
-"Ring Doorbell" = "Ring Doorbell";
 "Enter password" = "Enter password";
 "Cancel" = "Cancel";
 "Ring" = "Ring";
 "Your name" = "Your name";
 "Password" = "Password";
-"Network Status" = "Network Status";
 "Network Unavailable" = "Sorry, the network does not appear to be available. Please try again later." ;
 "OK" = "OK";
 "Doorbell rang" = "Doorbell rang";
 "Done" = "Done";
+"OCocoa" = "OCocoa";

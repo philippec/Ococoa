@@ -32,7 +32,7 @@
 
 - (void)viewDidLoad
 {
-    const CGFloat kButtonSpace = 60.;
+    const CGFloat kNavBarHeight = 44.;
     
     [super viewDidLoad];
 
@@ -40,12 +40,32 @@
 
     CGRect baseRect = self.view.frame;
     CGRect webRect = baseRect;
-    CGRect btnRect = baseRect;
+    CGRect navRect = baseRect;
 
+    // Create the "Ring" button
+    UIBarButtonItem *ringButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Ring", nil)
+                                                                   style:UIBarButtonSystemItemDone
+                                                                  target:self
+                                                                  action:@selector(ringDoorbell:)];
+    // Add it to a nav item as the right-most button
+    UINavigationItem *item = [[UINavigationItem alloc] initWithTitle:NSLocalizedString(@"OCocoa", nil)];
+    item.rightBarButtonItem = ringButton;
+    item.hidesBackButton = YES;
+
+    // Create a NavigationBar on the top
+    // We won't use it for navigation, but as a convenient place to put
+    // the "Ring" button contained in the item
+    navRect.size.height = kNavBarHeight;
+    UINavigationBar *navBar = [[UINavigationBar alloc] initWithFrame:navRect];
+    navBar.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
+    [navBar pushNavigationItem:item animated:NO];
+    [self.view addSubview:navBar];
+    
     // Create a webview
-    webRect.size.height -= kButtonSpace;
+    webRect.size.height -= kNavBarHeight;
+    webRect.origin.y += kNavBarHeight;
     self.webView = [[UIWebView alloc] initWithFrame:webRect];
-    self.webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin;
+    self.webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
     [self.view addSubview:self.webView];
     self.webView.delegate = self;
     [self loadInitialWebPage:nil];
@@ -56,18 +76,6 @@
     self.spinner.hidesWhenStopped = YES;
     self.spinner.center = self.webView.center;
     [self.spinner startAnimating];
-
-    // Create the "Ring" button
-    btnRect.size.height = 37.;
-    btnRect.size.width = 123.;
-    btnRect.origin.x = webRect.origin.x + (webRect.size.width - btnRect.size.width) / 2.;
-    btnRect.origin.y = webRect.origin.y + webRect.size.height + (kButtonSpace - btnRect.size.height) / 2.;
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [button addTarget:self action:@selector(ringDoorbell:) forControlEvents:UIControlEventTouchDown];
-    [button setTitle:NSLocalizedString(@"Ring Doorbell", nil) forState:UIControlStateNormal];
-    button.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
-    button.frame = btnRect;
-    [self.view addSubview:button];
 }
 
 - (void)viewDidUnload
