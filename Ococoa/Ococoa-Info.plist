@@ -13,6 +13,7 @@
 		<string>AppIcon57.png</string>
 		<string>AppIcon114.png</string>
 		<string>AppIcon72.png</string>
+		<string>AppIcon144.png</string>
 	</array>
 	<key>CFBundleIcons</key>
 	<dict>
@@ -23,6 +24,7 @@
 				<string>AppIcon57.png</string>
 				<string>AppIcon114.png</string>
 				<string>AppIcon72.png</string>
+				<string>AppIcon144.png</string>
 			</array>
 			<key>UIPrerenderedIcon</key>
 			<false/>

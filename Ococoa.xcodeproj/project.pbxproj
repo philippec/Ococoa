@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		372F72C614D24F9300F77690 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 372F72C414D24F9300F77690 /* Localizable.strings */; };
 		372F72CE14D3A4D000F77690 /* cocoaheads.html in Resources */ = {isa = PBXBuildFile; fileRef = 372F72CC14D3A4D000F77690 /* cocoaheads.html */; };
+		37458459150C52A800A87BED /* AppIcon144.png in Resources */ = {isa = PBXBuildFile; fileRef = 37458458150C52A800A87BED /* AppIcon144.png */; };
 		375D3CDB149D30460098AFA4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 375D3CDA149D30460098AFA4 /* UIKit.framework */; };
 		375D3CDD149D30460098AFA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 375D3CDC149D30460098AFA4 /* Foundation.framework */; };
 		375D3CDF149D30460098AFA4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 375D3CDE149D30460098AFA4 /* CoreGraphics.framework */; };
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		372F72C514D24F9300F77690 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		372F72CD14D3A4D000F77690 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = en; path = en.lproj/cocoaheads.html; sourceTree = "<group>"; };
+		37458458150C52A800A87BED /* AppIcon144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AppIcon144.png; path = images/AppIcon144.png; sourceTree = "<group>"; };
 		375D3CD6149D30460098AFA4 /* Ococoa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ococoa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		375D3CDA149D30460098AFA4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		375D3CDC149D30460098AFA4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -160,6 +162,7 @@
 				37BF4B0914AA90940045936C /* AppIcon57.png */,
 				37BF4B0A14AA90940045936C /* AppIcon72.png */,
 				37BF4B0B14AA90940045936C /* AppIcon114.png */,
+				37458458150C52A800A87BED /* AppIcon144.png */,
 				375D3CE2149D30460098AFA4 /* Ococoa-Info.plist */,
 				375D3CE3149D30460098AFA4 /* InfoPlist.strings */,
 				375D3CE6149D30460098AFA4 /* main.m */,
@@ -277,6 +280,7 @@
 				37BF4B0E14AA90940045936C /* AppIcon114.png in Resources */,
 				372F72C614D24F9300F77690 /* Localizable.strings in Resources */,
 				372F72CE14D3A4D000F77690 /* cocoaheads.html in Resources */,
+				37458459150C52A800A87BED /* AppIcon144.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
