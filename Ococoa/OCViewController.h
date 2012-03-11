@@ -25,6 +25,7 @@ typedef enum
 @property (strong, nonatomic) UIWebView *webView;
 @property (strong, nonatomic) UIActivityIndicatorView *spinner;
 @property (assign, nonatomic) OCPageLoadStatus pageLoadStatus;
+@property (assign, nonatomic) BOOL debug;
 
 - (IBAction)ringDoorbell:(id)sender;
 

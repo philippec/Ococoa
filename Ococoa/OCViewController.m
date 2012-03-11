@@ -22,11 +22,45 @@
 @synthesize webView = _webView;
 @synthesize spinner = _spinner;
 @synthesize pageLoadStatus = _pageLoadStatus;
+@synthesize debug = _debug;
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Release any cached data, images, etc that aren't in use.
+}
+
+#pragma mark Debug
+
+- (BOOL)canBecomeFirstResponder
+{
+    return YES;
+}
+
+- (IBAction)debugAction:(id)sender
+{
+    NSLog(@"Debug Action...");
+}
+
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    if (event.type == UIEventSubtypeMotionShake)
+    {
+        UINavigationItem *item = [self.navBar.items objectAtIndex:0];
+
+        self.debug = !self.debug;
+        if (self.debug)
+        {
+            item.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"bug"]
+                                                                      style:UIBarButtonItemStyleBordered
+                                                                     target:self
+                                                                     action:@selector(debugAction:)];
+        }
+        else
+        {
+            item.leftBarButtonItem = nil;
+        }
+    }
 }
 
 #pragma mark - View lifecycle
@@ -94,6 +128,7 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
+    [self becomeFirstResponder];
     [super viewDidAppear:animated];
 }
 
