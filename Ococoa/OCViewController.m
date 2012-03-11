@@ -78,11 +78,9 @@
     CGRect navRect = baseRect;
 
     // Create the "Ring" button
-    UIBarButtonItem *ringButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Ring", nil)
-                                                                   style:UIBarButtonSystemItemDone
-                                                                  target:self
+    UIBarButtonItem *ringButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"bell"]
+                                                                   style:UIBarButtonItemStyleBordered                                                                  target:self
                                                                   action:@selector(ringDoorbell:)];
-    ringButton.image = [UIImage imageNamed:@"bell"];
     // Add it to a nav item as the right-most button
     UINavigationItem *item = [[UINavigationItem alloc] initWithTitle:NSLocalizedString(@"OCocoa", nil)];
     item.rightBarButtonItem = ringButton;
