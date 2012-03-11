@@ -57,6 +57,7 @@
     // the "Ring" button contained in the item
     navRect.size.height = kNavBarHeight;
     UINavigationBar *navBar = [[UINavigationBar alloc] initWithFrame:navRect];
+    navBar.tintColor = [UIColor colorWithRed:0.7 green:0.1 blue:0.1 alpha:1.0];
     navBar.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
     [navBar pushNavigationItem:item animated:NO];
     [self.view addSubview:navBar];
