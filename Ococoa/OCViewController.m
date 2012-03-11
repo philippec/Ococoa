@@ -47,6 +47,7 @@
                                                                    style:UIBarButtonSystemItemDone
                                                                   target:self
                                                                   action:@selector(ringDoorbell:)];
+    ringButton.image = [UIImage imageNamed:@"bell"];
     // Add it to a nav item as the right-most button
     UINavigationItem *item = [[UINavigationItem alloc] initWithTitle:NSLocalizedString(@"OCocoa", nil)];
     item.rightBarButtonItem = ringButton;
