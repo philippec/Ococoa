@@ -39,7 +39,17 @@
 
 - (IBAction)debugAction:(id)sender
 {
-    NSLog(@"Debug Action...");
+    static NSUInteger debugCount = 1;
+    NSString *str = @"http://ococoa-push.appspot.com/static/test.html";
+
+    // alternate between real page and test page
+    debugCount++;
+    if (debugCount % 2)
+        str = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"Site URL"];
+
+    self.pageLoadStatus = OCStatus_networkPageRequest;
+    NSURL *url = [NSURL URLWithString:str];
+    [NSThread detachNewThreadSelector:@selector(loadSimplifiedRequest:) toTarget:self withObject:url];                
 }
 
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
