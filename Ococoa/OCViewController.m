@@ -110,7 +110,7 @@
     webRect.size.height -= kNavBarHeight;
     webRect.origin.y += kNavBarHeight;
     self.webView = [[UIWebView alloc] initWithFrame:webRect];
-    self.webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
+    self.webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     [self.view addSubview:self.webView];
     self.webView.delegate = self;
     [self loadInitialWebPage:nil];
@@ -120,6 +120,7 @@
     [self.webView addSubview:self.spinner];
     self.spinner.hidesWhenStopped = YES;
     self.spinner.center = self.webView.center;
+    self.spinner.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
     [self.spinner startAnimating];
 }
 
