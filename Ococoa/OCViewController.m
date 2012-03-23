@@ -339,7 +339,7 @@
 
         default:
         {
-            NSAssert(FALSE, @"should handle default case %d", self.pageLoadStatus);
+            NSLog(@"should handle default case %d", self.pageLoadStatus);
             break;
         }
     }
