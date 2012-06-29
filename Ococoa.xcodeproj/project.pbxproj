@@ -338,7 +338,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ ! -e \"OCocoa/OCPrivateInfo.m\" ]\nthen\necho '#error Delete these lines and enter your UrbanAirship credentials below' > 'OCocoa/OCPrivateInfo.m'\necho 'const NSString *kUrbanAirshipAppKey = @\"Your UrbanAirship Application Key goes here\";' >> 'OCocoa/OCPrivateInfo.m'\necho 'const NSString *kUrbanAirshipAppSecret = @\"Your UrbanAirship Application Secret goes here\";' >> 'OCocoa/OCPrivateInfo.m'\necho 'const NSString *kServerString = @\"http://your.server.com/your/api?msg=%@&key=%@\";' >> 'OCocoa/OCPrivateInfo.m'\nfi";
+			shellScript = "if [ ! -e \"OCocoa/OCPrivateInfo.m\" ]\nthen\necho '#warning Delete these lines and enter your UrbanAirship credentials below' > 'OCocoa/OCPrivateInfo.m'\necho 'const NSString *kUrbanAirshipAppKey = @\"Your UrbanAirship Application Key goes here\";' >> 'OCocoa/OCPrivateInfo.m'\necho 'const NSString *kUrbanAirshipAppSecret = @\"Your UrbanAirship Application Secret goes here\";' >> 'OCocoa/OCPrivateInfo.m'\necho 'const NSString *kServerString = @\"http://your.server.com/your/api?msg=%@&key=%@\";' >> 'OCocoa/OCPrivateInfo.m'\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
