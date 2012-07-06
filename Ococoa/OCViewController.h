@@ -27,6 +27,8 @@ typedef enum
 @property (assign, nonatomic) OCPageLoadStatus pageLoadStatus;
 @property (assign, nonatomic) BOOL debug;
 
+- (void)startPageReloadTimer;
+- (void)stopPageReloadTimer;
 - (IBAction)ringDoorbell:(id)sender;
 
 @end

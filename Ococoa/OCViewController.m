@@ -10,7 +10,8 @@
 #import "OCDoorbell.h"
 #import "Reachability.h"
 
-@interface OCViewController(private)
+@interface OCViewController()
+@property (strong, nonatomic) NSTimer *pageReloadTimer;
 - (void)loadInitialWebPage:(id)sender;
 - (void)loadBasicWebPage:(NSString*)pageContent withMeeting:(NSString*)meetingInfo withConnectivity:(NSString*)connInfo;
 @end
@@ -23,6 +24,7 @@
 @synthesize spinner = _spinner;
 @synthesize pageLoadStatus = _pageLoadStatus;
 @synthesize debug = _debug;
+@synthesize pageReloadTimer = _pageReloadTimer;
 
 - (void)didReceiveMemoryWarning
 {
@@ -113,7 +115,7 @@
     self.webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     [self.view addSubview:self.webView];
     self.webView.delegate = self;
-    [self loadInitialWebPage:nil];
+    [self startPageReloadTimer];
 
     // Overlay a progress spinner, to be disabled when page has loaded
     self.spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
@@ -127,6 +129,7 @@
 - (void)viewDidUnload
 {
     [super viewDidUnload];
+    [self stopPageReloadTimer];
     self.webView = nil;
 }
 
@@ -345,6 +348,23 @@
     }
 
     self.pageLoadStatus = nextStatus;
+}
+
+#pragma mark Page Reload timer
+
+- (void)startPageReloadTimer
+{
+    [self stopPageReloadTimer];
+    [self loadInitialWebPage:nil];
+    self.pageReloadTimer = [NSTimer scheduledTimerWithTimeInterval:300.0 target:self selector:@selector(startPageReloadTimer) userInfo:nil repeats:NO];
+    DebugLog(@"Timer fired");
+}
+
+- (void)stopPageReloadTimer
+{
+    [self.pageReloadTimer invalidate];
+    self.pageReloadTimer = nil;
+    
 }
 
 #pragma mark IBActions
