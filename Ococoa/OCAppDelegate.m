@@ -87,8 +87,26 @@
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
 {
     NSDictionary *aps = [userInfo valueForKey:@"aps"];
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Doorbell rang", nil) message:[aps valueForKey:@"alert"] delegate:nil cancelButtonTitle:NSLocalizedString(@"Done", nil) otherButtonTitles:nil];
-    [alert show];
+    NSNumber *job = [userInfo valueForKey:@"job"];
+    switch ([job intValue])
+    {
+        case 1:
+        {
+            // Schedule update
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Schedule update", nil) message:[aps valueForKey:@"alert"] delegate:nil cancelButtonTitle:NSLocalizedString(@"Done", nil) otherButtonTitles:nil];
+            [alert show];
+            break;
+        }
+
+        default:
+        {
+            // Doorbell
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Doorbell rang", nil) message:[aps valueForKey:@"alert"] delegate:nil cancelButtonTitle:NSLocalizedString(@"Done", nil) otherButtonTitles:nil];
+            [alert show];
+            break;
+        }
+    }
+
     for (id key in userInfo)
     {
         DebugLog(@"key: %@, value: %@", key, [userInfo objectForKey:key]);

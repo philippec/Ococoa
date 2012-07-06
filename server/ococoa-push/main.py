@@ -33,7 +33,7 @@ class MainHandler(webapp.RequestHandler):
         msg = self.request.get('msg')
         if len(msg) > 0:
             airship = urbanairship.Airship(AppKey(),AppMasterSecret())
-            airship.broadcast({'aps': {'alert': msg}})
+            airship.broadcast({'aps': {'alert': msg} 'job': 0})
             self.response.out.write('200 OK - Message {' + msg + '} sent!')
         else:
             self.response.out.write('500 ERROR - No message sent!')
