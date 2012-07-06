@@ -66,7 +66,7 @@
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex;
 {
-    NSLog(@"Button: %d", buttonIndex);
+    DebugLog(@"Button: %d", buttonIndex);
     if (buttonIndex == 0)
         return;
 
@@ -78,7 +78,7 @@
 {
     @autoreleasepool
     {
-        NSLog(@"Ring ring!");
+        DebugLog(@"Ring ring!");
         NSString *msg = [NSString stringWithFormat:NSLocalizedString(@"Someone at the door", nil), _name];
         NSString *key = [_password stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
         NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:kServerString, [msg stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding], key]];
@@ -86,13 +86,13 @@
         NSString *result = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:&err];
         if ([result hasPrefix:@"200 OK"])
         {
-            NSLog(@"Success: %@", result);
+            DebugLog(@"Success: %@", result);
             [[NSUserDefaults standardUserDefaults] setValue:_name forKey:kDefaultName];
             [[NSUserDefaults standardUserDefaults] setValue:_password forKey:kDefaultPass];
         }
         else
         {
-            NSLog(@"Failed: %@, error: %@", result, err);
+            DebugLog(@"Failed: %@, error: %@", result, err);
         }
     }
 }

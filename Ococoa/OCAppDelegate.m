@@ -39,7 +39,7 @@
 
 - (void)application:(UIApplication*)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken
 {
-    NSLog(@"My token is: %@", deviceToken);
+    DebugLog(@"My token is: %@", deviceToken);
 
     // Convert the token to a hex string and make sure it's all caps
     NSMutableString *tokenString = [NSMutableString stringWithString:[[deviceToken description] uppercaseString]];
@@ -62,7 +62,7 @@
 
 - (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error
 {
-    NSLog(@"Failed to get token, error: %@", [error description]);
+    DebugLog(@"Failed to get token, error: %@", [error description]);
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge
@@ -71,7 +71,7 @@
     if ([challenge previousFailureCount] > 0)
     {
         // We've already tried - something is wrong with our credentials
-        NSLog(@"Urban Airship credentials invalid");
+        DebugLog(@"Urban Airship credentials invalid");
         return;
     }
 
@@ -80,7 +80,7 @@
                                                                      password:kUrbanAirshipAppSecret
                                                                   persistence:NSURLCredentialPersistenceNone];
     [[challenge sender] useCredential:airshipCredentials forAuthenticationChallenge:challenge];  
-    NSLog(@"Urban Airship credentials sent");
+    DebugLog(@"Urban Airship credentials sent");
 }
 
 
@@ -91,7 +91,7 @@
     [alert show];
     for (id key in userInfo)
     {
-        NSLog(@"key: %@, value: %@", key, [userInfo objectForKey:key]);
+        DebugLog(@"key: %@, value: %@", key, [userInfo objectForKey:key]);
     }
 }
 

@@ -225,7 +225,7 @@
         result = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:&err];
         if (err)
         {
-            NSLog(@"Error {%@} downloading from {%@}", err, url);
+            DebugLog(@"Error {%@} downloading from {%@}", err, url);
             result = nil; // just to be sure
         }
     }
@@ -270,14 +270,14 @@
                 }
                 else
                 {
-                    NSLog(@"Should not happen, something is broken on the website");
+                    DebugLog(@"Should not happen, something is broken on the website");
                     break;
                 }
             }
         }
         if (err)
         {
-            NSLog(@"Error {%@} downloading from {%@}", err, url);
+            DebugLog(@"Error {%@} downloading from {%@}", err, url);
         }
         
         if (openDivCount == closeDivCount)
@@ -299,7 +299,7 @@
     {
         case OCStatus_basePageRequest:
         {
-            NSLog(@"OCStatus_basePageRequest");
+            DebugLog(@"OCStatus_basePageRequest");
             nextStatus = OCStatus_networkPageRequest;
 
             // Load the whole web page on iPad, or just a subset on iPhone
@@ -325,7 +325,7 @@
 
         case OCStatus_networkPageRequest:
         {
-            NSLog(@"OCStatus_networkPageRequest");
+            DebugLog(@"OCStatus_networkPageRequest");
             nextStatus = OCStatus_networkPageLoaded;
             [self.spinner stopAnimating];
             break;
@@ -333,13 +333,13 @@
 
         case OCStatus_networkPageLoaded:
         {
-            NSLog(@"OCStatus_networkPageLoaded");
+            DebugLog(@"OCStatus_networkPageLoaded");
             break;
         }
 
         default:
         {
-            NSLog(@"should handle default case %d", self.pageLoadStatus);
+            DebugLog(@"should handle default case %d", self.pageLoadStatus);
             break;
         }
     }
