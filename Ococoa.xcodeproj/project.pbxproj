@@ -27,7 +27,7 @@
 		375D3CFD149D30460098AFA4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 375D3CDA149D30460098AFA4 /* UIKit.framework */; };
 		375D3CFE149D30460098AFA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 375D3CDC149D30460098AFA4 /* Foundation.framework */; };
 		375D3D06149D30460098AFA4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 375D3D04149D30460098AFA4 /* InfoPlist.strings */; };
-		375D3D09149D30460098AFA4 /* OcocoaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 375D3D08149D30460098AFA4 /* OcocoaTests.m */; };
+		3790A0CD15FBBDBA009DA097 /* OCDoorbellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3790A0CC15FBBDBA009DA097 /* OCDoorbellTests.m */; };
 		37AC635514AA192B003A2A25 /* OCDoorbell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AC635414AA192B003A2A25 /* OCDoorbell.m */; };
 		37BF4B0C14AA90940045936C /* AppIcon57.png in Resources */ = {isa = PBXBuildFile; fileRef = 37BF4B0914AA90940045936C /* AppIcon57.png */; };
 		37BF4B0D14AA90940045936C /* AppIcon72.png in Resources */ = {isa = PBXBuildFile; fileRef = 37BF4B0A14AA90940045936C /* AppIcon72.png */; };
@@ -74,8 +74,7 @@
 		375D3CFB149D30460098AFA4 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		375D3D03149D30460098AFA4 /* OcocoaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OcocoaTests-Info.plist"; sourceTree = "<group>"; };
 		375D3D05149D30460098AFA4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		375D3D07149D30460098AFA4 /* OcocoaTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OcocoaTests.h; sourceTree = "<group>"; };
-		375D3D08149D30460098AFA4 /* OcocoaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OcocoaTests.m; sourceTree = "<group>"; };
+		3790A0CC15FBBDBA009DA097 /* OCDoorbellTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCDoorbellTests.m; sourceTree = "<group>"; };
 		37AC635314AA192B003A2A25 /* OCDoorbell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCDoorbell.h; sourceTree = "<group>"; };
 		37AC635414AA192B003A2A25 /* OCDoorbell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCDoorbell.m; sourceTree = "<group>"; };
 		37AC636F14AA8E30003A2A25 /* AppIcon.opacity */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppIcon.opacity; path = images/AppIcon.opacity; sourceTree = "<group>"; };
@@ -157,6 +156,7 @@
 				375D3CED149D30460098AFA4 /* OCViewController.m */,
 				37AC635314AA192B003A2A25 /* OCDoorbell.h */,
 				37AC635414AA192B003A2A25 /* OCDoorbell.m */,
+				3790A0CC15FBBDBA009DA097 /* OCDoorbellTests.m */,
 				375D3CEF149D30460098AFA4 /* OCViewController_iPhone.xib */,
 				375D3CF2149D30460098AFA4 /* OCViewController_iPad.xib */,
 				375D3CE1149D30460098AFA4 /* Supporting Files */,
@@ -190,8 +190,6 @@
 		375D3D01149D30460098AFA4 /* OcocoaTests */ = {
 			isa = PBXGroup;
 			children = (
-				375D3D07149D30460098AFA4 /* OcocoaTests.h */,
-				375D3D08149D30460098AFA4 /* OcocoaTests.m */,
 				375D3D02149D30460098AFA4 /* Supporting Files */,
 			);
 			path = OcocoaTests;
@@ -360,7 +358,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				375D3D09149D30460098AFA4 /* OcocoaTests.m in Sources */,
+				3790A0CD15FBBDBA009DA097 /* OCDoorbellTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
