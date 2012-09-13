@@ -41,14 +41,24 @@
     STAssertNotNil(self.doorBell.alertView, @"");
 }
 
-- (void)testMock
+- (void)testRing
 {
-    id mock = [OCMockObject mockForClass:[NSDate class]];
+    id mockAlert = [OCMockObject mockForClass:[UIAlertView class]];
 
-    NSTimeInterval t = 20.0;
-    [[[mock stub] andReturnValue:OCMOCK_VALUE(t)] timeIntervalSinceNow];
-    STAssertEquals([mock timeIntervalSinceNow], 20.0, @"");
-    [mock verify];
+    STAssertNoThrow(self.doorBell.alertView = mockAlert, @"");
+
+    // This will always return YES, so it cannot be mocked properly
+    // see http://stackoverflow.com/questions/11098615/how-to-stub-respondstoselector-method
+    //[[mockAlert expect] respondsToSelector:@selector(setAlertViewStyle:)];
+    [[mockAlert expect] setAlertViewStyle:UIAlertViewStyleLoginAndPasswordInput];
+    [[mockAlert expect] textFieldAtIndex:0];
+    [[mockAlert expect] textFieldAtIndex:0];
+    [[mockAlert expect] textFieldAtIndex:1];
+    [[mockAlert expect] show];
+
+    STAssertNoThrow([self.doorBell ring], @"");
+
+    [mockAlert verify];
 }
 
 @end
