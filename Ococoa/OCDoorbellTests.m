@@ -37,6 +37,7 @@
 - (void)testExists
 {
     STAssertNotNil(self.doorBell, @"");
+    STAssertNotNil(self.doorBell.alertView, @"");
 }
 
 

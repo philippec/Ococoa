@@ -17,6 +17,8 @@
     __strong UITextField *_passwordTF;
 }
 
+@property (strong, nonatomic) UIAlertView *alertView;
+
 -(void)ring;
 
 @end
