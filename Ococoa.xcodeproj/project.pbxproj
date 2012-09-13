@@ -35,6 +35,7 @@
 		37BF4B3314AABEC10045936C /* OCPrivateInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BF4B3214AABEC10045936C /* OCPrivateInfo.m */; };
 		37DD91A614C38921007F2F95 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DD91A514C38921007F2F95 /* Reachability.m */; };
 		37DD91C714C38F03007F2F95 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37DD91C614C38F03007F2F95 /* SystemConfiguration.framework */; };
+		37FFFE0116028A5A0033E8D0 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FFFE0016028A5A0033E8D0 /* libOCMock.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		37DD91A514C38921007F2F95 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = Ococoa/Reachability.m; sourceTree = "<group>"; };
 		37DD91C614C38F03007F2F95 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		37FE17F6149E9E740086D2D8 /* OCPrivateInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCPrivateInfo.h; sourceTree = "<group>"; };
+		37FFFE0016028A5A0033E8D0 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = "OCMock 2.0.1/iOS/libOCMock.a"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				375D3CFC149D30460098AFA4 /* SenTestingKit.framework in Frameworks */,
 				375D3CFD149D30460098AFA4 /* UIKit.framework in Frameworks */,
 				375D3CFE149D30460098AFA4 /* Foundation.framework in Frameworks */,
+				37FFFE0116028A5A0033E8D0 /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +201,7 @@
 		375D3D02149D30460098AFA4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				37FFFE0016028A5A0033E8D0 /* libOCMock.a */,
 				375D3D03149D30460098AFA4 /* OcocoaTests-Info.plist */,
 				375D3D04149D30460098AFA4 /* InfoPlist.strings */,
 			);
@@ -474,7 +478,18 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Ococoa/Ococoa-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/OCMock 2.0.1/iOS\"",
+				);
 				INFOPLIST_FILE = "OcocoaTests/OcocoaTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/OCMock 2.0.1/iOS\"",
+				);
+				OTHER_LDFLAGS = (
+					"-force_load",
+					"\"$(PROJECT_DIR)/OCMock 2.0.1/iOS/libOCMock.a\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -570,7 +585,18 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Ococoa/Ococoa-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/OCMock 2.0.1/iOS\"",
+				);
 				INFOPLIST_FILE = "OcocoaTests/OcocoaTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/OCMock 2.0.1/iOS\"",
+				);
+				OTHER_LDFLAGS = (
+					"-force_load",
+					"\"$(PROJECT_DIR)/OCMock 2.0.1/iOS/libOCMock.a\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -587,7 +613,18 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Ococoa/Ococoa-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/OCMock 2.0.1/iOS\"",
+				);
 				INFOPLIST_FILE = "OcocoaTests/OcocoaTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/OCMock 2.0.1/iOS\"",
+				);
+				OTHER_LDFLAGS = (
+					"-force_load",
+					"\"$(PROJECT_DIR)/OCMock 2.0.1/iOS/libOCMock.a\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
