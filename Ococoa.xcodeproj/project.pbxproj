@@ -261,7 +261,7 @@
 		375D3CCD149D30460098AFA4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0440;
 			};
 			buildConfigurationList = 375D3CD0149D30460098AFA4 /* Build configuration list for PBXProject "Ococoa" */;
 			compatibilityVersion = "Xcode 3.2";
