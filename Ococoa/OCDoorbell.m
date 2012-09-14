@@ -84,6 +84,11 @@
         [NSThread detachNewThreadSelector:@selector(callServer:) toTarget:self withObject:self];
 }
 
+- (NSString *)stringFromURL:(NSURL *)url error:(NSError **)err
+{
+    return [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:err];
+}
+
 - (void)callServer:(id)obj
 {
     @autoreleasepool
@@ -93,7 +98,7 @@
         NSString *key = [_password stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
         NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:kServerString, [msg stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding], key]];
         NSError *err;
-        NSString *result = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:&err];
+        NSString *result = [self stringFromURL:url error:&err];
         if ([result hasPrefix:@"200 OK"])
         {
             DebugLog(@"Success: %@", result);
