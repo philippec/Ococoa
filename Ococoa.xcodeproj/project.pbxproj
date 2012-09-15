@@ -29,6 +29,7 @@
 		375D3D06149D30460098AFA4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 375D3D04149D30460098AFA4 /* InfoPlist.strings */; };
 		3790A0CD15FBBDBA009DA097 /* OCDoorbellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3790A0CC15FBBDBA009DA097 /* OCDoorbellTests.m */; };
 		37AC635514AA192B003A2A25 /* OCDoorbell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AC635414AA192B003A2A25 /* OCDoorbell.m */; };
+		37AF78F61604361900918D7D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37AF78F51604361900918D7D /* Default-568h@2x.png */; };
 		37BF4B0C14AA90940045936C /* AppIcon57.png in Resources */ = {isa = PBXBuildFile; fileRef = 37BF4B0914AA90940045936C /* AppIcon57.png */; };
 		37BF4B0D14AA90940045936C /* AppIcon72.png in Resources */ = {isa = PBXBuildFile; fileRef = 37BF4B0A14AA90940045936C /* AppIcon72.png */; };
 		37BF4B0E14AA90940045936C /* AppIcon114.png in Resources */ = {isa = PBXBuildFile; fileRef = 37BF4B0B14AA90940045936C /* AppIcon114.png */; };
@@ -79,6 +80,7 @@
 		37AC635314AA192B003A2A25 /* OCDoorbell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCDoorbell.h; sourceTree = "<group>"; };
 		37AC635414AA192B003A2A25 /* OCDoorbell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCDoorbell.m; sourceTree = "<group>"; };
 		37AC636F14AA8E30003A2A25 /* AppIcon.opacity */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppIcon.opacity; path = images/AppIcon.opacity; sourceTree = "<group>"; };
+		37AF78F51604361900918D7D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "images/Default-568h@2x.png"; sourceTree = "<group>"; };
 		37BF4B0914AA90940045936C /* AppIcon57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AppIcon57.png; path = images/AppIcon57.png; sourceTree = "<group>"; };
 		37BF4B0A14AA90940045936C /* AppIcon72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AppIcon72.png; path = images/AppIcon72.png; sourceTree = "<group>"; };
 		37BF4B0B14AA90940045936C /* AppIcon114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AppIcon114.png; path = images/AppIcon114.png; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 		375D3CE1149D30460098AFA4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				37AF78F51604361900918D7D /* Default-568h@2x.png */,
 				37AC636F14AA8E30003A2A25 /* AppIcon.opacity */,
 				37BF4B0914AA90940045936C /* AppIcon57.png */,
 				37BF4B0A14AA90940045936C /* AppIcon72.png */,
@@ -263,7 +266,7 @@
 		375D3CCD149D30460098AFA4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0440;
+				LastUpgradeCheck = 0450;
 			};
 			buildConfigurationList = 375D3CD0149D30460098AFA4 /* Build configuration list for PBXProject "Ococoa" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -301,6 +304,7 @@
 				37458462150D0C6800A87BED /* bell@2x.png in Resources */,
 				37458465150D32A600A87BED /* bug.png in Resources */,
 				37458466150D32A600A87BED /* bug@2x.png in Resources */,
+				37AF78F61604361900918D7D /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,20 +436,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv6,
-					armv7,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -462,7 +463,6 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Ococoa/Ococoa-Prefix.pch";
 				INFOPLIST_FILE = "Ococoa/Ococoa-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -478,6 +478,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Ococoa/Ococoa-Prefix.pch";
+				GCC_THUMB_SUPPORT = NO;
 				HEADER_SEARCH_PATHS = (
 					"\"$(SRCROOT)/OCMock 2.0.1/iOS\"",
 				);
@@ -500,10 +501,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv6,
-					armv7,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
@@ -515,11 +513,11 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -530,19 +528,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv6,
-					armv7,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = iphoneos;
@@ -557,7 +552,6 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Ococoa/Ococoa-Prefix.pch";
 				INFOPLIST_FILE = "Ococoa/Ococoa-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -569,7 +563,6 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Ococoa/Ococoa-Prefix.pch";
 				INFOPLIST_FILE = "Ococoa/Ococoa-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -585,6 +578,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Ococoa/Ococoa-Prefix.pch";
+				GCC_THUMB_SUPPORT = NO;
 				HEADER_SEARCH_PATHS = (
 					"\"$(SRCROOT)/OCMock 2.0.1/iOS\"",
 				);
@@ -613,6 +607,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Ococoa/Ococoa-Prefix.pch";
+				GCC_THUMB_SUPPORT = NO;
 				HEADER_SEARCH_PATHS = (
 					"\"$(SRCROOT)/OCMock 2.0.1/iOS\"",
 				);
