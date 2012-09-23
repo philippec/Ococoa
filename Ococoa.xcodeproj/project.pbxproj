@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2938520D160E88ED002BF0E5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2938520C160E88ED002BF0E5 /* CoreLocation.framework */; };
 		372F72C614D24F9300F77690 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 372F72C414D24F9300F77690 /* Localizable.strings */; };
 		372F72CE14D3A4D000F77690 /* cocoaheads.html in Resources */ = {isa = PBXBuildFile; fileRef = 372F72CC14D3A4D000F77690 /* cocoaheads.html */; };
 		37458459150C52A800A87BED /* AppIcon144.png in Resources */ = {isa = PBXBuildFile; fileRef = 37458458150C52A800A87BED /* AppIcon144.png */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2938520C160E88ED002BF0E5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		372F72C514D24F9300F77690 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		372F72CD14D3A4D000F77690 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = en; path = en.lproj/cocoaheads.html; sourceTree = "<group>"; };
 		37458458150C52A800A87BED /* AppIcon144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AppIcon144.png; path = images/AppIcon144.png; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2938520D160E88ED002BF0E5 /* CoreLocation.framework in Frameworks */,
 				375D3CDB149D30460098AFA4 /* UIKit.framework in Frameworks */,
 				375D3CDD149D30460098AFA4 /* Foundation.framework in Frameworks */,
 				375D3CDF149D30460098AFA4 /* CoreGraphics.framework in Frameworks */,
@@ -121,6 +124,7 @@
 		375D3CCB149D30460098AFA4 = {
 			isa = PBXGroup;
 			children = (
+				2938520C160E88ED002BF0E5 /* CoreLocation.framework */,
 				375D3CE0149D30460098AFA4 /* Ococoa */,
 				375D3D01149D30460098AFA4 /* OcocoaTests */,
 				37DD91A214C388F9007F2F95 /* Reachability */,
@@ -344,7 +348,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ ! -e \"OCocoa/OCPrivateInfo.m\" ]\nthen\necho '#warning Delete these lines and enter your UrbanAirship credentials below' > 'OCocoa/OCPrivateInfo.m'\necho 'const NSString *kUrbanAirshipAppKey = @\"Your UrbanAirship Application Key goes here\";' >> 'OCocoa/OCPrivateInfo.m'\necho 'const NSString *kUrbanAirshipAppSecret = @\"Your UrbanAirship Application Secret goes here\";' >> 'OCocoa/OCPrivateInfo.m'\necho 'const NSString *kServerString = @\"http://your.server.com/your/api?msg=%@&key=%@\";' >> 'OCocoa/OCPrivateInfo.m'\nfi";
+			shellScript = "if [ ! -e \"OCocoa/OCPrivateInfo.m\" ]\nthen\necho '#import \"OCPrivateInfo.h\"' > 'OCocoa/OCPrivateInfo.m'\necho '#warning Delete these lines and enter your UrbanAirship credentials below' >> 'OCocoa/OCPrivateInfo.m'\necho 'const NSString *kUrbanAirshipAppKey = @\"Your UrbanAirship Application Key goes here\";' >> 'OCocoa/OCPrivateInfo.m'\necho 'const NSString *kUrbanAirshipAppSecret = @\"Your UrbanAirship Application Secret goes here\";' >> 'OCocoa/OCPrivateInfo.m'\necho 'const NSString *kServerString = @\"http://your.server.com/your/api?msg=%@&key=%@\";' >> 'OCocoa/OCPrivateInfo.m'\necho 'const NSString *kLocationValidatedUsername = @\"yourspecialusername\";' >> 'OCocoa/OCPrivateInfo.m'\necho 'const NSString *kLocationValidatedPassword = @\"yourspecialpassword\";' >> 'OCocoa/OCPrivateInfo.m'\necho 'const CLLocationDegrees kDoorbellLocationLatitude = 45.250111;' >> 'OCocoa/OCPrivateInfo.m'\necho 'const CLLocationDegrees kDoorbellLocationLongitude = -75.123456;' >> 'OCocoa/OCPrivateInfo.m'\n\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
 @class OCDoorbell;
 
@@ -18,7 +19,7 @@ typedef enum
     OCStatus_networkPageLoaded,
 } OCPageLoadStatus;
 
-@interface OCViewController : UIViewController <UIWebViewDelegate>
+@interface OCViewController : UIViewController <UIWebViewDelegate, CLLocationManagerDelegate>
 
 @property (strong, nonatomic) OCDoorbell *doorbell;
 @property (strong, nonatomic) UINavigationBar *navBar;

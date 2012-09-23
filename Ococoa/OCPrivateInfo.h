@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
 
 extern NSString *kUrbanAirshipAppKey;
 extern NSString *kUrbanAirshipAppSecret;
 extern NSString *kServerString;
+
+// related to the proximity feature
+extern NSString *kLocationValidatedUsername;
+extern NSString *kLocationValidatedPassword;
+extern const CLLocationDegrees kDoorbellLocationLongitude;
+extern const CLLocationDegrees kDoorbellLocationLatitude;
