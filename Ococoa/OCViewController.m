@@ -79,9 +79,10 @@
 
 #pragma mark - View lifecycle
 
-- (void)configureLocationManager {
+- (void)configureLocationManager
+{
     self.locationManager = [[CLLocationManager alloc] init];
-    self.locationManager.purpose = NSLocalizedString(@"This app uses your location to bypass the requirement to enter a username and password if you are near the front door.", nil);
+    self.locationManager.purpose = NSLocalizedString(@"Ococoa uses your location to bypass the requirement to enter a username and password if you are near the front door.", nil);
     self.locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
     self.locationManager.delegate = self;
     [self.locationManager startUpdatingLocation];

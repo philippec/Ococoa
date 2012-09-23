@@ -28,7 +28,8 @@
 
 -(void)ring:(CLLocation*)userLocation
 {
-    if (userLocation) {
+    if (userLocation)
+    {
         // feature that allows the username/password step to be skipped if user location is
         // close enough to the physical doorbell... if any step fails (quality of location, etc)
         // the user is silently routed to the normal dialog
@@ -36,7 +37,8 @@
                                                                   longitude:kDoorbellLocationLongitude];
         CLLocationDistance distance = [doorbellLocation distanceFromLocation:userLocation];
         
-        if (distance < 150) {
+        if (distance < 150)
+        {
             _name = kLocationValidatedUsername;
             _password = kLocationValidatedPassword;
             [NSThread detachNewThreadSelector:@selector(callServer:) toTarget:self withObject:self];
