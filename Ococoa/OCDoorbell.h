@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
 
 @interface OCDoorbell : NSObject <UIAlertViewDelegate>
 {
@@ -19,6 +20,6 @@
 
 @property (strong, nonatomic) UIAlertView *alertView;
 
--(void)ring;
+-(void)ring:(CLLocation*)userLocation;
 
 @end

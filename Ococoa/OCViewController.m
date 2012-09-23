@@ -11,6 +11,7 @@
 #import "Reachability.h"
 
 @interface OCViewController()
+@property (strong, nonatomic) CLLocationManager *locationManager;
 @property (strong, nonatomic) NSTimer *pageReloadTimer;
 - (void)loadInitialWebPage:(id)sender;
 - (void)loadBasicWebPage:(NSString*)pageContent withMeeting:(NSString*)meetingInfo withConnectivity:(NSString*)connInfo;
@@ -75,7 +76,17 @@
     }
 }
 
+
 #pragma mark - View lifecycle
+
+- (void)configureLocationManager {
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.purpose = NSLocalizedString(@"This app uses your location to bypass the requirement to enter a username and password if you are near the front door.", nil);
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
+    self.locationManager.delegate = self;
+    [self.locationManager startUpdatingLocation];
+    NSLog(@"start updating location");
+}
 
 - (void)viewDidLoad
 {
@@ -83,6 +94,8 @@
     
     [super viewDidLoad];
 
+    [self configureLocationManager];
+    
     self.doorbell = [[OCDoorbell alloc] init];
 
     CGRect baseRect = self.view.frame;
@@ -131,6 +144,9 @@
     [super viewDidUnload];
     [self stopPageReloadTimer];
     self.webView = nil;
+    
+    [self.locationManager stopUpdatingLocation];
+    self.locationManager = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -371,7 +387,8 @@
 
 - (IBAction)ringDoorbell:(id)sender
 {
-    [self.doorbell ring];
+    // send any location that we may have
+    [self.doorbell ring:self.locationManager.location];
 }
 
 @end
