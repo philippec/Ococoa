@@ -11,5 +11,14 @@ handlers:
 - url: /static
   static_dir: static
 
+- url: /passes
+  static_dir: passes
+  mime_type:
+    application/vnd.apple.pkpass
+
+- url: /passbook.*
+  script: passbook.py
+  secure: always
+
 - url: .*
   script: main.py
