@@ -3,3 +3,7 @@ server/index.yaml
 server/ococoa-push/PrivateInfo.py
 server/ococoa-push/static/test.html
 *.pyc
+*.cer
+*.certSigningRequest
+Passbook/signpass
+*.pkpass
