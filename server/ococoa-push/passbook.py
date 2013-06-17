@@ -32,6 +32,7 @@ class RegisteredDevice(db.Model):
     passTypeIdentifier = db.StringProperty()
     serialNumber = db.StringProperty()
     pushToken = db.StringProperty()
+    date = db.DateTimeProperty(auto_now_add=True)
 
 class LogHandler(webapp.RequestHandler):
     def get(self):
@@ -70,6 +71,17 @@ class DeviceHandler(webapp.RequestHandler):
         args = json.loads(self.request.body)
         pushToken = args['pushToken']
         logging.info("pushToken: " + pushToken)
+        # Remember this device in our database
+        device = RegisteredDevice()
+        device.deviceLibraryIdentifier = deviceLibraryIdentifier
+        device.passTypeIdentifier = passTypeIdentifier
+        device.serialNumber = serialNumber
+        device.pushToken = pushToken
+        device.put()
+        # Register for push notifications
+        airship = urbanairship.Airship(AppKey(),AppMasterSecret())
+        airship.register(pushToken)
+
         self.response.set_status(201)
         # If the serial number is already registered for this device, return HTTP status 200. 
         # If registration succeeds, return HTTP status 201.
@@ -106,6 +118,16 @@ class DeviceHandler(webapp.RequestHandler):
         logging.info("deviceLibraryIdentifier: " + deviceLibraryIdentifier)
         logging.info("passTypeIdentifier: " + passTypeIdentifier)
         logging.info("serialNumber: " + serialNumber)
+        
+        airship = urbanairship.Airship(AppKey(),AppMasterSecret())
+        devices = RegisteredDevice().all().filter('deviceLibraryIdentifier = ', deviceLibraryIdentifier)
+        results = devices.fetch(1)
+        for result in results:
+            # Remove the device from the push notifications
+            airship.deregister(result.pushToken)
+            # Remove the device from our database
+            result.delete()
+        
         self.response.set_status(200)
         # If disassociation succeeds, return HTTP status 200.
         # If the request is not authorized, return HTTP status 401. 
@@ -120,9 +142,9 @@ class PassesHandler(webapp.RequestHandler):
             authorizationToken = authorizationHeader[len("ApplePass "):]
         except:
             logging.info("auth failed, key not found")
-        if authorizationToken is "4FC7A0A6-C5F1-4CDC-850E-0B2514383CC8":
+        if authorizationToken == "4FC7A0A6-C5F1-4CDC-850E-0B2514383CC8":
             pass
-        else
+        else:
             if authorizationToken is None:
                 logging.info("Empty authorizationToken")
             else:
