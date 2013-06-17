@@ -79,7 +79,7 @@ class DeviceHandler(webapp.RequestHandler):
         device.pushToken = pushToken
         device.put()
         # Register for push notifications
-        airship = urbanairship.Airship(AppKey(),AppMasterSecret())
+        airship = urbanairship.Airship(PassAppKey(), PassAppMasterSecret())
         airship.register(pushToken)
 
         self.response.set_status(201)
@@ -119,7 +119,7 @@ class DeviceHandler(webapp.RequestHandler):
         logging.info("passTypeIdentifier: " + passTypeIdentifier)
         logging.info("serialNumber: " + serialNumber)
         
-        airship = urbanairship.Airship(AppKey(),AppMasterSecret())
+        airship = urbanairship.Airship(PassAppKey(), PassAppMasterSecret())
         devices = RegisteredDevice().all().filter('deviceLibraryIdentifier = ', deviceLibraryIdentifier)
         results = devices.fetch(1)
         for result in results:

@@ -2,6 +2,8 @@
 
 kAppKey = 'urban_airship_app_key'
 kAppMasterSec = 'urban_airship_master_key'
+kPassAppKey = 'urban_airship_passbook_app_key'
+kPassAppMasterSec = 'urban_airship_passbook_master_key'
 api_keys = ["secret_api_key"]
 
 def AppKey():
@@ -9,6 +11,12 @@ def AppKey():
 
 def AppMasterSecret():
     return kAppMasterSec
+
+def PassAppKey():
+    return kPassAppKey
+
+def PassAppMasterSecret():
+    return kPassAppMasterSec
 
 def ApiKeys():
     return api_keys

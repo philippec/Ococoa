@@ -1,38 +1,84 @@
 {
   "formatVersion" : 1,
-  "passTypeIdentifier" : "pass.com.casgrain.simple-coupon",
+  "passTypeIdentifier" : "pass.org.cocoaheads.ottawa-gatineau",
   "serialNumber" : "E5982H-I2",
   "teamIdentifier" : "V7QY36F2JR",
   "webServiceURL" : "https://ococoa-push.appspot.com/passbook/",
   "authenticationToken" : "4FC7A0A6-C5F1-4CDC-850E-0B2514383CC8",
+  "relevantDate" : "2013-07-11T19:00-21:00",
   "locations" : [
     {
-      "longitude" : -122.3748889,
-      "latitude" : 37.6189722
-    },
-    {
-      "longitude" : -122.03118,
-      "latitude" : 37.33182
+      "longitude" : -75.695093,
+      "latitude"  :  45.433289
     }
   ],
-  "organizationName" : "Xample CS",
-  "logoText" : "Example Candy Store",
-  "description" : "Coupon for a free lollipop at Example Candy Store",
+  "organizationName" : "Cocoaheads Ottawa-Gatineau",
+  "description" : "July 2013",
   "foregroundColor" : "rgb(255, 255, 255)",
-  "backgroundColor" : "rgb(206, 140, 53)",
-  "coupon" : {
+  "backgroundColor" : "rgb(60, 65, 76)",
+  "eventTicket" : {
+    "headerFields" : [
+      {
+        "key" : "meetingHeader",
+        "label" : "COCOAHEADS",
+        "value" : "July 11th",
+        "changeMessage" : "Next meeting: %@"
+      }
+    ],
     "primaryFields" : [
       {
-        "key" : "offer",
-        "label" : "Free Lollipop",
-        "value" : "On June 14th"
+        "key" : "event",
+        "label" : "COCOAHEADS OTTAWA-GATINEAU",
+        "value" : "July Meeting"
+      }
+    ],
+	"secondaryFields" : [
+      {
+        "key" : "loc",
+        "label" : "LOCATION",
+        "value" : "To be Announced",
+        "changeMessage" : "Location: %@"
+      },
+      {
+        "key" : "meetingTime",
+        "label" : "THURSDAY JULY 11th",
+        "value" : "19:00-21:00",
+        "changeMessage" : "Meeting time: %@"
+      }
+    ],
+	"auxiliaryFields" : [
+      {
+        "key" : "presenter1",
+        "label" : "Philippe",
+        "value" : "Casgrain",
+        "changeMessage" : "New speaker: %@"
       }
     ],
     "backFields" : [
       {
-        "key" : "terms",
-        "label" : "TERMS AND CONDITIONS",
-        "value" : "Generico offers this pass, including all information, software, products and services available from this pass or offered as part of or in conjunction with this pass (the \"pass\"), to you, the user, conditioned upon your acceptance of all of the terms, conditions, policies and notices stated here. Generico reserves the right to make changes to these Terms and Conditions immediately by posting the changed Terms and Conditions in this location.\n\nUse the pass at your own risk. This pass is provided to you \"as is,\" without warranty of any kind either express or implied. Neither Generico nor its employees, agents, third-party information providers, merchants, licensors or the like warrant that the pass or its operation will be accurate, reliable, uninterrupted or error-free. No agent or representative has the authority to create any warranty regarding the pass on behalf of Generico. Generico reserves the right to change or discontinue at any time any aspect or feature of the pass."
+        "key" : "datetime",
+        "label" : "WHEN",
+        "value" : "Thursday, July 11th, 2013 from 19:00 to 21:00"
+      },
+      {
+        "key" : "location-detail",
+        "label" : "WHERE",
+        "value" : "Location TBA"
+      },
+      {
+        "key" : "topics",
+        "label" : "TOPICS",
+        "value" : "WWDC Recap, by all attendees.\n\nIntroducing PassKit, by Philippe C."
+      },
+      {
+        "key" : "website",
+        "label" : "WEBSITE",
+        "value" : "http://cocoaheads.org/ca/OttawaGatineauOntario/"
+      },
+      {
+        "key" : "mailingList",
+        "label" : "MAILING LIST",
+        "value" : "http://groups.google.com/group/ococoa"
       }
     ]
   }
