@@ -48,10 +48,10 @@
     ],
 	"auxiliaryFields" : [
       {
-        "key" : "presenter1",
-        "label" : "Philippe",
-        "value" : "Casgrain",
-        "changeMessage" : "New speaker: %@"
+        "key" : "topic1",
+        "label" : "Philippe C.",
+        "value" : "PassBook 101",
+        "changeMessage" : "New topic: %@"
       }
     ],
     "backFields" : [
@@ -79,6 +79,11 @@
         "key" : "mailingList",
         "label" : "MAILING LIST",
         "value" : "http://groups.google.com/group/ococoa"
+      },
+      {
+        "key" : "organizer",
+        "label" : "ORGANIZER",
+        "value" : "Philippe Casgrain, philippe@casgrain.com"
       }
     ]
   }
