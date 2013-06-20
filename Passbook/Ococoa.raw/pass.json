@@ -52,6 +52,12 @@
         "label" : "Philippe C.",
         "value" : "PassBook 101",
         "changeMessage" : "New topic: %@"
+      },
+      {
+        "key" : "topic2",
+        "label" : "Josh S.",
+        "value" : "Hello, SpriteKit!",
+        "changeMessage" : "New topic: %@"
       }
     ],
     "backFields" : [
@@ -68,7 +74,7 @@
       {
         "key" : "topics",
         "label" : "TOPICS",
-        "value" : "WWDC Recap, by all attendees.\n\nIntroducing PassKit, by Philippe C."
+        "value" : "WWDC Recap, by all attendees.\n\nIntroducing PassKit, by Philippe C.\n\nHello, SpriteKit! by Josh S."
       },
       {
         "key" : "website",
