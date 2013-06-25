@@ -8,6 +8,7 @@
 
 #import "OCViewController.h"
 #import "OCDoorbell.h"
+#import "OCPassbook.h"
 #import "Reachability.h"
 
 @interface OCViewController()
@@ -138,6 +139,8 @@
     self.spinner.center = self.webView.center;
     self.spinner.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
     [self.spinner startAnimating];
+
+    self.passbook = [[OCPassbook alloc] init];
 }
 
 - (void)viewDidUnload
@@ -367,6 +370,29 @@
     self.pageLoadStatus = nextStatus;
 }
 
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
+{
+    if (navigationType != UIWebViewNavigationTypeLinkClicked)
+    {
+        return YES;
+    }
+
+    // User tapped a link, check if we should handle it
+    if (![request.URL.scheme isEqualToString:@"ococoa"])
+    {
+        return YES;
+    }
+
+    // Link is ours, decide what to do
+    if ([request.URL.host isEqualToString:@"add-pass"])
+    {
+        if ([self.passbook passbookAvailable])
+            [self addPassToPassbook];
+    }
+
+    return NO;
+}
+
 #pragma mark Page Reload timer
 
 - (void)startPageReloadTimer
@@ -390,6 +416,13 @@
 {
     // send any location that we may have
     [self.doorbell ring:self.locationManager.location];
+}
+
+#pragma mark Passbook
+
+- (void)addPassToPassbook
+{
+    
 }
 
 @end

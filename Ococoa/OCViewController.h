@@ -10,6 +10,7 @@
 #import <CoreLocation/CoreLocation.h>
 
 @class OCDoorbell;
+@class OCPassbook;
 
 typedef enum
 {
@@ -21,12 +22,13 @@ typedef enum
 
 @interface OCViewController : UIViewController <UIWebViewDelegate, CLLocationManagerDelegate>
 
-@property (strong, nonatomic) OCDoorbell *doorbell;
-@property (strong, nonatomic) UINavigationBar *navBar;
-@property (strong, nonatomic) UIWebView *webView;
-@property (strong, nonatomic) UIActivityIndicatorView *spinner;
-@property (assign, nonatomic) OCPageLoadStatus pageLoadStatus;
-@property (assign, nonatomic) BOOL debug;
+@property (strong) OCDoorbell *doorbell;
+@property (strong) OCPassbook *passbook;
+@property (strong) UINavigationBar *navBar;
+@property (strong) UIWebView *webView;
+@property (strong) UIActivityIndicatorView *spinner;
+@property (assign) OCPageLoadStatus pageLoadStatus;
+@property (assign) BOOL debug;
 
 - (void)startPageReloadTimer;
 - (void)stopPageReloadTimer;
