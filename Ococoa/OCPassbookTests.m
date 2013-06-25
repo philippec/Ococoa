@@ -34,7 +34,20 @@
 {
     STAssertNoThrow(self.passbook = [[OCPassbook alloc] init], @"");
     STAssertNotNil(self.passbook, @"");
-    STAssertFalse([self.passbook passbookAvailable], @"");
+    STAssertNotNil(self.passbook.alertView, @"");
+}
+
+- (void)testsAvailable
+{
+    id mockAlert = [OCMockObject mockForClass:[UIAlertView class]];
+    [[mockAlert expect] show];
+
+    STAssertNoThrow(self.passbook.alertView = mockAlert, @"");
+
+    BOOL result;
+    STAssertNoThrow(result = [self.passbook passbookAvailable], @"");
+    STAssertFalse(result, @"");
+    STAssertNoThrow([mockAlert verify], @"");
 }
 
 @end

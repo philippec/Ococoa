@@ -10,8 +10,28 @@
 
 @implementation OCPassbook
 
+- (id)init
+{
+    if (self = [super init])
+    {
+        self.alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Sorry", nil)
+                                                    message:NSLocalizedString(@"Passbook requires iOS 6 or later.", nil)
+                                                   delegate:nil
+                                          cancelButtonTitle:NSLocalizedString(@"OK", nil)
+                                          otherButtonTitles:nil];
+    }
+
+    return self;
+}
+
+- (void)dealloc
+{
+    self.alertView = nil;
+}
+
 - (BOOL)passbookAvailable
 {
+    [self.alertView show];
     return NO;
 }
 

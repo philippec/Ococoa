@@ -66,7 +66,7 @@
     STAssertNoThrow([self.mockPassbook verify], @"");
 }
 
-- (void)testTapLink
+- (void)testTapLinkNoPassbook
 {
     BOOL notAvailable = NO;
     [[[self.mockPassbook expect] andReturnValue:OCMOCK_VALUE(notAvailable)] passbookAvailable];
