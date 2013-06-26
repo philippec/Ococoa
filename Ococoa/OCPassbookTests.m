@@ -37,16 +37,36 @@
     STAssertNotNil(self.passbook.alertView, @"");
 }
 
-- (void)testsAvailable
+- (void)testPassbookNotAvailable
 {
     id mockAlert = [OCMockObject mockForClass:[UIAlertView class]];
-    [[mockAlert expect] show];
-
     STAssertNoThrow(self.passbook.alertView = mockAlert, @"");
+
+    [[mockAlert expect] setTitle:[OCMArg isNotNil]];
+    [[mockAlert expect] setMessage:[OCMArg isNotNil]];
+
+    STAssertNoThrow(self.passbook.passbookAvailable = NO, @"");
+    STAssertNoThrow([mockAlert verify], @"");
+
+    [[mockAlert expect] show];
 
     BOOL result;
     STAssertNoThrow(result = [self.passbook passbookAvailable], @"");
     STAssertFalse(result, @"");
+    STAssertNoThrow([mockAlert verify], @"");
+}
+
+- (void)testPassbookAvailable
+{
+    id mockAlert = [OCMockObject mockForClass:[UIAlertView class]];
+    STAssertNoThrow(self.passbook.alertView = mockAlert, @"");
+
+    STAssertNoThrow(self.passbook.passbookAvailable = YES, @"");
+    STAssertNoThrow([mockAlert verify], @"");
+
+    BOOL result;
+    STAssertNoThrow(result = [self.passbook passbookAvailable], @"");
+    STAssertTrue(result, @"");
     STAssertNoThrow([mockAlert verify], @"");
 }
 

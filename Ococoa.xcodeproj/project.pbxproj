@@ -32,6 +32,7 @@
 		375D3CFD149D30460098AFA4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 375D3CDA149D30460098AFA4 /* UIKit.framework */; };
 		375D3CFE149D30460098AFA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 375D3CDC149D30460098AFA4 /* Foundation.framework */; };
 		375D3D06149D30460098AFA4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 375D3D04149D30460098AFA4 /* InfoPlist.strings */; };
+		376F4D26177A9B1A003522F3 /* JBContainedURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 376F4D25177A9B1A003522F3 /* JBContainedURLConnection.m */; };
 		3790A0CD15FBBDBA009DA097 /* OCDoorbellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3790A0CC15FBBDBA009DA097 /* OCDoorbellTests.m */; };
 		37A31AE1160F74AE00A531B2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2938520C160E88ED002BF0E5 /* CoreLocation.framework */; };
 		37AC635514AA192B003A2A25 /* OCDoorbell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AC635414AA192B003A2A25 /* OCDoorbell.m */; };
@@ -88,6 +89,8 @@
 		375D3CFB149D30460098AFA4 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		375D3D03149D30460098AFA4 /* OcocoaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OcocoaTests-Info.plist"; sourceTree = "<group>"; };
 		375D3D05149D30460098AFA4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		376F4D24177A9B1A003522F3 /* JBContainedURLConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JBContainedURLConnection.h; path = Ococoa/JBContainedURLConnection.h; sourceTree = "<group>"; };
+		376F4D25177A9B1A003522F3 /* JBContainedURLConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JBContainedURLConnection.m; path = Ococoa/JBContainedURLConnection.m; sourceTree = "<group>"; };
 		3790A0CC15FBBDBA009DA097 /* OCDoorbellTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCDoorbellTests.m; sourceTree = "<group>"; };
 		37AC635314AA192B003A2A25 /* OCDoorbell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCDoorbell.h; sourceTree = "<group>"; };
 		37AC635414AA192B003A2A25 /* OCDoorbell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCDoorbell.m; sourceTree = "<group>"; };
@@ -138,6 +141,7 @@
 			children = (
 				375D3CE0149D30460098AFA4 /* Ococoa */,
 				375D3D01149D30460098AFA4 /* OcocoaTests */,
+				376F4D23177A9B09003522F3 /* New Group */,
 				37DD91A214C388F9007F2F95 /* Reachability */,
 				375D3CD9149D30460098AFA4 /* Frameworks */,
 				375D3CD7149D30460098AFA4 /* Products */,
@@ -230,6 +234,15 @@
 				375D3D04149D30460098AFA4 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		376F4D23177A9B09003522F3 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				376F4D24177A9B1A003522F3 /* JBContainedURLConnection.h */,
+				376F4D25177A9B1A003522F3 /* JBContainedURLConnection.m */,
+			);
+			name = "New Group";
 			sourceTree = "<group>";
 		};
 		37DD91A214C388F9007F2F95 /* Reachability */ = {
@@ -381,6 +394,7 @@
 				37AC635514AA192B003A2A25 /* OCDoorbell.m in Sources */,
 				37DD91A614C38921007F2F95 /* Reachability.m in Sources */,
 				37026BC017791ABF006B5A71 /* OCPassbook.m in Sources */,
+				376F4D26177A9B1A003522F3 /* JBContainedURLConnection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

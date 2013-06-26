@@ -9,24 +9,26 @@
 #import "OCViewController.h"
 #import "OCDoorbell.h"
 #import "OCPassbook.h"
+#import "JBContainedURLConnection.h"
 #import "Reachability.h"
 
 @interface OCViewController()
-@property (strong, nonatomic) CLLocationManager *locationManager;
-@property (strong, nonatomic) NSTimer *pageReloadTimer;
+@property (strong) CLLocationManager *locationManager;
+@property (strong) NSTimer *pageReloadTimer;
+@property (assign) BOOL addingPass;
+@property (strong) JBContainedURLConnection *connection;
 - (void)loadInitialWebPage:(id)sender;
 - (void)loadBasicWebPage:(NSString*)pageContent withMeeting:(NSString*)meetingInfo withConnectivity:(NSString*)connInfo;
 @end
 
 @implementation OCViewController
 
-@synthesize doorbell = _doorbell;
-@synthesize navBar = _navBar;
-@synthesize webView = _webView;
-@synthesize spinner = _spinner;
-@synthesize pageLoadStatus = _pageLoadStatus;
-@synthesize debug = _debug;
-@synthesize pageReloadTimer = _pageReloadTimer;
+- (void)dealloc
+{
+    self.locationManager = nil;
+    self.pageReloadTimer = nil;
+    self.connection = nil;
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -87,7 +89,7 @@
     self.locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
     self.locationManager.delegate = self;
     [self.locationManager startUpdatingLocation];
-    NSLog(@"start updating location");
+    DebugLog(@"start updating location");
 }
 
 - (void)viewDidLoad
@@ -384,11 +386,8 @@
     }
 
     // Link is ours, decide what to do
-    if ([request.URL.host isEqualToString:@"add-pass"])
-    {
-        if ([self.passbook passbookAvailable])
-            [self addPassToPassbook];
-    }
+    if ([self.passbook passbookAvailable])
+        [self addPassAtURL:request.URL];
 
     return NO;
 }
@@ -420,9 +419,28 @@
 
 #pragma mark Passbook
 
-- (void)addPassToPassbook
+- (void)addPassAtURL:(NSURL *)url
 {
-    
+    if (self.addingPass)
+        return;
+
+    self.addingPass = YES;
+    NSURL *actualURL = [[NSURL alloc] initWithScheme:@"https" host:url.host path:url.path];
+
+    JBContainedURLConnectionCompletionHandler handler = ^(JBContainedURLConnection *connection, NSError *error, NSURL *url, NSDictionary *userInfo, NSData *data) {
+
+        if (nil != error)
+        {
+            // Handle the error.
+            // A nil error indicates success!
+            DebugLog(@"Error! %@", [error userInfo]);
+            return;
+        }
+        [self.passbook presentPassWithData:data fromViewController:self];
+        self.addingPass = NO;
+    };
+
+    self.connection = [[JBContainedURLConnection alloc] initWithURL:actualURL userInfo:nil completionHandler:handler];
 }
 
 @end

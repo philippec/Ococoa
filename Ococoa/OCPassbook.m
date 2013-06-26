@@ -18,8 +18,17 @@
 {
     if (self = [super init])
     {
-        self.passbookAvailableInternal = [PKPass class] != nil;
+        self.passbookAvailableInternal = NO;
+        if ([PKPass class] != nil)
+        {
+            self.passbookAvailableInternal = [PKPassLibrary isPassLibraryAvailable];
+        }
         self.passbookAvailable = self.passbookAvailableInternal;
+        self.alertView = [[UIAlertView alloc] initWithTitle:@"<don't translate>"
+                                                    message:@"<don't translate"
+                                                   delegate:nil
+                                          cancelButtonTitle:NSLocalizedString(@"OK", nil)
+                                          otherButtonTitles:nil];
     }
 
     return self;
@@ -46,17 +55,30 @@
 
 - (void)setPassbookAvailable:(BOOL)passbookAvailable
 {
-    if (self.passbookAvailableInternal)
+    self.passbookAvailableInternal = passbookAvailable;
+    if (!self.passbookAvailableInternal)
     {
-        self.pass = [[PKPass alloc] initWithData:[NSData data] error:nil];
+        self.alertView.title = NSLocalizedString(@"Sorry", nil);
+        self.alertView.message = NSLocalizedString(@"Passbook requires iOS 6 or later on iPhone or iPod Touch.", nil);
+    }
+}
+
+- (void)presentPassWithData:(NSData *)passData fromViewController:(UIViewController *)viewController
+{
+    self.pass = [[PKPass alloc] initWithData:passData error:nil];
+    PKPassLibrary *passLibrary = [[PKPassLibrary alloc] init];
+    if ([passLibrary containsPass:self.pass])
+    {
+        self.alertView.title = NSLocalizedString(@"Thank you", nil);
+        self.alertView.message = NSLocalizedString(@"This pass is already in your library.", nil);
+        [self.alertView show];
     }
     else
     {
-        self.alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Sorry", nil)
-                                                    message:NSLocalizedString(@"Passbook requires iOS 6 or later.", nil)
-                                                   delegate:nil
-                                          cancelButtonTitle:NSLocalizedString(@"OK", nil)
-                                          otherButtonTitles:nil];
+        PKAddPassesViewController *addViewController = [[PKAddPassesViewController alloc] initWithPass:self.pass];
+        [viewController presentViewController:addViewController animated:YES completion:^{
+            DebugLog(@"PKAddPassesViewController completion");
+        }];
     }
 }
 

@@ -14,4 +14,6 @@
 @property (strong) UIAlertView *alertView;
 @property (assign) BOOL passbookAvailable;
 
+- (void)presentPassWithData:(NSData *)passData fromViewController:(UIViewController *)viewController;
+
 @end
