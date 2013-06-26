@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <PassKit/PassKit.h>
 
 @interface OCPassbook : NSObject
+@property (strong) PKPass *pass;
 @property (strong) UIAlertView *alertView;
-
-- (BOOL)passbookAvailable;
+@property (assign) BOOL passbookAvailable;
 
 @end

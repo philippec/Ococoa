@@ -10,6 +10,7 @@
 		2938520D160E88ED002BF0E5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2938520C160E88ED002BF0E5 /* CoreLocation.framework */; };
 		37026BC017791ABF006B5A71 /* OCPassbook.m in Sources */ = {isa = PBXBuildFile; fileRef = 37026BBF17791ABF006B5A71 /* OCPassbook.m */; };
 		37026BC217791B09006B5A71 /* OCPassbookTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37026BC117791B09006B5A71 /* OCPassbookTests.m */; };
+		37026BC417792695006B5A71 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37026BC317792695006B5A71 /* PassKit.framework */; };
 		371EA606177862CC00183602 /* OCViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 371EA605177862CC00183602 /* OCViewControllerTests.m */; };
 		372F72C614D24F9300F77690 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 372F72C414D24F9300F77690 /* Localizable.strings */; };
 		372F72CE14D3A4D000F77690 /* cocoaheads.html in Resources */ = {isa = PBXBuildFile; fileRef = 372F72CC14D3A4D000F77690 /* cocoaheads.html */; };
@@ -59,6 +60,7 @@
 		37026BBE17791ABF006B5A71 /* OCPassbook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCPassbook.h; sourceTree = "<group>"; };
 		37026BBF17791ABF006B5A71 /* OCPassbook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCPassbook.m; sourceTree = "<group>"; };
 		37026BC117791B09006B5A71 /* OCPassbookTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCPassbookTests.m; sourceTree = "<group>"; };
+		37026BC317792695006B5A71 /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
 		371EA605177862CC00183602 /* OCViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCViewControllerTests.m; sourceTree = "<group>"; };
 		372F72C514D24F9300F77690 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		372F72CD14D3A4D000F77690 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = en; path = en.lproj/cocoaheads.html; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				375D3CDD149D30460098AFA4 /* Foundation.framework in Frameworks */,
 				375D3CDF149D30460098AFA4 /* CoreGraphics.framework in Frameworks */,
 				37DD91C714C38F03007F2F95 /* SystemConfiguration.framework in Frameworks */,
+				37026BC417792695006B5A71 /* PassKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +156,7 @@
 		375D3CD9149D30460098AFA4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				37026BC317792695006B5A71 /* PassKit.framework */,
 				2938520C160E88ED002BF0E5 /* CoreLocation.framework */,
 				37DD91C614C38F03007F2F95 /* SystemConfiguration.framework */,
 				375D3CDA149D30460098AFA4 /* UIKit.framework */,
