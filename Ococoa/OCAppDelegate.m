@@ -130,6 +130,8 @@
      If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
      */
     [self.viewController stopPageReloadTimer];
+    // Make sure we're not showing a badge icon
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
