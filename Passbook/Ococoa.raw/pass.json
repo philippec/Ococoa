@@ -5,11 +5,11 @@
   "teamIdentifier" : "V7QY36F2JR",
   "webServiceURL" : "https://ococoa-push.appspot.com/passbook/",
   "authenticationToken" : "4FC7A0A6-C5F1-4CDC-850E-0B2514383CC8",
-  "relevantDate" : "2013-07-11T19:00-21:00",
+  "relevantDate" : "2013-07-11T19:00-04:00",
   "locations" : [
     {
-      "longitude" : -75.695093,
-      "latitude"  :  45.433289
+      "latitude"  :  45.428831,
+      "longitude" : -75.832486
     }
   ],
   "organizationName" : "Cocoaheads Ottawa-Gatineau",
@@ -22,7 +22,6 @@
         "key" : "meetingHeader",
         "label" : "COCOAHEADS",
         "value" : "July 11th",
-        "changeMessage" : "Next meeting: %@"
       }
     ],
     "primaryFields" : [
@@ -36,14 +35,13 @@
       {
         "key" : "loc",
         "label" : "LOCATION",
-        "value" : "To be Announced",
+        "value" : "LightSpeed Ottawa",
         "changeMessage" : "Location: %@"
       },
       {
         "key" : "meetingTime",
         "label" : "THURSDAY JULY 11th",
         "value" : "19:00-21:00",
-        "changeMessage" : "Meeting time: %@"
       }
     ],
 	"auxiliaryFields" : [
@@ -51,13 +49,11 @@
         "key" : "topic1",
         "label" : "Philippe C.",
         "value" : "PassBook 101",
-        "changeMessage" : "New topic: %@"
       },
       {
         "key" : "topic2",
         "label" : "Josh S.",
         "value" : "Hello, SpriteKit!",
-        "changeMessage" : "New topic: %@"
       }
     ],
     "backFields" : [
@@ -69,7 +65,7 @@
       {
         "key" : "location-detail",
         "label" : "WHERE",
-        "value" : "Location TBA"
+        "value" : "LightSpeed, 148 Dalhousie, Ottawa, K1N 7C4"
       },
       {
         "key" : "topics",
