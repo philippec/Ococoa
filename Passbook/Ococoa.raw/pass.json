@@ -36,7 +36,6 @@
         "key" : "loc",
         "label" : "LOCATION",
         "value" : "LightSpeed Ottawa",
-        "changeMessage" : "Location: %@"
       },
       {
         "key" : "meetingTime",
@@ -48,7 +47,7 @@
       {
         "key" : "topic1",
         "label" : "Philippe C.",
-        "value" : "PassBook 101",
+        "value" : "Passbook 101",
       },
       {
         "key" : "topic2",
