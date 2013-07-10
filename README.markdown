@@ -46,7 +46,7 @@ How-to-use
     * You can create a free UrbanAirship account, create a new app, and use those credentials
     * UrbanAirship provides 1M free push notifications a month, which is fine for a local user group
     * You will also need a web server to talk to UrbanAirship using their API
-    * Such a server exists, and its source code may be integrated in this repository
+    * This source code contains such a web server, written in python for Google App Engine
 
 Notes
 -----
