@@ -5,7 +5,7 @@
   "teamIdentifier" : "V7QY36F2JR",
   "webServiceURL" : "https://ococoa-push.appspot.com/passbook/",
   "authenticationToken" : "4FC7A0A6-C5F1-4CDC-850E-0B2514383CC8",
-  "relevantDate" : "2013-07-11T19:00-04:00",
+  "relevantDate" : "2013-08-08T19:00-04:00",
   "locations" : [
     {
       "latitude"  :  45.43331333,
@@ -13,7 +13,7 @@
     }
   ],
   "organizationName" : "Cocoaheads Ottawa-Gatineau",
-  "description" : "July 2013",
+  "description" : "August 2013",
   "foregroundColor" : "rgb(255, 255, 255)",
   "backgroundColor" : "rgb(60, 65, 76)",
   "eventTicket" : {
@@ -21,14 +21,14 @@
       {
         "key" : "meetingHeader",
         "label" : "COCOAHEADS",
-        "value" : "July 11th",
+        "value" : "August 8th",
       }
     ],
     "primaryFields" : [
       {
         "key" : "event",
         "label" : "COCOAHEADS OTTAWA-GATINEAU",
-        "value" : "July Meeting"
+        "value" : "August Meeting"
       }
     ],
 	"secondaryFields" : [
@@ -39,27 +39,23 @@
       },
       {
         "key" : "meetingTime",
-        "label" : "THURSDAY JULY 11th",
+        "label" : "THURSDAY AUGUST 8th",
         "value" : "19:00-21:00",
       }
     ],
 	"auxiliaryFields" : [
       {
         "key" : "topic1",
-        "label" : "Philippe C.",
-        "value" : "Passbook 101",
-      },
-      {
-        "key" : "topic2",
-        "label" : "Josh S.",
-        "value" : "Hello, SpriteKit!",
+        "label" : "Raymond Camden",
+        "value" : "Integrating with Parse",
+        "changeMessage" : "New topic: %@"
       }
     ],
     "backFields" : [
       {
         "key" : "datetime",
         "label" : "WHEN",
-        "value" : "Thursday, July 11th, 2013 from 19:00 to 21:00"
+        "value" : "Thursday, August 8th, 2013 from 19:00 to 21:00"
       },
       {
         "key" : "location-detail",
@@ -68,8 +64,8 @@
       },
       {
         "key" : "topics",
-        "label" : "TOPICS",
-        "value" : "WWDC Recap, by all attendees.\n\nIntroducing PassKit, by Philippe C.\n\nHello, SpriteKit! by Josh S."
+        "label" : "INTEGRATING WITH PARSE.COM",
+        "value" : "Special guest Raymond Camden will show us how to integrate your app with Parse.com, a back-end cloud service. Raymond is a member of Adobe's Evangelists group, and you can find out more about him at http://www.raymondcamden.com/."
       },
       {
         "key" : "website",
