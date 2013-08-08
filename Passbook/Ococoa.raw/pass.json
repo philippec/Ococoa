@@ -47,7 +47,12 @@
       {
         "key" : "topic1",
         "label" : "Raymond Camden",
-        "value" : "Integrating with Parse",
+        "value" : "Integrating with Parse"
+      },
+      {
+        "key" : "topic2",
+        "label" : "Josh Svatek",
+        "value" : "Associated Objects",
         "changeMessage" : "New topic: %@"
       }
     ],
@@ -66,6 +71,11 @@
         "key" : "topics",
         "label" : "INTEGRATING WITH PARSE.COM",
         "value" : "Special guest Raymond Camden will show us how to integrate your app with Parse.com, a back-end cloud service. Raymond is a member of Adobe's Evangelists group, and you can find out more about him at http://www.raymondcamden.com/."
+      },
+      {
+        "key" : "additionaltopic",
+        "label" : "ASSOCIATED OBJECTS",
+        "value" : "Josh Svatek will take us on a whirlwind tour of Associated Objects in the Objective-C runtime."
       },
       {
         "key" : "website",
