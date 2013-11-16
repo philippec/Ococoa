@@ -5,7 +5,7 @@
   "teamIdentifier" : "V7QY36F2JR",
   "webServiceURL" : "https://ococoa-push.appspot.com/passbook/",
   "authenticationToken" : "4FC7A0A6-C5F1-4CDC-850E-0B2514383CC8",
-  "relevantDate" : "2013-08-08T19:00-04:00",
+  "relevantDate" : "2013-12-12T19:00-04:00",
   "locations" : [
     {
       "latitude"  :  45.43331333,
@@ -13,7 +13,7 @@
     }
   ],
   "organizationName" : "Cocoaheads Ottawa-Gatineau",
-  "description" : "August 2013",
+  "description" : "December 2013",
   "foregroundColor" : "rgb(255, 255, 255)",
   "backgroundColor" : "rgb(60, 65, 76)",
   "eventTicket" : {
@@ -21,14 +21,14 @@
       {
         "key" : "meetingHeader",
         "label" : "COCOAHEADS",
-        "value" : "August 8th",
+        "value" : "Dec. 12th",
       }
     ],
     "primaryFields" : [
       {
         "key" : "event",
         "label" : "COCOAHEADS OTTAWA-GATINEAU",
-        "value" : "August Meeting"
+        "value" : "December Meeting"
       }
     ],
 	"secondaryFields" : [
@@ -39,20 +39,25 @@
       },
       {
         "key" : "meetingTime",
-        "label" : "THURSDAY AUGUST 8th",
+        "label" : "THURSDAY DEC. 12th",
         "value" : "19:00-21:00",
       }
     ],
 	"auxiliaryFields" : [
       {
         "key" : "topic1",
-        "label" : "Raymond Camden",
-        "value" : "Integrating with Parse"
+        "label" : "Josh S.",
+        "value" : "Smooth lines in SK",
       },
       {
         "key" : "topic2",
-        "label" : "Josh Svatek",
-        "value" : "Associated Objects",
+        "label" : "Matt G.",
+        "value" : "GPUImage",
+      },
+      {
+        "key" : "topic3",
+        "label" : "Philippe G.",
+        "value" : "Objective-Cloud",
         "changeMessage" : "New topic: %@"
       }
     ],
@@ -60,7 +65,7 @@
       {
         "key" : "datetime",
         "label" : "WHEN",
-        "value" : "Thursday, August 8th, 2013 from 19:00 to 21:00"
+        "value" : "Thursday, December 12th, 2013 from 19:00 to 21:00"
       },
       {
         "key" : "location-detail",
@@ -68,14 +73,19 @@
         "value" : "LightSpeed, 148 Dalhousie, Ottawa, K1N 7C4"
       },
       {
-        "key" : "topics",
-        "label" : "INTEGRATING WITH PARSE.COM",
-        "value" : "Special guest Raymond Camden will show us how to integrate your app with Parse.com, a back-end cloud service. Raymond is a member of Adobe's Evangelists group, and you can find out more about him at http://www.raymondcamden.com/."
+        "key" : "topic1-detail",
+        "label" : "Josh Svatek",
+        "value" : "Smoothing lines, faking variable width lines using SpriteKit, performance issues with shape nodes and textures."
       },
       {
-        "key" : "additionaltopic",
-        "label" : "ASSOCIATED OBJECTS",
-        "value" : "Josh Svatek will take us on a whirlwind tour of Associated Objects in the Objective-C runtime."
+        "key" : "topic2-detail",
+        "label" : "Matt Garden",
+        "value" : "Learn about GPUImage, a third-party image filtering library for iOS and OS X. We'll compare the framework to Apple's CoreImage and demonstrate basic usage in an iOS app."
+      },
+      {
+        "key" : "topic3-detail",
+        "label" : "Philippe Guitard",
+        "value" : "An overview of Objective-Cloud (http://objective-cloud.com), which recently entered its beta phase."
       },
       {
         "key" : "website",
@@ -86,6 +96,16 @@
         "key" : "mailingList",
         "label" : "MAILING LIST",
         "value" : "http://groups.google.com/group/ococoa"
+      },
+      {
+        "key" : "backgroundPicture",
+        "label" : "BACKGROUND PICTURE",
+        "value" : "Ottawa City Hall from Confederation Park, by d.neuman http://www.flickr.com/photos/dneuman/"
+      },
+      {
+        "key" : "suggestPicture",
+        "label" : "SUGGEST YOUR PICTURE",
+        "value" : "Email the organizer with your picture and license. Dimensions are exactly 360 x 440. Picture will be blurred automatically by Passbook."
       },
       {
         "key" : "organizer",
