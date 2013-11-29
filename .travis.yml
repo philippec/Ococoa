@@ -1,0 +1,3 @@
+language: objective-c
+xcode_project: Ococoa.xcodeproj
+xcode_scheme: Ococoa
