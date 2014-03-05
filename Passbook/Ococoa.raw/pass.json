@@ -5,7 +5,7 @@
   "teamIdentifier" : "V7QY36F2JR",
   "webServiceURL" : "https://ococoa-push.appspot.com/passbook/",
   "authenticationToken" : "4FC7A0A6-C5F1-4CDC-850E-0B2514383CC8",
-  "relevantDate" : "2014-01-09T19:00-05:00",
+  "relevantDate" : "2014-08-14T19:00-05:00",
   "locations" : [
     {
       "latitude"  :  45.43331333,
@@ -13,7 +13,7 @@
     }
   ],
   "organizationName" : "Cocoaheads Ottawa-Gatineau",
-  "description" : "February 2014",
+  "description" : "August 2014",
   "foregroundColor" : "rgb(255, 255, 255)",
   "backgroundColor" : "rgb(60, 65, 76)",
   "eventTicket" : {
@@ -21,33 +21,33 @@
       {
         "key" : "meetingHeader",
         "label" : "COCOAHEADS",
-        "value" : "Feb. 13th",
+        "value" : "August 14th"
       }
     ],
     "primaryFields" : [
       {
         "key" : "event",
         "label" : "COCOAHEADS OTTAWA-GATINEAU",
-        "value" : "February Meeting"
+        "value" : "August Meeting"
       }
     ],
 	"secondaryFields" : [
       {
         "key" : "loc",
         "label" : "LOCATION",
-        "value" : "LightSpeed Ottawa",
+        "value" : "LightSpeed Ottawa"
       },
       {
         "key" : "meetingTime",
-        "label" : "THURSDAY FEB. 13th",
-        "value" : "19:00-21:00",
+        "label" : "THURSDAY Aug. 14th",
+        "value" : "19:00-21:00"
       }
     ],
 	"auxiliaryFields" : [
       {
         "key" : "topic1",
-        "label" : "Marc P.",
-        "value" : "ReactiveCocoa",
+        "label" : "SLUGGO",
+        "value" : "Summer of Swift",
         "changeMessage" : "New topic: %@"
       }
     ],
@@ -55,7 +55,7 @@
       {
         "key" : "datetime",
         "label" : "WHEN",
-        "value" : "Thursday, February 13th, 2014 from 19:00 to 21:00"
+        "value" : "Thursday, August 14th, 2014 from 19:00 to 21:00"
       },
       {
         "key" : "location-detail",
@@ -64,8 +64,8 @@
       },
       {
         "key" : "topic1-detail",
-        "label" : "Marc Prud'hommeaux",
-        "value" : "This talk will introduce the open-source ReactiveCocoa framework for iOS and Mac. Marc will present the history and theory of Functional Reactive Programming (FRP) as well as provide real-world examples of how it can lead to simpler user interface design, fewer bugs, and easily testable UI code using the Model-View-ViewModel design paradigm. Slides and sample code will be available at http://www.impathic.com/presentations/CocoaHeadsOttawa/"
+        "label" : "Swift Language User Group of Gatineau-Ottawa",
+        "value" : "Developers taking part in the Summer of Swift (https://github.com/realm/summer-of-swift) will proudly showcase their project's progress, or lack thereof."
       },
       {
         "key" : "website",
@@ -80,7 +80,7 @@
       {
         "key" : "backgroundPicture",
         "label" : "BACKGROUND PICTURE",
-        "value" : "Ottawa City Hall from Confederation Park, by d.neuman http://www.flickr.com/photos/dneuman/"
+        "value" : "Museum of Nature by NSNorth 2014"
       },
       {
         "key" : "suggestPicture",
