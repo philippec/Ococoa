@@ -19,6 +19,7 @@
 		37458462150D0C6800A87BED /* bell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3745845F150D0C6800A87BED /* bell@2x.png */; };
 		37458465150D32A600A87BED /* bug.png in Resources */ = {isa = PBXBuildFile; fileRef = 37458463150D32A600A87BED /* bug.png */; };
 		37458466150D32A600A87BED /* bug@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37458464150D32A600A87BED /* bug@2x.png */; };
+		37527ED1198C777100B99E96 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37527ED0198C777100B99E96 /* XCTest.framework */; };
 		375D3CDB149D30460098AFA4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 375D3CDA149D30460098AFA4 /* UIKit.framework */; };
 		375D3CDD149D30460098AFA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 375D3CDC149D30460098AFA4 /* Foundation.framework */; };
 		375D3CDF149D30460098AFA4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 375D3CDE149D30460098AFA4 /* CoreGraphics.framework */; };
@@ -28,7 +29,6 @@
 		375D3CEE149D30460098AFA4 /* OCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 375D3CED149D30460098AFA4 /* OCViewController.m */; };
 		375D3CF1149D30460098AFA4 /* OCViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 375D3CEF149D30460098AFA4 /* OCViewController_iPhone.xib */; };
 		375D3CF4149D30460098AFA4 /* OCViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 375D3CF2149D30460098AFA4 /* OCViewController_iPad.xib */; };
-		375D3CFC149D30460098AFA4 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 375D3CFB149D30460098AFA4 /* SenTestingKit.framework */; };
 		375D3CFD149D30460098AFA4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 375D3CDA149D30460098AFA4 /* UIKit.framework */; };
 		375D3CFE149D30460098AFA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 375D3CDC149D30460098AFA4 /* Foundation.framework */; };
 		375D3D06149D30460098AFA4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 375D3D04149D30460098AFA4 /* InfoPlist.strings */; };
@@ -47,6 +47,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		37527ECA198C75B000B99E96 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 375D3CCD149D30460098AFA4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 375D3CD5149D30460098AFA4;
+			remoteInfo = Ococoa;
+		};
+		37527ECC198C75B100B99E96 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 375D3CCD149D30460098AFA4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 375D3CD5149D30460098AFA4;
+			remoteInfo = Ococoa;
+		};
 		375D3CFF149D30460098AFA4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 375D3CCD149D30460098AFA4 /* Project object */;
@@ -71,6 +85,7 @@
 		3745845F150D0C6800A87BED /* bell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bell@2x.png"; path = "images/bell@2x.png"; sourceTree = "<group>"; };
 		37458463150D32A600A87BED /* bug.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bug.png; path = images/bug.png; sourceTree = "<group>"; };
 		37458464150D32A600A87BED /* bug@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bug@2x.png"; path = "images/bug@2x.png"; sourceTree = "<group>"; };
+		37527ED0198C777100B99E96 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		375D3CD6149D30460098AFA4 /* Ococoa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ococoa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		375D3CDA149D30460098AFA4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		375D3CDC149D30460098AFA4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -85,8 +100,7 @@
 		375D3CED149D30460098AFA4 /* OCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCViewController.m; sourceTree = "<group>"; };
 		375D3CF0149D30460098AFA4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/OCViewController_iPhone.xib; sourceTree = "<group>"; };
 		375D3CF3149D30460098AFA4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/OCViewController_iPad.xib; sourceTree = "<group>"; };
-		375D3CFA149D30460098AFA4 /* OcocoaTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OcocoaTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		375D3CFB149D30460098AFA4 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		375D3CFA149D30460098AFA4 /* OcocoaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OcocoaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		375D3D03149D30460098AFA4 /* OcocoaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OcocoaTests-Info.plist"; sourceTree = "<group>"; };
 		375D3D05149D30460098AFA4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		376F4D24177A9B1A003522F3 /* JBContainedURLConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JBContainedURLConnection.h; path = Ococoa/JBContainedURLConnection.h; sourceTree = "<group>"; };
@@ -125,7 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				375D3CFC149D30460098AFA4 /* SenTestingKit.framework in Frameworks */,
+				37527ED1198C777100B99E96 /* XCTest.framework in Frameworks */,
 				375D3CFD149D30460098AFA4 /* UIKit.framework in Frameworks */,
 				375D3CFE149D30460098AFA4 /* Foundation.framework in Frameworks */,
 				37FFFE0116028A5A0033E8D0 /* libOCMock.a in Frameworks */,
@@ -152,7 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				375D3CD6149D30460098AFA4 /* Ococoa.app */,
-				375D3CFA149D30460098AFA4 /* OcocoaTests.octest */,
+				375D3CFA149D30460098AFA4 /* OcocoaTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -160,13 +174,13 @@
 		375D3CD9149D30460098AFA4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				37527ED0198C777100B99E96 /* XCTest.framework */,
 				37026BC317792695006B5A71 /* PassKit.framework */,
 				2938520C160E88ED002BF0E5 /* CoreLocation.framework */,
 				37DD91C614C38F03007F2F95 /* SystemConfiguration.framework */,
 				375D3CDA149D30460098AFA4 /* UIKit.framework */,
 				375D3CDC149D30460098AFA4 /* Foundation.framework */,
 				375D3CDE149D30460098AFA4 /* CoreGraphics.framework */,
-				375D3CFB149D30460098AFA4 /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -288,11 +302,13 @@
 			);
 			dependencies = (
 				375D3D00149D30460098AFA4 /* PBXTargetDependency */,
+				37527ECB198C75B000B99E96 /* PBXTargetDependency */,
+				37527ECD198C75B100B99E96 /* PBXTargetDependency */,
 			);
 			name = OcocoaTests;
 			productName = OcocoaTests;
-			productReference = 375D3CFA149D30460098AFA4 /* OcocoaTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productReference = 375D3CFA149D30460098AFA4 /* OcocoaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -300,7 +316,13 @@
 		375D3CCD149D30460098AFA4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0450;
+				LastTestingUpgradeCheck = 0600;
+				LastUpgradeCheck = 0600;
+				TargetAttributes = {
+					375D3CF9149D30460098AFA4 = {
+						TestTargetID = 375D3CD5149D30460098AFA4;
+					};
+				};
 			};
 			buildConfigurationList = 375D3CD0149D30460098AFA4 /* Build configuration list for PBXProject "Ococoa" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -411,6 +433,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		37527ECB198C75B000B99E96 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 375D3CD5149D30460098AFA4 /* Ococoa */;
+			targetProxy = 37527ECA198C75B000B99E96 /* PBXContainerItemProxy */;
+		};
+		37527ECD198C75B100B99E96 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 375D3CD5149D30460098AFA4 /* Ococoa */;
+			targetProxy = 37527ECC198C75B100B99E96 /* PBXContainerItemProxy */;
+		};
 		375D3D00149D30460098AFA4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 375D3CD5149D30460098AFA4 /* Ococoa */;
@@ -474,11 +506,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
@@ -512,14 +544,14 @@
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Ococoa.app/Ococoa";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(DEVELOPER_DIR)/Platforms/iPhoneOS.platform/Developer/Library/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Ococoa/Ococoa-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
-				HEADER_SEARCH_PATHS = (
-					"\"$(SRCROOT)/OCMock 2.0.1/iOS\"",
-				);
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/OCMock 2.0.1/iOS\"";
 				INFOPLIST_FILE = "OcocoaTests/OcocoaTests-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -531,7 +563,6 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = AppStore;
 		};
@@ -539,10 +570,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -556,6 +587,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				ONLY_ACTIVE_ARCH = YES;
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -566,10 +598,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
@@ -612,14 +644,14 @@
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Ococoa.app/Ococoa";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(DEVELOPER_DIR)/Platforms/iPhoneOS.platform/Developer/Library/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Ococoa/Ococoa-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
-				HEADER_SEARCH_PATHS = (
-					"\"$(SRCROOT)/OCMock 2.0.1/iOS\"",
-				);
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/OCMock 2.0.1/iOS\"";
 				INFOPLIST_FILE = "OcocoaTests/OcocoaTests-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -631,7 +663,6 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -641,14 +672,14 @@
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Ococoa.app/Ococoa";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(DEVELOPER_DIR)/Platforms/iPhoneOS.platform/Developer/Library/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Ococoa/Ococoa-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
-				HEADER_SEARCH_PATHS = (
-					"\"$(SRCROOT)/OCMock 2.0.1/iOS\"",
-				);
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/OCMock 2.0.1/iOS\"";
 				INFOPLIST_FILE = "OcocoaTests/OcocoaTests-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -660,7 +691,6 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};

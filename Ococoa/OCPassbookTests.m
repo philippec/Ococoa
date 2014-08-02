@@ -6,11 +6,11 @@
 //  Copyright (c) 2013 Philippe Casgrain. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 #import <OCMock/OCMock.h>
 #import "OCPassbook.h"
 
-@interface OCPassbookTests : SenTestCase
+@interface OCPassbookTests : XCTestCase
 @property (strong) OCPassbook *passbook;
 @end
 
@@ -32,42 +32,42 @@
 
 - (void)testExists
 {
-    STAssertNoThrow(self.passbook = [[OCPassbook alloc] init], @"");
-    STAssertNotNil(self.passbook, @"");
-    STAssertNotNil(self.passbook.alertView, @"");
+    XCTAssertNoThrow(self.passbook = [[OCPassbook alloc] init], @"");
+    XCTAssertNotNil(self.passbook, @"");
+    XCTAssertNotNil(self.passbook.alertView, @"");
 }
 
 - (void)testPassbookNotAvailable
 {
     id mockAlert = [OCMockObject mockForClass:[UIAlertView class]];
-    STAssertNoThrow(self.passbook.alertView = mockAlert, @"");
+    XCTAssertNoThrow(self.passbook.alertView = mockAlert, @"");
 
     [[mockAlert expect] setTitle:[OCMArg isNotNil]];
     [[mockAlert expect] setMessage:[OCMArg isNotNil]];
 
-    STAssertNoThrow(self.passbook.passbookAvailable = NO, @"");
-    STAssertNoThrow([mockAlert verify], @"");
+    XCTAssertNoThrow(self.passbook.passbookAvailable = NO, @"");
+    XCTAssertNoThrow([mockAlert verify], @"");
 
     [[mockAlert expect] show];
 
     BOOL result;
-    STAssertNoThrow(result = [self.passbook passbookAvailable], @"");
-    STAssertFalse(result, @"");
-    STAssertNoThrow([mockAlert verify], @"");
+    XCTAssertNoThrow(result = [self.passbook passbookAvailable], @"");
+    XCTAssertFalse(result, @"");
+    XCTAssertNoThrow([mockAlert verify], @"");
 }
 
 - (void)testPassbookAvailable
 {
     id mockAlert = [OCMockObject mockForClass:[UIAlertView class]];
-    STAssertNoThrow(self.passbook.alertView = mockAlert, @"");
+    XCTAssertNoThrow(self.passbook.alertView = mockAlert, @"");
 
-    STAssertNoThrow(self.passbook.passbookAvailable = YES, @"");
-    STAssertNoThrow([mockAlert verify], @"");
+    XCTAssertNoThrow(self.passbook.passbookAvailable = YES, @"");
+    XCTAssertNoThrow([mockAlert verify], @"");
 
     BOOL result;
-    STAssertNoThrow(result = [self.passbook passbookAvailable], @"");
-    STAssertTrue(result, @"");
-    STAssertNoThrow([mockAlert verify], @"");
+    XCTAssertNoThrow(result = [self.passbook passbookAvailable], @"");
+    XCTAssertTrue(result, @"");
+    XCTAssertNoThrow([mockAlert verify], @"");
 }
 
 @end

@@ -6,11 +6,11 @@
 //
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 #import <OCMock/OCMock.h>
 #import "OCDoorbell.h"
 
-@interface OCDoorbellTests : SenTestCase
+@interface OCDoorbellTests : XCTestCase
 {
     OCDoorbell *_doorBell;
 }
@@ -37,15 +37,15 @@
 
 - (void)testExists
 {
-    STAssertNotNil(self.doorBell, @"");
-    STAssertNotNil(self.doorBell.alertView, @"");
+    XCTAssertNotNil(self.doorBell, @"");
+    XCTAssertNotNil(self.doorBell.alertView, @"");
 }
 
 - (void)testRing
 {
     id mockAlert = [OCMockObject mockForClass:[UIAlertView class]];
 
-    STAssertNoThrow(self.doorBell.alertView = mockAlert, @"");
+    XCTAssertNoThrow(self.doorBell.alertView = mockAlert, @"");
 
     // This will always return YES, so it cannot be mocked properly
     // see http://stackoverflow.com/questions/11098615/how-to-stub-respondstoselector-method
@@ -56,7 +56,7 @@
     [[mockAlert expect] textFieldAtIndex:1];
     [[mockAlert expect] show];
 
-    STAssertNoThrow([self.doorBell ring:nil], @"");
+    XCTAssertNoThrow([self.doorBell ring:nil], @"");
 
     [mockAlert verify];
 }
@@ -65,7 +65,7 @@
 {
     id mockAlert = [OCMockObject mockForClass:[UIAlertView class]];
 
-    STAssertNoThrow(self.doorBell.alertView = mockAlert, @"");
+    XCTAssertNoThrow(self.doorBell.alertView = mockAlert, @"");
 
     CLLocation *inFrontOfCodeFactory = [[CLLocation alloc] initWithLatitude:45.420 longitude:-75.702];
 
@@ -78,7 +78,7 @@
     [[mockAlert expect] textFieldAtIndex:1];
     [[mockAlert expect] show];
 
-    STAssertNoThrow([self.doorBell ring:inFrontOfCodeFactory], @"");
+    XCTAssertNoThrow([self.doorBell ring:inFrontOfCodeFactory], @"");
 
     [mockAlert verify];
 }

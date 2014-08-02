@@ -6,12 +6,12 @@
 //  Copyright (c) 2013 Philippe Casgrain. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 #import <OCMock/OCMock.h>
 #import "OCViewController.h"
 #import "OCPassbook.h"
 
-@interface OCViewControllerTests : SenTestCase
+@interface OCViewControllerTests : XCTestCase
 @property (strong) OCViewController *controller;
 @property (strong) id mockPassbook;
 @end
@@ -38,32 +38,32 @@
 
 - (void)testExists
 {
-    STAssertNoThrow(self.controller = [[OCViewController alloc] initWithNibName:nil bundle:[NSBundle bundleForClass:[OCViewController class]]], @"");
-    STAssertNotNil(self.controller, @"");
+    XCTAssertNoThrow(self.controller = [[OCViewController alloc] initWithNibName:nil bundle:[NSBundle bundleForClass:[OCViewController class]]], @"");
+    XCTAssertNotNil(self.controller, @"");
 
-    STAssertNotNil(self.controller.view, @"");
-    STAssertNotNil(self.controller.doorbell, @"");
-    STAssertNotNil(self.controller.passbook, @"");
+    XCTAssertNotNil(self.controller.view, @"");
+    XCTAssertNotNil(self.controller.doorbell, @"");
+    XCTAssertNotNil(self.controller.passbook, @"");
 }
 
 - (void)testLoadAnyRequest
 {
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://add-pass"]];
     BOOL result;
-    STAssertNoThrow(result = [self.controller webView:nil shouldStartLoadWithRequest:request navigationType:UIWebViewNavigationTypeLinkClicked], @"");
-    STAssertTrue(result, @"");
+    XCTAssertNoThrow(result = [self.controller webView:nil shouldStartLoadWithRequest:request navigationType:UIWebViewNavigationTypeLinkClicked], @"");
+    XCTAssertTrue(result, @"");
 
-    STAssertNoThrow([self.mockPassbook verify], @"");
+    XCTAssertNoThrow([self.mockPassbook verify], @"");
 }
 
 - (void)testLoadAnyNavType
 {
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"ococoa://add-pass"]];
     BOOL result;
-    STAssertNoThrow(result = [self.controller webView:nil shouldStartLoadWithRequest:request navigationType:UIWebViewNavigationTypeOther], @"");
-    STAssertTrue(result, @"");
+    XCTAssertNoThrow(result = [self.controller webView:nil shouldStartLoadWithRequest:request navigationType:UIWebViewNavigationTypeOther], @"");
+    XCTAssertTrue(result, @"");
 
-    STAssertNoThrow([self.mockPassbook verify], @"");
+    XCTAssertNoThrow([self.mockPassbook verify], @"");
 }
 
 - (void)testTapLinkNoPassbook
@@ -73,10 +73,10 @@
 
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"ococoa://add-pass"]];
     BOOL result;
-    STAssertNoThrow(result = [self.controller webView:nil shouldStartLoadWithRequest:request navigationType:UIWebViewNavigationTypeLinkClicked], @"");
-    STAssertFalse(result, @"");
+    XCTAssertNoThrow(result = [self.controller webView:nil shouldStartLoadWithRequest:request navigationType:UIWebViewNavigationTypeLinkClicked], @"");
+    XCTAssertFalse(result, @"");
 
-    STAssertNoThrow([self.mockPassbook verify], @"");
+    XCTAssertNoThrow([self.mockPassbook verify], @"");
 }
 
 @end
