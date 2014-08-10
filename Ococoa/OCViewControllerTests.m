@@ -42,7 +42,6 @@
     XCTAssertNotNil(self.controller, @"");
 
     XCTAssertNotNil(self.controller.view, @"");
-    XCTAssertNotNil(self.controller.doorbell, @"");
     XCTAssertNotNil(self.controller.passbook, @"");
 }
 

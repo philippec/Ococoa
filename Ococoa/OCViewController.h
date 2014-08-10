@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 
-@class OCDoorbell;
 @class OCPassbook;
 
 typedef enum
@@ -20,9 +19,8 @@ typedef enum
     OCStatus_networkPageLoaded,
 } OCPageLoadStatus;
 
-@interface OCViewController : UIViewController <UIWebViewDelegate, CLLocationManagerDelegate>
+@interface OCViewController : UIViewController <UIWebViewDelegate>
 
-@property (strong) OCDoorbell *doorbell;
 @property (strong) OCPassbook *passbook;
 @property (strong) UINavigationBar *navBar;
 @property (strong) UIWebView *webView;
@@ -32,6 +30,5 @@ typedef enum
 
 - (void)startPageReloadTimer;
 - (void)stopPageReloadTimer;
-- (IBAction)ringDoorbell:(id)sender;
 
 @end

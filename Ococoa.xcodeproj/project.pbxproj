@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2938520D160E88ED002BF0E5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2938520C160E88ED002BF0E5 /* CoreLocation.framework */; };
 		37026BC017791ABF006B5A71 /* OCPassbook.m in Sources */ = {isa = PBXBuildFile; fileRef = 37026BBF17791ABF006B5A71 /* OCPassbook.m */; };
 		37026BC217791B09006B5A71 /* OCPassbookTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37026BC117791B09006B5A71 /* OCPassbookTests.m */; };
 		37026BC417792695006B5A71 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37026BC317792695006B5A71 /* PassKit.framework */; };
@@ -15,8 +14,6 @@
 		372F72C614D24F9300F77690 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 372F72C414D24F9300F77690 /* Localizable.strings */; };
 		372F72CE14D3A4D000F77690 /* cocoaheads.html in Resources */ = {isa = PBXBuildFile; fileRef = 372F72CC14D3A4D000F77690 /* cocoaheads.html */; };
 		37458459150C52A800A87BED /* AppIcon144.png in Resources */ = {isa = PBXBuildFile; fileRef = 37458458150C52A800A87BED /* AppIcon144.png */; };
-		37458461150D0C6800A87BED /* bell.png in Resources */ = {isa = PBXBuildFile; fileRef = 3745845E150D0C6800A87BED /* bell.png */; };
-		37458462150D0C6800A87BED /* bell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3745845F150D0C6800A87BED /* bell@2x.png */; };
 		37458465150D32A600A87BED /* bug.png in Resources */ = {isa = PBXBuildFile; fileRef = 37458463150D32A600A87BED /* bug.png */; };
 		37458466150D32A600A87BED /* bug@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37458464150D32A600A87BED /* bug@2x.png */; };
 		37527ED1198C777100B99E96 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37527ED0198C777100B99E96 /* XCTest.framework */; };
@@ -33,14 +30,11 @@
 		375D3CFE149D30460098AFA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 375D3CDC149D30460098AFA4 /* Foundation.framework */; };
 		375D3D06149D30460098AFA4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 375D3D04149D30460098AFA4 /* InfoPlist.strings */; };
 		376F4D26177A9B1A003522F3 /* JBContainedURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 376F4D25177A9B1A003522F3 /* JBContainedURLConnection.m */; };
-		3790A0CD15FBBDBA009DA097 /* OCDoorbellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3790A0CC15FBBDBA009DA097 /* OCDoorbellTests.m */; };
 		37A31AE1160F74AE00A531B2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2938520C160E88ED002BF0E5 /* CoreLocation.framework */; };
-		37AC635514AA192B003A2A25 /* OCDoorbell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AC635414AA192B003A2A25 /* OCDoorbell.m */; };
 		37AF78F61604361900918D7D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37AF78F51604361900918D7D /* Default-568h@2x.png */; };
 		37BF4B0C14AA90940045936C /* AppIcon57.png in Resources */ = {isa = PBXBuildFile; fileRef = 37BF4B0914AA90940045936C /* AppIcon57.png */; };
 		37BF4B0D14AA90940045936C /* AppIcon72.png in Resources */ = {isa = PBXBuildFile; fileRef = 37BF4B0A14AA90940045936C /* AppIcon72.png */; };
 		37BF4B0E14AA90940045936C /* AppIcon114.png in Resources */ = {isa = PBXBuildFile; fileRef = 37BF4B0B14AA90940045936C /* AppIcon114.png */; };
-		37BF4B3314AABEC10045936C /* OCPrivateInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BF4B3214AABEC10045936C /* OCPrivateInfo.m */; };
 		37DD91A614C38921007F2F95 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DD91A514C38921007F2F95 /* Reachability.m */; };
 		37DD91C714C38F03007F2F95 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37DD91C614C38F03007F2F95 /* SystemConfiguration.framework */; };
 		37FFFE0116028A5A0033E8D0 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FFFE0016028A5A0033E8D0 /* libOCMock.a */; };
@@ -80,9 +74,6 @@
 		372F72C514D24F9300F77690 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		372F72CD14D3A4D000F77690 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = en; path = en.lproj/cocoaheads.html; sourceTree = "<group>"; };
 		37458458150C52A800A87BED /* AppIcon144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AppIcon144.png; path = images/AppIcon144.png; sourceTree = "<group>"; };
-		3745845D150D0C6800A87BED /* Bell.opacity */ = {isa = PBXFileReference; lastKnownFileType = file; name = Bell.opacity; path = images/Bell.opacity; sourceTree = "<group>"; };
-		3745845E150D0C6800A87BED /* bell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bell.png; path = images/bell.png; sourceTree = "<group>"; };
-		3745845F150D0C6800A87BED /* bell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bell@2x.png"; path = "images/bell@2x.png"; sourceTree = "<group>"; };
 		37458463150D32A600A87BED /* bug.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bug.png; path = images/bug.png; sourceTree = "<group>"; };
 		37458464150D32A600A87BED /* bug@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bug@2x.png"; path = "images/bug@2x.png"; sourceTree = "<group>"; };
 		37527ED0198C777100B99E96 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -105,19 +96,14 @@
 		375D3D05149D30460098AFA4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		376F4D24177A9B1A003522F3 /* JBContainedURLConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JBContainedURLConnection.h; path = Ococoa/JBContainedURLConnection.h; sourceTree = "<group>"; };
 		376F4D25177A9B1A003522F3 /* JBContainedURLConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JBContainedURLConnection.m; path = Ococoa/JBContainedURLConnection.m; sourceTree = "<group>"; };
-		3790A0CC15FBBDBA009DA097 /* OCDoorbellTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCDoorbellTests.m; sourceTree = "<group>"; };
-		37AC635314AA192B003A2A25 /* OCDoorbell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCDoorbell.h; sourceTree = "<group>"; };
-		37AC635414AA192B003A2A25 /* OCDoorbell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCDoorbell.m; sourceTree = "<group>"; };
 		37AC636F14AA8E30003A2A25 /* AppIcon.opacity */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppIcon.opacity; path = images/AppIcon.opacity; sourceTree = "<group>"; };
 		37AF78F51604361900918D7D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "images/Default-568h@2x.png"; sourceTree = "<group>"; };
 		37BF4B0914AA90940045936C /* AppIcon57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AppIcon57.png; path = images/AppIcon57.png; sourceTree = "<group>"; };
 		37BF4B0A14AA90940045936C /* AppIcon72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AppIcon72.png; path = images/AppIcon72.png; sourceTree = "<group>"; };
 		37BF4B0B14AA90940045936C /* AppIcon114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AppIcon114.png; path = images/AppIcon114.png; sourceTree = "<group>"; };
-		37BF4B3214AABEC10045936C /* OCPrivateInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCPrivateInfo.m; sourceTree = "<group>"; };
 		37DD91A414C38921007F2F95 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = Ococoa/Reachability.h; sourceTree = "<group>"; };
 		37DD91A514C38921007F2F95 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = Ococoa/Reachability.m; sourceTree = "<group>"; };
 		37DD91C614C38F03007F2F95 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		37FE17F6149E9E740086D2D8 /* OCPrivateInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCPrivateInfo.h; sourceTree = "<group>"; };
 		37FFFE0016028A5A0033E8D0 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = "OCMock 2.0.1/iOS/libOCMock.a"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -126,7 +112,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2938520D160E88ED002BF0E5 /* CoreLocation.framework in Frameworks */,
 				375D3CDB149D30460098AFA4 /* UIKit.framework in Frameworks */,
 				375D3CDD149D30460098AFA4 /* Foundation.framework in Frameworks */,
 				375D3CDF149D30460098AFA4 /* CoreGraphics.framework in Frameworks */,
@@ -188,8 +173,6 @@
 		375D3CE0149D30460098AFA4 /* Ococoa */ = {
 			isa = PBXGroup;
 			children = (
-				37FE17F6149E9E740086D2D8 /* OCPrivateInfo.h */,
-				37BF4B3214AABEC10045936C /* OCPrivateInfo.m */,
 				375D3CE9149D30460098AFA4 /* OCAppDelegate.h */,
 				375D3CEA149D30460098AFA4 /* OCAppDelegate.m */,
 				37026BBE17791ABF006B5A71 /* OCPassbook.h */,
@@ -198,9 +181,6 @@
 				375D3CEC149D30460098AFA4 /* OCViewController.h */,
 				375D3CED149D30460098AFA4 /* OCViewController.m */,
 				371EA605177862CC00183602 /* OCViewControllerTests.m */,
-				37AC635314AA192B003A2A25 /* OCDoorbell.h */,
-				37AC635414AA192B003A2A25 /* OCDoorbell.m */,
-				3790A0CC15FBBDBA009DA097 /* OCDoorbellTests.m */,
 				375D3CEF149D30460098AFA4 /* OCViewController_iPhone.xib */,
 				375D3CF2149D30460098AFA4 /* OCViewController_iPad.xib */,
 				375D3CE1149D30460098AFA4 /* Supporting Files */,
@@ -217,9 +197,6 @@
 				37BF4B0A14AA90940045936C /* AppIcon72.png */,
 				37BF4B0B14AA90940045936C /* AppIcon114.png */,
 				37458458150C52A800A87BED /* AppIcon144.png */,
-				3745845D150D0C6800A87BED /* Bell.opacity */,
-				3745845E150D0C6800A87BED /* bell.png */,
-				3745845F150D0C6800A87BED /* bell@2x.png */,
 				37458463150D32A600A87BED /* bug.png */,
 				37458464150D32A600A87BED /* bug@2x.png */,
 				375D3CE2149D30460098AFA4 /* Ococoa-Info.plist */,
@@ -275,7 +252,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 375D3D0C149D30460098AFA4 /* Build configuration list for PBXNativeTarget "Ococoa" */;
 			buildPhases = (
-				37FE17F5149E9CB70086D2D8 /* Create OCPrivateInfo */,
 				375D3CD2149D30460098AFA4 /* Sources */,
 				375D3CD3149D30460098AFA4 /* Frameworks */,
 				375D3CD4149D30460098AFA4 /* Resources */,
@@ -356,8 +332,6 @@
 				37458459150C52A800A87BED /* AppIcon144.png in Resources */,
 				372F72C614D24F9300F77690 /* Localizable.strings in Resources */,
 				372F72CE14D3A4D000F77690 /* cocoaheads.html in Resources */,
-				37458461150D0C6800A87BED /* bell.png in Resources */,
-				37458462150D0C6800A87BED /* bell@2x.png in Resources */,
 				37458465150D32A600A87BED /* bug.png in Resources */,
 				37458466150D32A600A87BED /* bug@2x.png in Resources */,
 				37AF78F61604361900918D7D /* Default-568h@2x.png in Resources */,
@@ -388,20 +362,6 @@
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
-		37FE17F5149E9CB70086D2D8 /* Create OCPrivateInfo */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Create OCPrivateInfo";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if [ ! -e \"OCocoa/OCPrivateInfo.m\" ]\nthen\necho '#import \"OCPrivateInfo.h\"' > 'OCocoa/OCPrivateInfo.m'\necho '#warning Delete these lines and enter your UrbanAirship credentials below' >> 'OCocoa/OCPrivateInfo.m'\necho 'const NSString *kUrbanAirshipAppKey = @\"Your UrbanAirship Application Key goes here\";' >> 'OCocoa/OCPrivateInfo.m'\necho 'const NSString *kUrbanAirshipAppSecret = @\"Your UrbanAirship Application Secret goes here\";' >> 'OCocoa/OCPrivateInfo.m'\necho 'const NSString *kServerString = @\"http://your.server.com/your/api?msg=%@&key=%@\";' >> 'OCocoa/OCPrivateInfo.m'\necho 'const NSString *kLocationValidatedUsername = @\"yourspecialusername\";' >> 'OCocoa/OCPrivateInfo.m'\necho 'const NSString *kLocationValidatedPassword = @\"yourspecialpassword\";' >> 'OCocoa/OCPrivateInfo.m'\necho 'const CLLocationDegrees kDoorbellLocationLatitude = 45.250111;' >> 'OCocoa/OCPrivateInfo.m'\necho 'const CLLocationDegrees kDoorbellLocationLongitude = -75.123456;' >> 'OCocoa/OCPrivateInfo.m'\n\nfi";
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -412,8 +372,6 @@
 				375D3CE7149D30460098AFA4 /* main.m in Sources */,
 				375D3CEB149D30460098AFA4 /* OCAppDelegate.m in Sources */,
 				375D3CEE149D30460098AFA4 /* OCViewController.m in Sources */,
-				37BF4B3314AABEC10045936C /* OCPrivateInfo.m in Sources */,
-				37AC635514AA192B003A2A25 /* OCDoorbell.m in Sources */,
 				37DD91A614C38921007F2F95 /* Reachability.m in Sources */,
 				37026BC017791ABF006B5A71 /* OCPassbook.m in Sources */,
 				376F4D26177A9B1A003522F3 /* JBContainedURLConnection.m in Sources */,
@@ -424,7 +382,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3790A0CD15FBBDBA009DA097 /* OCDoorbellTests.m in Sources */,
 				371EA606177862CC00183602 /* OCViewControllerTests.m in Sources */,
 				37026BC217791B09006B5A71 /* OCPassbookTests.m in Sources */,
 			);
@@ -510,7 +467,6 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
@@ -546,7 +502,6 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(DEVELOPER_DIR)/Platforms/iPhoneOS.platform/Developer/Library/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Ococoa/Ococoa-Prefix.pch";
@@ -573,7 +528,6 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -601,7 +555,6 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
@@ -646,7 +599,6 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(DEVELOPER_DIR)/Platforms/iPhoneOS.platform/Developer/Library/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Ococoa/Ococoa-Prefix.pch";
@@ -674,7 +626,6 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(DEVELOPER_DIR)/Platforms/iPhoneOS.platform/Developer/Library/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Ococoa/Ococoa-Prefix.pch";

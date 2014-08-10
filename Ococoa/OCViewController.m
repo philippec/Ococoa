@@ -7,13 +7,11 @@
 //
 
 #import "OCViewController.h"
-#import "OCDoorbell.h"
 #import "OCPassbook.h"
 #import "JBContainedURLConnection.h"
 #import "Reachability.h"
 
 @interface OCViewController()
-@property (strong) CLLocationManager *locationManager;
 @property (strong) NSTimer *pageReloadTimer;
 @property (assign) BOOL addingPass;
 @property (strong) JBContainedURLConnection *connection;
@@ -25,7 +23,6 @@
 
 - (void)dealloc
 {
-    self.locationManager = nil;
     self.pageReloadTimer = nil;
     self.connection = nil;
 }
@@ -43,91 +40,20 @@
     return YES;
 }
 
-- (IBAction)debugAction:(id)sender
-{
-    static NSUInteger debugCount = 1;
-    NSString *str = @"http://ococoa-push.appspot.com/static/test.html";
-
-    // alternate between real page and test page
-    debugCount++;
-    if (debugCount % 2)
-        str = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"Site URL"];
-
-    self.pageLoadStatus = OCStatus_networkPageRequest;
-    NSURL *url = [NSURL URLWithString:str];
-    [NSThread detachNewThreadSelector:@selector(loadSimplifiedRequest:) toTarget:self withObject:url];                
-}
-
-- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
-{
-    if (event.type == UIEventSubtypeMotionShake)
-    {
-        UINavigationItem *item = [self.navBar.items objectAtIndex:0];
-
-        self.debug = !self.debug;
-        if (self.debug)
-        {
-            item.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"bug"]
-                                                                      style:UIBarButtonItemStyleBordered
-                                                                     target:self
-                                                                     action:@selector(debugAction:)];
-        }
-        else
-        {
-            item.leftBarButtonItem = nil;
-        }
-    }
-}
-
-
 #pragma mark - View lifecycle
-
-- (void)configureLocationManager
-{
-    self.locationManager = [[CLLocationManager alloc] init];
-    self.locationManager.purpose = NSLocalizedString(@"Ococoa uses your location to bypass the requirement to enter a username and password if you are near the front door.", nil);
-    self.locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
-    self.locationManager.delegate = self;
-    [self.locationManager startUpdatingLocation];
-    DebugLog(@"start updating location");
-}
 
 - (void)viewDidLoad
 {
-    const CGFloat kNavBarHeight = 44.;
+    const CGFloat kMenuBarHeight = 22.;
     
     [super viewDidLoad];
 
-    [self configureLocationManager];
-    
-    self.doorbell = [[OCDoorbell alloc] init];
-
     CGRect baseRect = self.view.frame;
     CGRect webRect = baseRect;
-    CGRect navRect = baseRect;
 
-    // Create the "Ring" button
-    UIBarButtonItem *ringButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"bell"]
-                                                                   style:UIBarButtonItemStyleBordered                                                                  target:self
-                                                                  action:@selector(ringDoorbell:)];
-    // Add it to a nav item as the right-most button
-    UINavigationItem *item = [[UINavigationItem alloc] initWithTitle:NSLocalizedString(@"OCocoa", nil)];
-    item.rightBarButtonItem = ringButton;
-    item.hidesBackButton = YES;
-
-    // Create a NavigationBar on the top
-    // We won't use it for navigation, but as a convenient place to put
-    // the "Ring" button contained in the item
-    navRect.size.height = kNavBarHeight;
-    self.navBar = [[UINavigationBar alloc] initWithFrame:navRect];
-    self.navBar.tintColor = [UIColor colorWithRed:0.7 green:0.1 blue:0.1 alpha:1.0];
-    self.navBar.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
-    [self.navBar pushNavigationItem:item animated:NO];
-    [self.view addSubview:self.navBar];
-    
     // Create a webview
-    webRect.size.height -= kNavBarHeight;
-    webRect.origin.y += kNavBarHeight;
+    webRect.size.height -= kMenuBarHeight;
+    webRect.origin.y += kMenuBarHeight;
     self.webView = [[UIWebView alloc] initWithFrame:webRect];
     self.webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     [self.view addSubview:self.webView];
@@ -150,9 +76,6 @@
     [super viewDidUnload];
     [self stopPageReloadTimer];
     self.webView = nil;
-    
-    [self.locationManager stopUpdatingLocation];
-    self.locationManager = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -407,14 +330,6 @@
     [self.pageReloadTimer invalidate];
     self.pageReloadTimer = nil;
     
-}
-
-#pragma mark IBActions
-
-- (IBAction)ringDoorbell:(id)sender
-{
-    // send any location that we may have
-    [self.doorbell ring:self.locationManager.location];
 }
 
 #pragma mark Passbook

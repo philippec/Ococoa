@@ -7,9 +7,7 @@
 //
 
 #import "OCAppDelegate.h"
-
 #import "OCViewController.h"
-#import "OCPrivateInfo.h"
 
 @implementation OCAppDelegate
 
@@ -31,87 +29,7 @@
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
 
-    // Let the device know we want to receive push notifications
-    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
-
     return YES;
-}
-
-- (void)application:(UIApplication*)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken
-{
-    DebugLog(@"My token is: %@", deviceToken);
-
-    // Convert the token to a hex string and make sure it's all caps
-    NSMutableString *tokenString = [NSMutableString stringWithString:[[deviceToken description] uppercaseString]];
-    [tokenString replaceOccurrencesOfString:@"<" withString:@"" options:0 range:NSMakeRange(0, tokenString.length)];
-    [tokenString replaceOccurrencesOfString:@">" withString:@"" options:0 range:NSMakeRange(0, tokenString.length)];
-    [tokenString replaceOccurrencesOfString:@" " withString:@"" options:0 range:NSMakeRange(0, tokenString.length)];
-
-    // Create the NSURL for the request
-    NSString *urlFormat = @"https://go.urbanairship.com/api/device_tokens/%@";
-    NSURL *registrationURL = [NSURL URLWithString:[NSString stringWithFormat:urlFormat, tokenString]];
-
-    // Create the registration request
-    NSMutableURLRequest *registrationRequest = [[NSMutableURLRequest alloc] initWithURL:registrationURL];
-    [registrationRequest setHTTPMethod:@"PUT"];
-
-    // And fire it off
-    NSURLConnection *connection = [NSURLConnection connectionWithRequest:registrationRequest delegate:self];
-    [connection start];
-}
-
-- (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error
-{
-    DebugLog(@"Failed to get token, error: %@", [error description]);
-}
-
-- (void)connection:(NSURLConnection *)connection didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge
-{
-    // Check for previous failures
-    if ([challenge previousFailureCount] > 0)
-    {
-        // We've already tried - something is wrong with our credentials
-        DebugLog(@"Urban Airship credentials invalid");
-        return;
-    }
-
-    // Send our Urban Airship credentials
-    NSURLCredential *airshipCredentials = [NSURLCredential credentialWithUser:kUrbanAirshipAppKey
-                                                                     password:kUrbanAirshipAppSecret
-                                                                  persistence:NSURLCredentialPersistenceNone];
-    [[challenge sender] useCredential:airshipCredentials forAuthenticationChallenge:challenge];  
-    DebugLog(@"Urban Airship credentials sent");
-}
-
-
-- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
-{
-    NSDictionary *aps = [userInfo valueForKey:@"aps"];
-    NSNumber *job = [userInfo valueForKey:@"job"];
-    switch ([job intValue])
-    {
-        case 1:
-        {
-            // Schedule update
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Schedule update", nil) message:[aps valueForKey:@"alert"] delegate:nil cancelButtonTitle:NSLocalizedString(@"Done", nil) otherButtonTitles:nil];
-            [alert show];
-            [self.viewController startPageReloadTimer];
-            break;
-        }
-
-        default:
-        {
-            // Doorbell
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Doorbell rang", nil) message:[aps valueForKey:@"alert"] delegate:nil cancelButtonTitle:NSLocalizedString(@"Done", nil) otherButtonTitles:nil];
-            [alert show];
-            break;
-        }
-    }
-
-    for (id key in userInfo)
-    {
-        DebugLog(@"key: %@, value: %@", key, [userInfo objectForKey:key]);
-    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
