@@ -1,0 +1,2 @@
+{% for device in devices %}"{{ device.pushToken }}"
+{% endfor %}

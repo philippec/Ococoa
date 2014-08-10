@@ -16,27 +16,10 @@
 #
 from google.appengine.ext import webapp
 from google.appengine.ext.webapp import util
-import urbanairship
-from PrivateInfo import *
 
 class MainHandler(webapp.RequestHandler):
     def get(self):
-        key = self.request.get('key')
-        if len(key) == 0:
-            self.response.out.write('Missing key')
-            return
-
-        if key not in ApiKeys():
-            self.response.out.write('Incorrect key {' + key + '}')
-            return
-
-        msg = self.request.get('msg')
-        if len(msg) > 0:
-            airship = urbanairship.Airship(AppKey(),AppMasterSecret())
-            airship.broadcast({'aps': {'alert': msg}, 'job': 0})
-            self.response.out.write('200 OK - Message {' + msg + '} sent!')
-        else:
-            self.response.out.write('500 ERROR - No message sent!')
+        self.response.out.write('Hello, world!')
 
 
 def main():

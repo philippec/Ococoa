@@ -20,12 +20,11 @@ from google.appengine.ext import db
 from google.appengine.dist import use_library
 use_library('django', '1.2')
 from django.utils import simplejson as json
-import urbanairship
+from google.appengine.ext.webapp import template
 import os
 import datetime
 from urlparse import urlparse
 import logging
-from PrivateInfo import *
 
 class RegisteredDevice(db.Model):
     deviceLibraryIdentifier = db.StringProperty()
@@ -37,12 +36,24 @@ class RegisteredDevice(db.Model):
 class LogHandler(webapp.RequestHandler):
     def get(self):
         logging.info("log get:" + self.request.url)
-        self.response.out.write("hello")
+        self.response.out.write("hello\n")
     def post(self):
         args = json.loads(self.request.body)
         logs = args['logs']
         logging.info("Logs: " + str(logs))
 
+class TokensHandler(webapp.RequestHandler):
+    def get(self):
+        devices = RegisteredDevice().all()
+        template_values = {
+            'devices': devices,
+        }
+        path = os.path.join(os.path.dirname(__file__), 'devices.ptxt')
+        self.response.out.write(template.render(path, template_values))
+        logging.info("tokens get: " + str(devices.count()) + " tokens, url: " + self.request.url )
+    def post(self):
+        logging.info("tokens post: " + self.request.url)
+        self.response.out.write("hello")
 
 def get_pass_path_for_user():
     path = os.path.join(os.path.dirname(__file__), 'Ococoa.pkpass')
@@ -78,9 +89,6 @@ class DeviceHandler(webapp.RequestHandler):
         device.serialNumber = serialNumber
         device.pushToken = pushToken
         device.put()
-        # Register for push notifications
-        airship = urbanairship.Airship(PassAppKey(), PassAppMasterSecret())
-        airship.register(pushToken)
 
         self.response.set_status(201)
         # If the serial number is already registered for this device, return HTTP status 200. 
@@ -119,12 +127,9 @@ class DeviceHandler(webapp.RequestHandler):
         logging.info("passTypeIdentifier: " + passTypeIdentifier)
         logging.info("serialNumber: " + serialNumber)
         
-        airship = urbanairship.Airship(PassAppKey(), PassAppMasterSecret())
         devices = RegisteredDevice().all().filter('deviceLibraryIdentifier = ', deviceLibraryIdentifier)
         results = devices.fetch(1)
         for result in results:
-            # Remove the device from the push notifications
-            airship.deregister(result.pushToken)
             # Remove the device from our database
             result.delete()
         
@@ -186,6 +191,7 @@ class PassesHandler(webapp.RequestHandler):
 def main():
     application = webapp.WSGIApplication([('/passbook/v1/devices/.*', DeviceHandler),
                                           ('/passbook/v1/passes/.*',  PassesHandler),
+                                          ('/passbook/v1/tokens',     TokensHandler),
                                           ('/passbook/v1/log.*',      LogHandler)],
                                          debug=True)
     util.run_wsgi_app(application)
