@@ -21,14 +21,14 @@
       {
         "key" : "meetingHeader",
         "label" : "COCOAHEADS",
-        "value" : "August 14th"
+        "value" : "September 11th"
       }
     ],
     "primaryFields" : [
       {
         "key" : "event",
         "label" : "COCOAHEADS OTTAWA-GATINEAU",
-        "value" : "August Meeting"
+        "value" : "September Meeting"
       }
     ],
 	"secondaryFields" : [
@@ -39,15 +39,20 @@
       },
       {
         "key" : "meetingTime",
-        "label" : "THURSDAY Aug. 14th",
+        "label" : "THURSDAY Sep. 11th",
         "value" : "19:00-21:00"
       }
     ],
 	"auxiliaryFields" : [
       {
         "key" : "topic1",
-        "label" : "SLUGGO",
-        "value" : "Summer of Swift",
+        "label" : "Chris S.",
+        "value" : "Localizing Echoes"
+      },
+      {
+        "key" : "topic2",
+        "label" : "Steven T.",
+        "value" : "iOS 8: the little things",
         "changeMessage" : "New topic: %@"
       }
     ],
@@ -55,7 +60,7 @@
       {
         "key" : "datetime",
         "label" : "WHEN",
-        "value" : "Thursday, August 14th, 2014 from 19:00 to 21:00"
+        "value" : "Thursday, Sept. 11th, 2014 from 19:00 to 21:00"
       },
       {
         "key" : "location-detail",
@@ -64,8 +69,23 @@
       },
       {
         "key" : "topic1-detail",
+        "label" : "Chris Saldanha",
+        "value" : "Lessons learned when localizing our newest Mac app, Echoes, including tales of Base Localization."
+      },
+      {
+        "key" : "topic2-detail",
+        "label" : "Steven Thompson",
+        "value" : "Let’s talk about the little things that are new in iOS 8 and Xcode 6."
+      },
+      {
+        "key" : "topic3-detail",
         "label" : "Swift Language User Group of Gatineau-Ottawa",
         "value" : "Developers taking part in the Summer of Swift (https://github.com/realm/summer-of-swift) will proudly showcase their project's progress, or lack thereof."
+      },
+      {
+        "key" : "topic4-detail",
+        "label" : "Apple's Sept. 9th announcements",
+        "value" : "Come and discuss the new bits that were released on September 9th."
       },
       {
         "key" : "website",
