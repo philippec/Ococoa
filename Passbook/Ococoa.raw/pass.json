@@ -5,7 +5,7 @@
   "teamIdentifier" : "V7QY36F2JR",
   "webServiceURL" : "https://ococoa-push.appspot.com/passbook/",
   "authenticationToken" : "4FC7A0A6-C5F1-4CDC-850E-0B2514383CC8",
-  "relevantDate" : "2014-08-14T19:00-05:00",
+  "relevantDate" : "2014-10-09T19:00-05:00",
   "locations" : [
     {
       "latitude"  :  45.43331333,
@@ -13,7 +13,7 @@
     }
   ],
   "organizationName" : "Cocoaheads Ottawa-Gatineau",
-  "description" : "August 2014",
+  "description" : "October 2014",
   "foregroundColor" : "rgb(255, 255, 255)",
   "backgroundColor" : "rgb(60, 65, 76)",
   "eventTicket" : {
@@ -21,14 +21,14 @@
       {
         "key" : "meetingHeader",
         "label" : "COCOAHEADS",
-        "value" : "September 11th"
+        "value" : "October 9th"
       }
     ],
     "primaryFields" : [
       {
         "key" : "event",
         "label" : "COCOAHEADS OTTAWA-GATINEAU",
-        "value" : "September Meeting"
+        "value" : "October Meeting"
       }
     ],
 	"secondaryFields" : [
@@ -39,20 +39,20 @@
       },
       {
         "key" : "meetingTime",
-        "label" : "THURSDAY Sep. 11th",
+        "label" : "THURSDAY Oct. 9th",
         "value" : "19:00-21:00"
       }
     ],
 	"auxiliaryFields" : [
       {
         "key" : "topic1",
-        "label" : "Chris S.",
-        "value" : "Localizing Echoes"
+        "label" : "Philippe C.",
+        "value" : "TrainScan"
       },
       {
         "key" : "topic2",
-        "label" : "Steven T.",
-        "value" : "iOS 8: the little things",
+        "label" : "Jean-Pierre S..",
+        "value" : "Jazzy",
         "changeMessage" : "New topic: %@"
       }
     ],
@@ -60,7 +60,7 @@
       {
         "key" : "datetime",
         "label" : "WHEN",
-        "value" : "Thursday, Sept. 11th, 2014 from 19:00 to 21:00"
+        "value" : "Thursday, Oct. 9th, 2014 from 19:00 to 21:00"
       },
       {
         "key" : "location-detail",
@@ -69,23 +69,13 @@
       },
       {
         "key" : "topic1-detail",
-        "label" : "Chris Saldanha",
-        "value" : "Lessons learned when localizing our newest Mac app, Echoes, including tales of Base Localization."
+        "label" : "Philippe Casgrain",
+        "value" : "Go behind the scenes on how, with a little help from my friends, I built a small app to get your Via Rail train ticket into your Passbook. Check out the app at https://trainscan.ca"
       },
       {
         "key" : "topic2-detail",
-        "label" : "Steven Thompson",
-        "value" : "Let’s talk about the little things that are new in iOS 8 and Xcode 6."
-      },
-      {
-        "key" : "topic3-detail",
-        "label" : "Swift Language User Group of Gatineau-Ottawa",
-        "value" : "Developers taking part in the Summer of Swift (https://github.com/realm/summer-of-swift) will proudly showcase their project's progress, or lack thereof."
-      },
-      {
-        "key" : "topic4-detail",
-        "label" : "Apple's Sept. 9th announcements",
-        "value" : "Come and discuss the new bits that were released on September 9th."
+        "label" : "Jean-Pierre Simard",
+        "value" : "Introducing Jazzy, a Swift (and, soon, Objective-C) documentation generator."
       },
       {
         "key" : "website",
