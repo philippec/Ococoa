@@ -46,14 +46,19 @@
 	"auxiliaryFields" : [
       {
         "key" : "topic1",
-        "label" : "Philippe C.",
-        "value" : "TrainScan"
+        "label" : "Nick B.",
+        "value" : "PopKey",
+        "changeMessage" : "New topic: %@"
       },
       {
         "key" : "topic2",
-        "label" : "Jean-Pierre S..",
-        "value" : "Jazzy",
-        "changeMessage" : "New topic: %@"
+        "label" : "Jean-Pierre S.",
+        "value" : "Jazzy"
+      },
+      {
+        "key" : "topic3",
+        "label" : "Philippe C.",
+        "value" : "TrainScan"
       }
     ],
     "backFields" : [
@@ -69,13 +74,18 @@
       },
       {
         "key" : "topic1-detail",
-        "label" : "Philippe Casgrain",
-        "value" : "Go behind the scenes on how, with a little help from my friends, I built a small app to get your Via Rail train ticket into your Passbook. Check out the app at https://trainscan.ca"
+        "label" : "Nick Barfoot",
+        "value" : "Popkey is a new leading 3rd party GIF keyboard for iOS 8. We make inserting animated GIFs as easy as using an emoji. Popkey is currently a “best featured app” in the App Store. You can learn more about PopKey at www.popkey.co."
       },
       {
         "key" : "topic2-detail",
         "label" : "Jean-Pierre Simard",
         "value" : "Introducing Jazzy, a Swift (and, soon, Objective-C) documentation generator."
+      },
+      {
+        "key" : "topic3-detail",
+        "label" : "Philippe Casgrain",
+        "value" : "Go behind the scenes on how, with a little help from my friends, I built a small app to get your Via Rail train ticket into your Passbook. Check out the app at https://trainscan.ca"
       },
       {
         "key" : "website",
