@@ -1,5 +1,11 @@
 #!/bin/sh
 
+# Check pass for basic JSON validity
+if [ 0 -ne `cat Ococoa.raw/pass.json | python -mjson.tool > /dev/null` ]; then
+    echo "pass.json is invalid, cannot deploy"
+    exit 1
+fi
+
 # Sign pass
 ./signpass -p Ococoa.raw -o ../server/ococoa-push/Ococoa.pkpass
 
