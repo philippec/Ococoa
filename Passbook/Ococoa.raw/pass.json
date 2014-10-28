@@ -8,8 +8,8 @@
   "relevantDate" : "2014-11-13T19:00-04:00",
   "locations" : [
     {
-      "latitude"  :  45.43331333,
-      "longitude" : -75.69500864
+      "latitude"  :  45.401598,
+      "longitude" : -75.730773
     }
   ],
   "organizationName" : "Cocoaheads Ottawa-Gatineau",
@@ -35,7 +35,7 @@
       {
         "key" : "loc",
         "label" : "LOCATION",
-        "value" : "LightSpeed Ottawa"
+        "value" : "WorkshopX"
       },
       {
         "key" : "meetingTime",
@@ -60,7 +60,7 @@
       {
         "key" : "location-detail",
         "label" : "WHERE",
-        "value" : "LightSpeed, 148 Dalhousie, Ottawa, K1N 7C4"
+        "value" : "WorkshopX, 6 Hamilton Avenue North, Ottawa, K1Y 4R1"
       },
       {
         "key" : "topic1-detail",
