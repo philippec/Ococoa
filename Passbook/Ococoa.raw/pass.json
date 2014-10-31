@@ -47,7 +47,12 @@
       {
         "key" : "topic1",
         "label" : "Kevin H.",
-        "value" : "PaintCode",
+        "value" : "PaintCode"
+      },
+      {
+        "key" : "topic2",
+        "label" : "Colin M. & Eric S.",
+        "value" : "Foko",
         "changeMessage" : "New topic: %@"
       }
     ],
@@ -66,6 +71,11 @@
         "key" : "topic1-detail",
         "label" : "Kevin Hayes",
         "value" : "PaintCode: resolution independent artwork."
+      },
+      {
+        "key" : "topic2-detail",
+        "label" : "Colin McDonald & Eric Sauve",
+        "value" : "The Foko app is a private Instagram for Companies - with 500 customer companies and over 10% of the Fortune 100. We decided to start with an emphasis on Swift - here is our story."
       },
       {
         "key" : "website",
