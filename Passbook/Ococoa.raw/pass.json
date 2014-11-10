@@ -52,7 +52,12 @@
       {
         "key" : "topic2",
         "label" : "Colin M. & Eric S.",
-        "value" : "Foko",
+        "value" : "Foko"
+      },
+      {
+        "key" : "topic3",
+        "label" : "Matt G.",
+        "value" : "Jailbroken!",
         "changeMessage" : "New topic: %@"
       }
     ],
@@ -76,6 +81,11 @@
         "key" : "topic2-detail",
         "label" : "Colin McDonald & Eric Sauve",
         "value" : "The Foko app is a private Instagram for Companies - with 500 customer companies and over 10% of the Fortune 100. We decided to start with an emphasis on Swift - here is our story."
+      },
+      {
+        "key" : "topic3-detail",
+        "label" : "Matthew Garden",
+        "value" : "Baby steps into jailbreaking and mobile penetration testing."
       },
       {
         "key" : "website",
