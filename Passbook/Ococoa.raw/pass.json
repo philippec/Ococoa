@@ -5,7 +5,7 @@
   "teamIdentifier" : "V7QY36F2JR",
   "webServiceURL" : "https://ococoa-push.appspot.com/passbook/",
   "authenticationToken" : "4FC7A0A6-C5F1-4CDC-850E-0B2514383CC8",
-  "relevantDate" : "2014-11-13T19:00-04:00",
+  "relevantDate" : "2015-01-08T19:00-04:00",
   "locations" : [
     {
       "latitude"  :  45.401598,
@@ -13,7 +13,7 @@
     }
   ],
   "organizationName" : "Cocoaheads Ottawa-Gatineau",
-  "description" : "November 2014",
+  "description" : "January 2015",
   "foregroundColor" : "rgb(255, 255, 255)",
   "backgroundColor" : "rgb(60, 65, 76)",
   "eventTicket" : {
@@ -21,14 +21,14 @@
       {
         "key" : "meetingHeader",
         "label" : "COCOAHEADS",
-        "value" : "November 13th"
+        "value" : "January 8th"
       }
     ],
     "primaryFields" : [
       {
         "key" : "event",
         "label" : "COCOAHEADS OTTAWA-GATINEAU",
-        "value" : "November Meeting"
+        "value" : "January Meeting"
       }
     ],
 	"secondaryFields" : [
@@ -39,33 +39,33 @@
       },
       {
         "key" : "meetingTime",
-        "label" : "THURSDAY NOV. 13th",
+        "label" : "THURSDAY JAN. 8th",
         "value" : "19:00-21:00"
       }
     ],
 	"auxiliaryFields" : [
       {
         "key" : "topic1",
-        "label" : "Kevin H.",
-        "value" : "PaintCode"
+        "label" : "Steven R.",
+        "value" : "Swift migration"
       },
       {
         "key" : "topic2",
-        "label" : "Colin M. & Eric S.",
-        "value" : "Foko"
+        "label" : "Chuck S.",
+        "value" : "Endless Summer of Swift",
+        "changeMessage" : "New topic: %@"
       },
       {
         "key" : "topic3",
-        "label" : "Matt G.",
-        "value" : "Jailbroken!",
-        "changeMessage" : "New topic: %@"
+        "label" : "Philippe C.",
+        "value" : "Special Announcement"
       }
     ],
     "backFields" : [
       {
         "key" : "datetime",
         "label" : "WHEN",
-        "value" : "Thursday, Nov. 13th, 2014 from 19:00 to 21:00"
+        "value" : "Thursday, Jan. 8th, 2015 from 19:00 to 21:00"
       },
       {
         "key" : "location-detail",
@@ -74,18 +74,18 @@
       },
       {
         "key" : "topic1-detail",
-        "label" : "Kevin Hayes",
-        "value" : "PaintCode: resolution independent artwork."
+        "label" : "Steven Rae",
+        "value" : "Experiences in migrating my application to Swift."
       },
       {
         "key" : "topic2-detail",
-        "label" : "Colin McDonald & Eric Sauve",
-        "value" : "The Foko app is a private Instagram for Companies - with 500 customer companies and over 10% of the Fortune 100. We decided to start with an emphasis on Swift - here is our story."
+        "label" : "Chuck Shnider",
+        "value" : "Just in time for the skating season, Chuck brings us along a Swift journey with Skateway."
       },
       {
         "key" : "topic3-detail",
-        "label" : "Matthew Garden",
-        "value" : "Baby steps into jailbreaking and mobile penetration testing."
+        "label" : "Philippe Casgrain",
+        "value" : "Learn more about NSNorth 2015, its theme and the reasons why we think it'll be the best NSNorth ever."
       },
       {
         "key" : "website",
