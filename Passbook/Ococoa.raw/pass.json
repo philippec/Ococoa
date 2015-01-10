@@ -5,7 +5,7 @@
   "teamIdentifier" : "V7QY36F2JR",
   "webServiceURL" : "https://ococoa-push.appspot.com/passbook/",
   "authenticationToken" : "4FC7A0A6-C5F1-4CDC-850E-0B2514383CC8",
-  "relevantDate" : "2015-01-08T19:00-04:00",
+  "relevantDate" : "2015-02-12T19:00-04:00",
   "locations" : [
     {
       "latitude"  :  45.401598,
@@ -13,7 +13,7 @@
     }
   ],
   "organizationName" : "Cocoaheads Ottawa-Gatineau",
-  "description" : "January 2015",
+  "description" : "February 2015",
   "foregroundColor" : "rgb(255, 255, 255)",
   "backgroundColor" : "rgb(60, 65, 76)",
   "eventTicket" : {
@@ -21,14 +21,14 @@
       {
         "key" : "meetingHeader",
         "label" : "COCOAHEADS",
-        "value" : "January 8th"
+        "value" : "February 12th"
       }
     ],
     "primaryFields" : [
       {
         "key" : "event",
         "label" : "COCOAHEADS OTTAWA-GATINEAU",
-        "value" : "January Meeting"
+        "value" : "February Meeting"
       }
     ],
 	"secondaryFields" : [
@@ -39,33 +39,28 @@
       },
       {
         "key" : "meetingTime",
-        "label" : "THURSDAY JAN. 8th",
+        "label" : "THURSDAY Feb. 12th",
         "value" : "19:00-21:00"
       }
     ],
 	"auxiliaryFields" : [
       {
         "key" : "topic1",
-        "label" : "Steven R.",
-        "value" : "Swift migration"
+        "label" : "Philippe C.",
+        "value" : "Stress-testing with Arduino"
       },
       {
         "key" : "topic2",
-        "label" : "Chuck S.",
-        "value" : "Endless Summer of Swift",
+        "label" : "Matt G.",
+        "value" : "AsyncDisplayKit",
         "changeMessage" : "New topic: %@"
-      },
-      {
-        "key" : "topic3",
-        "label" : "Philippe C.",
-        "value" : "Special Announcement"
       }
     ],
     "backFields" : [
       {
         "key" : "datetime",
         "label" : "WHEN",
-        "value" : "Thursday, Jan. 8th, 2015 from 19:00 to 21:00"
+        "value" : "Thursday, Feb. 12th, 2015 from 19:00 to 21:00"
       },
       {
         "key" : "location-detail",
@@ -74,18 +69,13 @@
       },
       {
         "key" : "topic1-detail",
-        "label" : "Steven Rae",
-        "value" : "Experiences in migrating my application to Swift."
+        "label" : "Philippe Casgrain",
+        "value" : "If you have a problem to reproduce that requires you to do a lot of typing, and you are not convinced that using Automator and other keyboard simulators is the way to go, learn how to simulate a keyboard and mouse using an inexpensive Arduino board."
       },
       {
         "key" : "topic2-detail",
-        "label" : "Chuck Shnider",
-        "value" : "Just in time for the skating season, Chuck brings us along a Swift journey with Skateway."
-      },
-      {
-        "key" : "topic3-detail",
-        "label" : "Philippe Casgrain",
-        "value" : "Learn more about NSNorth 2015, its theme and the reasons why we think it'll be the best NSNorth ever."
+        "label" : "Matt Garden",
+        "value" : "A brief introduction to AsyncDisplayKit and a reactive approach to iOS UI."
       },
       {
         "key" : "website",
