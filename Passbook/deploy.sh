@@ -18,11 +18,7 @@ appcfg.py update ../server/ococoa-push/
 
 sleep 2
 
-# Get all tokens
-# curl https://ococoa-push.appspot.com/passbook/v1/tokens
-
-# Get all tokens but only push for my phone
-# curl https://ococoa-push.appspot.com/passbook/v1/tokens | grep b102 | xargs ./simplepush.php
-
 # Get all tokens and push for all
-curl https://ococoa-push.appspot.com/passbook/v1/tokens | xargs ./simplepush.php
+curl https://ococoa-push.appspot.com/passbook/v1/tokens | awk '/"/{print "./simplepush.php "$1" && sleep 0.1"}' > push.sh
+sh push.sh
+rm push.sh
