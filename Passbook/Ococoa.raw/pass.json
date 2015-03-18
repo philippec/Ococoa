@@ -5,7 +5,7 @@
   "teamIdentifier" : "V7QY36F2JR",
   "webServiceURL" : "https://ococoa-push.appspot.com/passbook/",
   "authenticationToken" : "4FC7A0A6-C5F1-4CDC-850E-0B2514383CC8",
-  "relevantDate" : "2015-03-12T19:00-05:00",
+  "relevantDate" : "2015-05-14T19:00-05:00",
   "locations" : [
     {
       "latitude"  :  45.401598,
@@ -13,7 +13,7 @@
     }
   ],
   "organizationName" : "Cocoaheads Ottawa-Gatineau",
-  "description" : "March 2015",
+  "description" : "May 2015",
   "foregroundColor" : "rgb(255, 255, 255)",
   "backgroundColor" : "rgb(60, 65, 76)",
   "eventTicket" : {
@@ -21,14 +21,14 @@
       {
         "key" : "meetingHeader",
         "label" : "COCOAHEADS",
-        "value" : "March 12th"
+        "value" : "May 14th"
       }
     ],
     "primaryFields" : [
       {
         "key" : "event",
         "label" : "COCOAHEADS OTTAWA-GATINEAU",
-        "value" : "March Meeting"
+        "value" : "May Meeting"
       }
     ],
 	"secondaryFields" : [
@@ -39,27 +39,22 @@
       },
       {
         "key" : "meetingTime",
-        "label" : "THURSDAY Mar. 12th",
+        "label" : "THURSDAY May 14th",
         "value" : "19:00-21:00"
       }
     ],
 	"auxiliaryFields" : [
       {
         "key" : "topic1",
-        "label" : "Chris S.",
-        "value" : "Cross-platform Swift"
-      },
-      {
-        "key" : "topic2",
-        "label" : "Josh S.",
-        "value" : "UICollectionViewOMGGameLayout"
+        "label" : "Nick B.",
+        "value" : "TBA"
       }
     ],
     "backFields" : [
       {
         "key" : "datetime",
         "label" : "WHEN",
-        "value" : "Thursday, Mar. 12th, 2015 from 19:00 to 21:00"
+        "value" : "Thursday, May 14th, 2015 from 19:00 to 21:00"
       },
       {
         "key" : "location-detail",
@@ -68,13 +63,8 @@
       },
       {
         "key" : "topic1-detail",
-        "label" : "Chris Saldanha",
-        "value" : "Using Swift to share code between Android and Mac/iOS with the RemObjects Silver compiler."
-      },
-      {
-        "key" : "topic2-detail",
-        "label" : "Josh Svatek",
-        "value" : "I wish I had a more detailed description but I guess you'll have to settle for this. Also, Phil really wonders if anyone reads the back of the pass..."
+        "label" : "Nick Barfoot",
+        "value" : "TBA."
       },
       {
         "key" : "website",
@@ -89,7 +79,7 @@
       {
         "key" : "backgroundPicture",
         "label" : "BACKGROUND PICTURE",
-        "value" : "Museum of Nature by NSNorth 2014"
+        "value" : "Fairmont Le Château Montebello by NSNorth 2015"
       },
       {
         "key" : "suggestPicture",
