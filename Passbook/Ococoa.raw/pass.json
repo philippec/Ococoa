@@ -46,6 +46,12 @@
 	"auxiliaryFields" : [
       {
         "key" : "topic1",
+        "label" : "Frank C.",
+        "value" : "Apiary.io",
+        "changeMessage" : "New topic: %@"
+      },
+      {
+        "key" : "topic2",
         "label" : "Nick B.",
         "value" : "TBA"
       }
@@ -63,6 +69,11 @@
       },
       {
         "key" : "topic1-detail",
+        "label" : "Special guest Frank Courville",
+        "value" : "Mocking as a service with Apiary.io. Learn how to document, mock, test and collaborate on APIs using Apiary.io, the perfect tool to bridge communication between mobile and backend developers."
+      },
+      {
+        "key" : "topic2-detail",
         "label" : "Nick Barfoot",
         "value" : "TBA."
       },
