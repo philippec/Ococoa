@@ -5,7 +5,7 @@
   "teamIdentifier" : "V7QY36F2JR",
   "webServiceURL" : "https://ococoa-push.appspot.com/passbook/",
   "authenticationToken" : "4FC7A0A6-C5F1-4CDC-850E-0B2514383CC8",
-  "relevantDate" : "2015-05-14T19:00-05:00",
+  "relevantDate" : "2015-06-11T19:00-05:00",
   "locations" : [
     {
       "latitude"  :  45.401598,
@@ -13,7 +13,7 @@
     }
   ],
   "organizationName" : "Cocoaheads Ottawa-Gatineau",
-  "description" : "May 2015",
+  "description" : "June 2015",
   "foregroundColor" : "rgb(255, 255, 255)",
   "backgroundColor" : "rgb(60, 65, 76)",
   "eventTicket" : {
@@ -21,14 +21,14 @@
       {
         "key" : "meetingHeader",
         "label" : "COCOAHEADS",
-        "value" : "May 14th"
+        "value" : "June 11th"
       }
     ],
     "primaryFields" : [
       {
         "key" : "event",
         "label" : "COCOAHEADS OTTAWA-GATINEAU",
-        "value" : "May Meeting"
+        "value" : "June Meeting"
       }
     ],
 	"secondaryFields" : [
@@ -39,28 +39,28 @@
       },
       {
         "key" : "meetingTime",
-        "label" : "THURSDAY May 14th",
+        "label" : "THURSDAY June 11th",
         "value" : "19:00-21:00"
       }
     ],
 	"auxiliaryFields" : [
       {
         "key" : "topic1",
-        "label" : "Frank C.",
-        "value" : "Apiary.io",
+        "label" : "Josh S.",
+        "value" : "Swift + Functional programming",
         "changeMessage" : "New topic: %@"
       },
       {
         "key" : "topic2",
-        "label" : "Nick B.",
-        "value" : "TBA"
+        "label" : "Discussion",
+        "value" : "WWDC 2015"
       }
     ],
     "backFields" : [
       {
         "key" : "datetime",
         "label" : "WHEN",
-        "value" : "Thursday, May 14th, 2015 from 19:00 to 21:00"
+        "value" : "Thursday, June 11th, 2015 from 19:00 to 21:00"
       },
       {
         "key" : "location-detail",
@@ -69,13 +69,13 @@
       },
       {
         "key" : "topic1-detail",
-        "label" : "Special guest Frank Courville",
-        "value" : "Mocking as a service with Apiary.io. Learn how to document, mock, test and collaborate on APIs using Apiary.io, the perfect tool to bridge communication between mobile and backend developers."
+        "label" : "Josh Svatek",
+        "value" : "Swift + Functional programming. Learn about Optional Chaining and Applicative Functors."
       },
       {
         "key" : "topic2-detail",
-        "label" : "Nick Barfoot",
-        "value" : "TBA."
+        "label" : "WWDC 2015",
+        "value" : "We'll discuss the new bits that were announced this week at WWDC 2015."
       },
       {
         "key" : "website",
