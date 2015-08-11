@@ -5,7 +5,7 @@
   "teamIdentifier" : "V7QY36F2JR",
   "webServiceURL" : "https://ococoa-push.appspot.com/passbook/",
   "authenticationToken" : "4FC7A0A6-C5F1-4CDC-850E-0B2514383CC8",
-  "relevantDate" : "2015-06-11T19:00-05:00",
+  "relevantDate" : "2015-07-09T19:00-04:00",
   "locations" : [
     {
       "latitude"  :  45.401598,
@@ -13,7 +13,7 @@
     }
   ],
   "organizationName" : "Cocoaheads Ottawa-Gatineau",
-  "description" : "June 2015",
+  "description" : "July 2015",
   "foregroundColor" : "rgb(255, 255, 255)",
   "backgroundColor" : "rgb(60, 65, 76)",
   "eventTicket" : {
@@ -21,14 +21,14 @@
       {
         "key" : "meetingHeader",
         "label" : "COCOAHEADS",
-        "value" : "June 11th"
+        "value" : "July 9th"
       }
     ],
     "primaryFields" : [
       {
         "key" : "event",
         "label" : "COCOAHEADS OTTAWA-GATINEAU",
-        "value" : "June Meeting"
+        "value" : "July Meeting"
       }
     ],
 	"secondaryFields" : [
@@ -39,15 +39,15 @@
       },
       {
         "key" : "meetingTime",
-        "label" : "THURSDAY June 11th",
+        "label" : "THURSDAY July 9th",
         "value" : "19:00-21:00"
       }
     ],
 	"auxiliaryFields" : [
       {
         "key" : "topic1",
-        "label" : "Josh S.",
-        "value" : "Swift + Functional programming",
+        "label" : "Philippe C.",
+        "value" : "SwiftConf",
         "changeMessage" : "New topic: %@"
       },
       {
@@ -60,7 +60,7 @@
       {
         "key" : "datetime",
         "label" : "WHEN",
-        "value" : "Thursday, June 11th, 2015 from 19:00 to 21:00"
+        "value" : "Thursday, July 9th, 2015 from 19:00 to 21:00"
       },
       {
         "key" : "location-detail",
@@ -69,8 +69,8 @@
       },
       {
         "key" : "topic1-detail",
-        "label" : "Josh Svatek",
-        "value" : "Swift + Functional programming. Learn about Optional Chaining and Applicative Functors."
+        "label" : "Philippe Casgrain",
+        "value" : "Conference report: SwiftConf 2015. Philippe was a speaker at the conference formerly known as Objective-Cologne and will give a first-hand account of his first european conference."
       },
       {
         "key" : "topic2-detail",
