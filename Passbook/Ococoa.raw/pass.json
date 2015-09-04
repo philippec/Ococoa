@@ -5,7 +5,7 @@
   "teamIdentifier" : "V7QY36F2JR",
   "webServiceURL" : "https://ococoa-push.appspot.com/passbook/",
   "authenticationToken" : "4FC7A0A6-C5F1-4CDC-850E-0B2514383CC8",
-  "relevantDate" : "2015-08-13T19:00-04:00",
+  "relevantDate" : "2015-09-10T19:00-04:00",
   "locations" : [
     {
       "latitude"  :  45.401598,
@@ -13,7 +13,7 @@
     }
   ],
   "organizationName" : "Cocoaheads Ottawa-Gatineau",
-  "description" : "August 2015",
+  "description" : "September 2015",
   "foregroundColor" : "rgb(255, 255, 255)",
   "backgroundColor" : "rgb(60, 65, 76)",
   "eventTicket" : {
@@ -21,14 +21,14 @@
       {
         "key" : "meetingHeader",
         "label" : "COCOAHEADS",
-        "value" : "August 13th"
+        "value" : "September 10th"
       }
     ],
     "primaryFields" : [
       {
         "key" : "event",
         "label" : "COCOAHEADS OTTAWA-GATINEAU",
-        "value" : "August Meeting"
+        "value" : "September Meeting"
       }
     ],
 	"secondaryFields" : [
@@ -39,22 +39,28 @@
       },
       {
         "key" : "meetingTime",
-        "label" : "THURSDAY August 13th",
+        "label" : "THURSDAY September 10th",
         "value" : "19:00-21:00"
       }
     ],
 	"auxiliaryFields" : [
       {
         "key" : "topic1",
+        "label" : "Philippe C.",
+        "value" : "Sherlocked!",
+        "changeMessage" : "New topic: %@"
+      },
+      {
+        "key" : "topic2",
         "label" : "Open discussion",
-        "value" : "Topic du jour"
+        "value" : "Apple Announcements"
       }
     ],
     "backFields" : [
       {
         "key" : "datetime",
         "label" : "WHEN",
-        "value" : "Thursday, August 13th, 2015 from 19:00 to 21:00"
+        "value" : "Thursday, September 10th, 2015 from 19:00 to 21:00"
       },
       {
         "key" : "location-detail",
@@ -63,6 +69,11 @@
       },
       {
         "key" : "topic1-detail",
+        "label" : "Sherlocked!",
+        "value" : "On August 25th, two of Philippe's paid apps were almost instantly obsoleted. Listen to the tales of woes as he had to rewrite his app in a few hours, and learn about App Transport Security."
+      },
+      {
+        "key" : "topic2-detail",
         "label" : "Open discussion",
         "value" : "Come and meet your fellow developers of all stripes in a friendly and inclusive atmosphere."
       },
