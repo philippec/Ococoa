@@ -46,12 +46,17 @@
 	"auxiliaryFields" : [
       {
         "key" : "topic1",
-        "label" : "Philippe C.",
-        "value" : "Sherlocked!",
+        "label" : "Farzad S.",
+        "value" : "Persuasive Technology",
         "changeMessage" : "New topic: %@"
       },
       {
         "key" : "topic2",
+        "label" : "Philippe C.",
+        "value" : "Sherlocked!"
+      },
+      {
+        "key" : "topic3",
         "label" : "Open discussion",
         "value" : "Apple Announcements"
       }
@@ -69,11 +74,16 @@
       },
       {
         "key" : "topic1-detail",
+        "label" : "Persuasive Technology",
+        "value" : "The main thing about Persuasive Technology is how to persuade people toward a task or behavior via software and computing devices. In other words it discusses the psychological factors to be considered for designing a persuasive application. It has some overlap with other technologies like gamification and communication science."
+      },
+      {
+        "key" : "topic2-detail",
         "label" : "Sherlocked!",
         "value" : "On August 25th, two of Philippe's paid apps were almost instantly obsoleted. Listen to the tales of woes as he had to rewrite his app in a few hours, and learn about App Transport Security."
       },
       {
-        "key" : "topic2-detail",
+        "key" : "topic3-detail",
         "label" : "Open discussion",
         "value" : "Come and meet your fellow developers of all stripes in a friendly and inclusive atmosphere."
       },
