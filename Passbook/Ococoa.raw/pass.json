@@ -5,7 +5,7 @@
   "teamIdentifier" : "V7QY36F2JR",
   "webServiceURL" : "https://ococoa-push.appspot.com/passbook/",
   "authenticationToken" : "4FC7A0A6-C5F1-4CDC-850E-0B2514383CC8",
-  "relevantDate" : "2015-09-10T19:00-04:00",
+  "relevantDate" : "2015-10-08T19:00-04:00",
   "locations" : [
     {
       "latitude"  :  45.401598,
@@ -13,7 +13,7 @@
     }
   ],
   "organizationName" : "Cocoaheads Ottawa-Gatineau",
-  "description" : "September 2015",
+  "description" : "October 2015",
   "foregroundColor" : "rgb(255, 255, 255)",
   "backgroundColor" : "rgb(60, 65, 76)",
   "eventTicket" : {
@@ -21,14 +21,14 @@
       {
         "key" : "meetingHeader",
         "label" : "COCOAHEADS",
-        "value" : "September 10th"
+        "value" : "October 8th"
       }
     ],
     "primaryFields" : [
       {
         "key" : "event",
         "label" : "COCOAHEADS OTTAWA-GATINEAU",
-        "value" : "September Meeting"
+        "value" : "October Meeting"
       }
     ],
 	"secondaryFields" : [
@@ -39,33 +39,23 @@
       },
       {
         "key" : "meetingTime",
-        "label" : "THURSDAY September 10th",
+        "label" : "THURSDAY October 8th",
         "value" : "19:00-21:00"
       }
     ],
 	"auxiliaryFields" : [
       {
         "key" : "topic1",
-        "label" : "Farzad S.",
-        "value" : "Persuasive Technology",
+        "label" : "Nick B.",
+        "value" : "PopKey - One Year Later",
         "changeMessage" : "New topic: %@"
-      },
-      {
-        "key" : "topic2",
-        "label" : "Philippe C.",
-        "value" : "Sherlocked!"
-      },
-      {
-        "key" : "topic3",
-        "label" : "Open discussion",
-        "value" : "Apple Announcements"
       }
     ],
     "backFields" : [
       {
         "key" : "datetime",
         "label" : "WHEN",
-        "value" : "Thursday, September 10th, 2015 from 19:00 to 21:00"
+        "value" : "Thursday, October 8th, 2015 from 19:00 to 21:00"
       },
       {
         "key" : "location-detail",
@@ -74,18 +64,8 @@
       },
       {
         "key" : "topic1-detail",
-        "label" : "Persuasive Technology",
-        "value" : "The main thing about Persuasive Technology is how to persuade people toward a task or behavior via software and computing devices. In other words it discusses the psychological factors to be considered for designing a persuasive application. It has some overlap with other technologies like gamification and communication science."
-      },
-      {
-        "key" : "topic2-detail",
-        "label" : "Sherlocked!",
-        "value" : "On August 25th, two of Philippe's paid apps were almost instantly obsoleted. Listen to the tales of woes as he had to rewrite his app in a few hours, and learn about App Transport Security."
-      },
-      {
-        "key" : "topic3-detail",
-        "label" : "Open discussion",
-        "value" : "Come and meet your fellow developers of all stripes in a friendly and inclusive atmosphere."
+        "label" : "PopKey - One Year Later",
+        "value" : "One year after the launch of PopKey, Nick Barfoot will present us with updates on product, engineering decisions, and lessons learned that might be helpful to other developers."
       },
       {
         "key" : "website",
