@@ -46,8 +46,13 @@
 	"auxiliaryFields" : [
       {
         "key" : "topic1",
-        "label" : "Ben S.",
-        "value" : "Realm and Core Data",
+        "label" : "Josh S.",
+        "value" : "The Trouble with Tuples",
+      },
+      {
+        "key" : "topic2",
+        "label" : "Steven T.",
+        "value" : "GameplayKit",
         "changeMessage" : "New topic: %@"
       }
     ],
@@ -64,8 +69,13 @@
       },
       {
         "key" : "topic1-detail",
-        "label" : "Realm and Core Data, by Ben Sarrazin",
-        "value" : "Realm's database engine is often touted as a great Core Data replacement. After a problematic versioning issue with Core Data models, Ben took the plunge with Realm. Come and learn about the differences and similarities, and how using Realm can help you with your app."
+        "label" : "The Trouble with Tuples, by Josh Svatek",
+        "value" : "A short Swift talk about the intersection between tuples and Protocol Oriented Programming."
+      },
+      {
+        "key" : "topic2-detail",
+        "label" : "Not just gaming with GameplayKit, by Steven Thompson",
+        "value" : "Showing off GameplayKit for games and work on the Apple TV."
       },
       {
         "key" : "website",
