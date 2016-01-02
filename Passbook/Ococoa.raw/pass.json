@@ -5,7 +5,7 @@
   "teamIdentifier" : "V7QY36F2JR",
   "webServiceURL" : "https://ococoa-push.appspot.com/passbook/",
   "authenticationToken" : "4FC7A0A6-C5F1-4CDC-850E-0B2514383CC8",
-  "relevantDate" : "2015-12-10T19:00-05:00",
+  "relevantDate" : "2016-01-14T19:00-05:00",
   "locations" : [
     {
       "latitude"  :  45.401598,
@@ -13,7 +13,7 @@
     }
   ],
   "organizationName" : "Cocoaheads Ottawa-Gatineau",
-  "description" : "December 2015",
+  "description" : "January 2016",
   "foregroundColor" : "rgb(255, 255, 255)",
   "backgroundColor" : "rgb(60, 65, 76)",
   "eventTicket" : {
@@ -21,14 +21,14 @@
       {
         "key" : "meetingHeader",
         "label" : "COCOAHEADS",
-        "value" : "December 10th"
+        "value" : "January 14th"
       }
     ],
     "primaryFields" : [
       {
         "key" : "event",
         "label" : "COCOAHEADS OTTAWA-GATINEAU",
-        "value" : "December Meeting"
+        "value" : "January Meeting"
       }
     ],
 	"secondaryFields" : [
@@ -39,20 +39,20 @@
       },
       {
         "key" : "meetingTime",
-        "label" : "THURSDAY December 10th",
+        "label" : "THURSDAY January 14th",
         "value" : "19:00-21:00"
       }
     ],
 	"auxiliaryFields" : [
       {
         "key" : "topic1",
-        "label" : "Josh S.",
-        "value" : "The Trouble with Tuples",
+        "label" : "Ben S.",
+        "value" : "Realm and Core Data"
       },
       {
         "key" : "topic2",
-        "label" : "Steven T.",
-        "value" : "GameplayKit",
+        "label" : "Chuck S.",
+        "value" : "Apple ][ gamedev",
         "changeMessage" : "New topic: %@"
       }
     ],
@@ -60,7 +60,7 @@
       {
         "key" : "datetime",
         "label" : "WHEN",
-        "value" : "Thursday, December 10th, 2015 from 19:00 to 21:00"
+        "value" : "Thursday, January 14th, 2016 from 19:00 to 21:00"
       },
       {
         "key" : "location-detail",
@@ -69,13 +69,13 @@
       },
       {
         "key" : "topic1-detail",
-        "label" : "The Trouble with Tuples, by Josh Svatek",
-        "value" : "A short Swift talk about the intersection between tuples and Protocol Oriented Programming."
+        "label" : "Realm and Core Data, by Ben Sarrazin",
+        "value" : "Realm's database engine is often touted as a great Core Data replacement. After a problematic versioning issue with Core Data models, Ben took the plunge with Realm. Come and learn about the differences and similarities, and how using Realm can help you with your app."
       },
       {
         "key" : "topic2-detail",
-        "label" : "Not just gaming with GameplayKit, by Steven Thompson",
-        "value" : "Showing off GameplayKit for games and work on the Apple TV."
+        "label" : "Apple ][ gamedev, by Chuck Shnider (twitter: @chucks)",
+        "value" : "A look back at Apple ][ game development."
       },
       {
         "key" : "website",
