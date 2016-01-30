@@ -5,7 +5,7 @@
   "teamIdentifier" : "V7QY36F2JR",
   "webServiceURL" : "https://ococoa-push.appspot.com/passbook/",
   "authenticationToken" : "4FC7A0A6-C5F1-4CDC-850E-0B2514383CC8",
-  "relevantDate" : "2016-01-14T19:00-05:00",
+  "relevantDate" : "2016-02-11T19:00-05:00",
   "locations" : [
     {
       "latitude"  :  45.401598,
@@ -13,7 +13,7 @@
     }
   ],
   "organizationName" : "Cocoaheads Ottawa-Gatineau",
-  "description" : "January 2016",
+  "description" : "February 2016",
   "foregroundColor" : "rgb(255, 255, 255)",
   "backgroundColor" : "rgb(60, 65, 76)",
   "eventTicket" : {
@@ -21,14 +21,14 @@
       {
         "key" : "meetingHeader",
         "label" : "COCOAHEADS",
-        "value" : "January 14th"
+        "value" : "February 11th"
       }
     ],
     "primaryFields" : [
       {
         "key" : "event",
         "label" : "COCOAHEADS OTTAWA-GATINEAU",
-        "value" : "January Meeting"
+        "value" : "February Meeting"
       }
     ],
 	"secondaryFields" : [
@@ -39,20 +39,20 @@
       },
       {
         "key" : "meetingTime",
-        "label" : "THURSDAY January 14th",
+        "label" : "THURSDAY February 11th",
         "value" : "19:00-21:00"
       }
     ],
 	"auxiliaryFields" : [
       {
         "key" : "topic1",
-        "label" : "Ben S.",
-        "value" : "Realm and Core Data"
+        "label" : "Philippe C.",
+        "value" : "So I made a Recipes app"
       },
       {
         "key" : "topic2",
-        "label" : "Chuck S.",
-        "value" : "Apple ][ gamedev",
+        "label" : "Jordan S.",
+        "value" : "Alternatives to Parse.io",
         "changeMessage" : "New topic: %@"
       }
     ],
@@ -60,7 +60,7 @@
       {
         "key" : "datetime",
         "label" : "WHEN",
-        "value" : "Thursday, January 14th, 2016 from 19:00 to 21:00"
+        "value" : "Thursday, February 11th, 2016 from 19:00 to 21:00"
       },
       {
         "key" : "location-detail",
@@ -69,13 +69,13 @@
       },
       {
         "key" : "topic1-detail",
-        "label" : "Realm and Core Data, by Ben Sarrazin",
-        "value" : "Realm's database engine is often touted as a great Core Data replacement. After a problematic versioning issue with Core Data models, Ben took the plunge with Realm. Come and learn about the differences and similarities, and how using Realm can help you with your app."
+        "label" : "La Bécasse, by Philippe Casgrain",
+        "value" : "Recipes apps are so cliché. It's even Apple's own sample app for Core Data. But my mom had a particular set of requirements, including simplicity, that did not play well with the apps on the market today. So I built an app for my mom. And then she got an iPad…"
       },
       {
         "key" : "topic2-detail",
-        "label" : "Apple ][ gamedev, by Chuck Shnider (twitter: @chucks)",
-        "value" : "A look back at Apple ][ game development."
+        "label" : "Alternatives to Parse.io, by Jordan St Jacques",
+        "value" : "With Facebook's Parse.io closing, developers are scrambling to look for an new backend service. Jordan will give us a tour of the current alternatives."
       },
       {
         "key" : "website",
