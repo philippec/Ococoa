@@ -1,7 +1,12 @@
 #!/bin/sh
 
 # Check pass for basic JSON validity
-if [ 0 -ne `cat Ococoa.raw/pass.json | python -mjson.tool > /dev/null` ]; then
+
+echo "Checking pass.json for validity..."
+cat Ococoa.raw/pass.json | python -mjson.tool > /dev/null
+if [ $? -eq 0 ]; then
+    echo "pass.json seems valid"
+else
     echo "pass.json is invalid, cannot deploy"
     exit 1
 fi
