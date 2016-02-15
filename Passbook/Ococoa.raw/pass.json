@@ -8,12 +8,12 @@
   "relevantDate" : "2016-02-11T19:00-05:00",
   "locations" : [
     {
-      "latitude"  :  45.433378,
-      "longitude" : -75.694970
+      "latitude"  :  45.401598,
+      "longitude" : -75.730773
     }
   ],
   "organizationName" : "Cocoaheads Ottawa-Gatineau",
-  "description" : "February 2016",
+  "description" : "March 2016",
   "foregroundColor" : "rgb(255, 255, 255)",
   "backgroundColor" : "rgb(60, 65, 76)",
   "eventTicket" : {
@@ -21,66 +21,50 @@
       {
         "key" : "meetingHeader",
         "label" : "COCOAHEADS",
-        "value" : "February 11th"
+        "value" : "March 10th"
       }
     ],
     "primaryFields" : [
       {
         "key" : "event",
         "label" : "COCOAHEADS OTTAWA-GATINEAU",
-        "value" : "February Meeting"
+        "value" : "March Meeting"
       }
     ],
 	"secondaryFields" : [
       {
         "key" : "loc",
         "label" : "LOCATION",
-        "value" : "Lightspeed Ottawa"
+        "value" : "WorkshopX"
       },
       {
         "key" : "meetingTime",
-        "label" : "THURSDAY February 11th",
+        "label" : "THURSDAY March 10th",
         "value" : "19:00-21:00"
       }
     ],
 	"auxiliaryFields" : [
       {
-        "key" : "topic0",
-        "label" : "Lightspeed",
-        "value" : "148 Dalhousie",
-        "changeMessage" : "Change of location: %@"
-      },
-      {
         "key" : "topic1",
-        "label" : "Philippe C.",
-        "value" : "So I made a Recipes app"
-      },
-      {
-        "key" : "topic2",
-        "label" : "Jordan S.",
-        "value" : "Alternatives to Parse.io"
+        "label" : "Ben S.",
+        "value" : "Realm in depth"
       }
     ],
     "backFields" : [
       {
         "key" : "datetime",
         "label" : "WHEN",
-        "value" : "Thursday, February 11th, 2016 from 19:00 to 21:00"
+        "value" : "Thursday, March 10th, 2016 from 19:00 to 21:00"
       },
       {
         "key" : "location-detail",
         "label" : "WHERE",
-        "value" : "Lightspeed Ottawa, 148 Dalhousie, Ottawa, K1N 7C4"
+        "value" : "WorkshopX, 6 Hamilton Avenue North, Ottawa, K1Y 4R1"
       },
       {
         "key" : "topic1-detail",
-        "label" : "La Bécasse, by Philippe Casgrain",
-        "value" : "Recipes apps are so cliché. It's even Apple's own sample app for Core Data. But my mom had a particular set of requirements, including simplicity, that did not play well with the apps on the market today. So I built an app for my mom. And then she got an iPad…"
-      },
-      {
-        "key" : "topic2-detail",
-        "label" : "Alternatives to Parse.io, by Jordan St Jacques",
-        "value" : "With Facebook's Parse.io closing, developers are scrambling to look for an new backend service. Jordan will give us a tour of the current alternatives."
+        "label" : "Realm in depth, by Ben Sarrazin",
+        "value" : "Follow-up from my January talk"
       },
       {
         "key" : "website",
