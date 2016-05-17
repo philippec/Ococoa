@@ -5,7 +5,7 @@
   "teamIdentifier" : "V7QY36F2JR",
   "webServiceURL" : "https://ococoa-push.appspot.com/passbook/",
   "authenticationToken" : "4FC7A0A6-C5F1-4CDC-850E-0B2514383CC8",
-  "relevantDate" : "2016-05-12T19:00-05:00",
+  "relevantDate" : "2016-06-09T19:00-05:00",
   "locations" : [
     {
       "latitude"  :  45.400786,
@@ -13,7 +13,7 @@
     }
   ],
   "organizationName" : "Cocoaheads Ottawa-Gatineau",
-  "description" : "May 2016",
+  "description" : "June 2016",
   "foregroundColor" : "rgb(255, 255, 255)",
   "backgroundColor" : "rgb(60, 65, 76)",
   "eventTicket" : {
@@ -21,14 +21,14 @@
       {
         "key" : "meetingHeader",
         "label" : "COCOAHEADS",
-        "value" : "May 12th"
+        "value" : "June 9th"
       }
     ],
     "primaryFields" : [
       {
         "key" : "event",
         "label" : "COCOAHEADS OTTAWA-GATINEAU",
-        "value" : "May Meeting"
+        "value" : "JUne Meeting"
       }
     ],
 	"secondaryFields" : [
@@ -39,23 +39,28 @@
       },
       {
         "key" : "meetingTime",
-        "label" : "THURSDAY May 12th",
+        "label" : "THURSDAY June 9th",
         "value" : "19:00-21:00"
       }
     ],
 	"auxiliaryFields" : [
       {
         "key" : "topic1",
-        "label" : "Philippe C.",
-        "value" : "Easy printing",
+        "label" : "Kevin H.",
+        "value" : "AgileCloudSDK",
         "changeMessage" : "New topic: %@"
+      },
+      {
+        "key" : "topic2",
+        "label" : "Josh S.",
+        "value" : "Iffy Swift"
       }
     ],
     "backFields" : [
       {
         "key" : "datetime",
         "label" : "WHEN",
-        "value" : "Thursday, May 12th, 2016 from 19:00 to 21:00"
+        "value" : "Thursday, June 9th, 2016 from 19:00 to 21:00"
       },
       {
         "key" : "location-detail",
@@ -64,8 +69,13 @@
       },
       {
         "key" : "topic1-detail",
-        "label" : "Easy printing, with Philippe Casgrain",
-        "value" : "You can easily print an NSView. But to add complex, multi-page printing can be a struggle. We'll go through how I added printing to my Recipes app using templating and Webkit."
+        "label" : "AgileCloudSDK, with Kevin Hayes",
+        "value" : "AgileCloudSDK is a CloudKit API-compatible framework for communicating with iCloud using Apple’s CloudKitJS library and CloudKit Web Services. Topics discussed will be similarities to CloudKit, a few differences, caveats, additional benefits, how to set it up, and a brief demo."
+      },
+      {
+        "key" : "topic2-detail",
+        "label" : "Iff Swift, with Josh Svatek",
+        "value" : "Iffy Swift: Code like nobody's watching."
       },
       {
         "key" : "website",
