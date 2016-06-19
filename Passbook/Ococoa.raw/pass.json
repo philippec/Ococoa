@@ -5,7 +5,7 @@
   "teamIdentifier" : "V7QY36F2JR",
   "webServiceURL" : "https://ococoa-push.appspot.com/passbook/",
   "authenticationToken" : "4FC7A0A6-C5F1-4CDC-850E-0B2514383CC8",
-  "relevantDate" : "2016-06-09T19:00-05:00",
+  "relevantDate" : "2016-07-14T19:00-05:00",
   "locations" : [
     {
       "latitude"  :  45.400786,
@@ -13,7 +13,7 @@
     }
   ],
   "organizationName" : "Cocoaheads Ottawa-Gatineau",
-  "description" : "June 2016",
+  "description" : "July 2016",
   "foregroundColor" : "rgb(255, 255, 255)",
   "backgroundColor" : "rgb(60, 65, 76)",
   "eventTicket" : {
@@ -21,14 +21,14 @@
       {
         "key" : "meetingHeader",
         "label" : "COCOAHEADS",
-        "value" : "June 9th"
+        "value" : "July 14th"
       }
     ],
     "primaryFields" : [
       {
         "key" : "event",
         "label" : "COCOAHEADS OTTAWA-GATINEAU",
-        "value" : "JUne Meeting"
+        "value" : "July Meeting"
       }
     ],
 	"secondaryFields" : [
@@ -39,21 +39,16 @@
       },
       {
         "key" : "meetingTime",
-        "label" : "THURSDAY June 9th",
+        "label" : "THURSDAY July 14th",
         "value" : "19:00-21:00"
       }
     ],
 	"auxiliaryFields" : [
       {
         "key" : "topic1",
-        "label" : "Kevin H.",
-        "value" : "AgileCloudSDK",
+        "label" : "WWDC",
+        "value" : "WWDC Recap",
         "changeMessage" : "New topic: %@"
-      },
-      {
-        "key" : "topic2",
-        "label" : "Josh S.",
-        "value" : "Iffy Swift"
       }
     ],
     "backFields" : [
@@ -69,13 +64,8 @@
       },
       {
         "key" : "topic1-detail",
-        "label" : "AgileCloudSDK, with Kevin Hayes",
-        "value" : "AgileCloudSDK is a CloudKit API-compatible framework for communicating with iCloud using Apple’s CloudKitJS library and CloudKit Web Services. Topics discussed will be similarities to CloudKit, a few differences, caveats, additional benefits, how to set it up, and a brief demo."
-      },
-      {
-        "key" : "topic2-detail",
-        "label" : "Iff Swift, with Josh Svatek",
-        "value" : "Iffy Swift: Code like nobody's watching."
+        "label" : "WWDC Recap",
+        "value" : "We'll discuss our favourite new bits from WWDC 2016."
       },
       {
         "key" : "website",
@@ -95,7 +85,7 @@
       {
         "key" : "backgroundPicture",
         "label" : "BACKGROUND PICTURE",
-        "value" : "Fairmont Le Château Montebello by NSNorth 2015"
+        "value" : "WWDC 2016 Logo by Apple"
       },
       {
         "key" : "suggestPicture",
