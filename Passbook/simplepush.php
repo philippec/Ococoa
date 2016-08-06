@@ -17,7 +17,7 @@ if ($argc < 2) {
 echo 'There are ' . ($argc - 1) . ' tokens.' . PHP_EOL;
 
 // Put your private key's passphrase here:
-$passphrase = 'foo';
+$passphrase = 'foobar';
 
 // Put your alert message here:
 $message = 'Yo';
@@ -48,7 +48,7 @@ function send_notification($deviceToken, $apns_stream) {
 
 $ctx = stream_context_create();
 stream_context_set_option($ctx, 'ssl', 'local_cert', 'apple_push_notification.pem');
-// stream_context_set_option($ctx, 'ssl', 'passphrase', $passphrase);
+stream_context_set_option($ctx, 'ssl', 'passphrase', $passphrase);
 
 // Open a connection to the APNS server
 $fp = stream_socket_client(

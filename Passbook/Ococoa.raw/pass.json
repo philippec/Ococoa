@@ -5,7 +5,7 @@
   "teamIdentifier" : "V7QY36F2JR",
   "webServiceURL" : "https://ococoa-push.appspot.com/passbook/",
   "authenticationToken" : "4FC7A0A6-C5F1-4CDC-850E-0B2514383CC8",
-  "relevantDate" : "2016-07-14T19:00-05:00",
+  "relevantDate" : "2016-08-11T19:00-05:00",
   "locations" : [
     {
       "latitude"  :  45.400786,
@@ -13,7 +13,7 @@
     }
   ],
   "organizationName" : "Cocoaheads Ottawa-Gatineau",
-  "description" : "July 2016",
+  "description" : "August 2016",
   "foregroundColor" : "rgb(255, 255, 255)",
   "backgroundColor" : "rgb(60, 65, 76)",
   "eventTicket" : {
@@ -21,14 +21,14 @@
       {
         "key" : "meetingHeader",
         "label" : "COCOAHEADS",
-        "value" : "July 14th"
+        "value" : "August 11th"
       }
     ],
     "primaryFields" : [
       {
         "key" : "event",
         "label" : "COCOAHEADS OTTAWA-GATINEAU",
-        "value" : "July Meeting"
+        "value" : "August Meeting"
       }
     ],
 	"secondaryFields" : [
@@ -39,23 +39,28 @@
       },
       {
         "key" : "meetingTime",
-        "label" : "THURSDAY July 14th",
+        "label" : "THURSDAY August 11th",
         "value" : "19:00-21:00"
       }
     ],
 	"auxiliaryFields" : [
-      {
-        "key" : "topic1",
-        "label" : "WWDC",
-        "value" : "WWDC Recap",
-        "changeMessage" : "New topic: %@"
-      }
+        {
+          "key" : "topic1",
+          "label" : "Chris S.",
+          "value" : "CI Workflow"
+        },
+        {
+          "key" : "topic2",
+          "label" : "Josh S.",
+          "value" : "Messages Extensions",
+          "changeMessage" : "New topic: %@"
+        }
     ],
     "backFields" : [
       {
         "key" : "datetime",
         "label" : "WHEN",
-        "value" : "Thursday, June 9th, 2016 from 19:00 to 21:00"
+        "value" : "Thursday, August 11th, 2016 from 19:00 to 21:00"
       },
       {
         "key" : "location-detail",
@@ -64,8 +69,13 @@
       },
       {
         "key" : "topic1-detail",
-        "label" : "WWDC Recap",
-        "value" : "We'll discuss our favourite new bits from WWDC 2016."
+        "label" : "Shopify's CI Workflow, by Chris Saldanha",
+        "value" : "Presenting Shopify's mobile development and CI workflow."
+      },
+      {
+        "key" : "topic2-detail",
+        "label" : "How to make a Sticker App when you haven’t raised artists, by Josh Svatek",
+        "value" : "A quick demo of a Sticker App that dynamically creates APNGs (and stickers) based on user input, on the fly."
       },
       {
         "key" : "website",
