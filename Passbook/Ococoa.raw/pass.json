@@ -5,7 +5,7 @@
   "teamIdentifier" : "V7QY36F2JR",
   "webServiceURL" : "https://ococoa-push.appspot.com/passbook/",
   "authenticationToken" : "4FC7A0A6-C5F1-4CDC-850E-0B2514383CC8",
-  "relevantDate" : "2016-08-11T19:00-05:00",
+  "relevantDate" : "2016-09-08T19:00-05:00",
   "locations" : [
     {
       "latitude"  :  45.400786,
@@ -13,7 +13,7 @@
     }
   ],
   "organizationName" : "Cocoaheads Ottawa-Gatineau",
-  "description" : "August 2016",
+  "description" : "September 2016",
   "foregroundColor" : "rgb(255, 255, 255)",
   "backgroundColor" : "rgb(60, 65, 76)",
   "eventTicket" : {
@@ -21,14 +21,14 @@
       {
         "key" : "meetingHeader",
         "label" : "COCOAHEADS",
-        "value" : "August 11th"
+        "value" : "September 8th"
       }
     ],
     "primaryFields" : [
       {
         "key" : "event",
         "label" : "COCOAHEADS OTTAWA-GATINEAU",
-        "value" : "August Meeting"
+        "value" : "September Meeting"
       }
     ],
 	"secondaryFields" : [
@@ -39,28 +39,33 @@
       },
       {
         "key" : "meetingTime",
-        "label" : "THURSDAY August 11th",
+        "label" : "THURSDAY September 8th",
         "value" : "19:00-21:00"
       }
     ],
 	"auxiliaryFields" : [
         {
           "key" : "topic1",
-          "label" : "Chris S.",
-          "value" : "CI Workflow"
+          "label" : "Greg R.",
+          "value" : "App Demo",
+          "changeMessage" : "New topics"
         },
         {
           "key" : "topic2",
+          "label" : "Philippe C.",
+          "value" : "Unit Testing"
+        },
+        {
+          "key" : "topic3",
           "label" : "Josh S.",
-          "value" : "Messages Extensions",
-          "changeMessage" : "New topic: %@"
+          "value" : "TBA"
         }
     ],
     "backFields" : [
       {
         "key" : "datetime",
         "label" : "WHEN",
-        "value" : "Thursday, August 11th, 2016 from 19:00 to 21:00"
+        "value" : "Thursday, September 8th, 2016 from 19:00 to 21:00"
       },
       {
         "key" : "location-detail",
@@ -69,13 +74,18 @@
       },
       {
         "key" : "topic1-detail",
-        "label" : "Shopify's CI Workflow, by Chris Saldanha",
-        "value" : "Presenting Shopify's mobile development and CI workflow."
+        "label" : "Greg Robertson",
+        "value" : "A demo my new app, focusing mostly on programming for the Apple Watch."
       },
       {
         "key" : "topic2-detail",
-        "label" : "How to make a Sticker App when you haven’t raised artists, by Josh Svatek",
-        "value" : "A quick demo of a Sticker App that dynamically creates APNGs (and stickers) based on user input, on the fly."
+        "label" : "Philippe Casgrain",
+        "value" : "Unit Testing from Soup to Nuts in Xojo. This is a preview of my XDC talk, you can find more info here: http://www.xojo.com/xdc/HTML/sessions.html"
+      },
+      {
+        "key" : "topic3-detail",
+        "label" : "Josh Svatek",
+        "value" : "A talk preview."
       },
       {
         "key" : "website",
