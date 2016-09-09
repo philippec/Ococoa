@@ -5,15 +5,15 @@
   "teamIdentifier" : "V7QY36F2JR",
   "webServiceURL" : "https://ococoa-push.appspot.com/passbook/",
   "authenticationToken" : "4FC7A0A6-C5F1-4CDC-850E-0B2514383CC8",
-  "relevantDate" : "2016-09-08T19:00-05:00",
+  "relevantDate" : "2016-10-13T19:00-05:00",
   "locations" : [
     {
-      "latitude"  :  45.400786,
-      "longitude" : -75.7130861
+      "latitude"  :  45.420471,
+      "longitude" : -75.692780
     }
   ],
   "organizationName" : "Cocoaheads Ottawa-Gatineau",
-  "description" : "September 2016",
+  "description" : "October 2016",
   "foregroundColor" : "rgb(255, 255, 255)",
   "backgroundColor" : "rgb(60, 65, 76)",
   "labelColor" : "rgb(220, 220, 220)",
@@ -22,71 +22,61 @@
       {
         "key" : "meetingHeader",
         "label" : "COCOAHEADS",
-        "value" : "September 8th"
+        "value" : "October 13th"
       }
     ],
     "primaryFields" : [
       {
         "key" : "event",
         "label" : "COCOAHEADS OTTAWA-GATINEAU",
-        "value" : "September Meeting"
+        "value" : "October Meeting"
       }
     ],
 	"secondaryFields" : [
       {
         "key" : "loc",
         "label" : "LOCATION",
-        "value" : "Invest Ottawa"
+        "value" : "Shopify"
       },
       {
         "key" : "meetingTime",
-        "label" : "THURSDAY September 8th",
+        "label" : "THURSDAY October 13th",
         "value" : "19:00-21:00"
       }
     ],
 	"auxiliaryFields" : [
         {
           "key" : "topic1",
-          "label" : "Greg R.",
-          "value" : "App Demo",
-          "changeMessage" : "New topics"
+          "label" : "Richard M.",
+          "value" : "Firebase & iOS"
         },
         {
           "key" : "topic2",
-          "label" : "Philippe C.",
-          "value" : "Unit Testing"
-        },
-        {
-          "key" : "topic3",
-          "label" : "Josh S.",
-          "value" : "TBA"
+          "label" : "Mohamed E.",
+          "value" : "Core Data as a Framework",
+          "changeMessage" : "New topic: %@"
         }
     ],
     "backFields" : [
       {
         "key" : "datetime",
         "label" : "WHEN",
-        "value" : "Thursday, September 8th, 2016 from 19:00 to 21:00"
+        "value" : "Thursday, October 13th, 2016 from 19:00 to 21:00"
       },
       {
         "key" : "location-detail",
         "label" : "WHERE",
-        "value" : "Invest Ottawa (Training Room), 80 Aberdeen St, Ottawa, ON K1S 5R5"
+        "value" : "Shopify (6th floor), 150 Elgin St, Ottawa, ON K2P 1L4"
       },
       {
         "key" : "topic1-detail",
-        "label" : "Greg Robertson",
-        "value" : "A demo my new app, focusing mostly on programming for the Apple Watch."
+        "label" : "Richard Martin",
+        "value" : "Google Firebase is a mobile, server-side platform that helps developers quickly develop high-quality apps, and allows companies to grow their user base and earn more money. Firebase provides a comprehensive set of APIs for iOS, Android and web developers.\n\nFirebase is ideal for mobile startups who want a low cost way to quickly develop and market-validate an app. It can also find a home with established companies that want to quickly turn mobile apps for special events like promotional marketing campaigns.\n\nRichard Martin, a Silicon Valley veteran who has worked at Apple, Cisco and Broadcom, will deliver a detailed presentation on how he used Google Firebase as the backend for his latest iOS app.\n\nDevelopers will learn how to use Firebase as the backend for their apps.\n\nMobile startups will learn how to leverage this technology to solve customer problems instead of devoting their precious resources building a complex infrastructure for their app."
       },
       {
         "key" : "topic2-detail",
-        "label" : "Philippe Casgrain",
-        "value" : "Unit Testing from Soup to Nuts in Xojo. This is a preview of my XDC talk, you can find more info here: http://www.xojo.com/xdc/HTML/sessions.html"
-      },
-      {
-        "key" : "topic3-detail",
-        "label" : "Josh Svatek",
-        "value" : "A talk preview."
+        "label" : "Mohamed El-Halawani",
+        "value" : "Steps to create a CoreData model as framework and include it in your project."
       },
       {
         "key" : "website",
