@@ -5,7 +5,7 @@
   "teamIdentifier" : "V7QY36F2JR",
   "webServiceURL" : "https://ococoa-push.appspot.com/passbook/",
   "authenticationToken" : "4FC7A0A6-C5F1-4CDC-850E-0B2514383CC8",
-  "relevantDate" : "2016-10-13T19:00-05:00",
+  "relevantDate" : "2016-11-10T19:00-04:00",
   "locations" : [
     {
       "latitude"  :  45.420471,
@@ -13,7 +13,7 @@
     }
   ],
   "organizationName" : "Cocoaheads Ottawa-Gatineau",
-  "description" : "October 2016",
+  "description" : "November 2016",
   "foregroundColor" : "rgb(255, 255, 255)",
   "backgroundColor" : "rgb(60, 65, 76)",
   "labelColor" : "rgb(220, 220, 220)",
@@ -22,14 +22,14 @@
       {
         "key" : "meetingHeader",
         "label" : "COCOAHEADS",
-        "value" : "October 13th"
+        "value" : "November 10th"
       }
     ],
     "primaryFields" : [
       {
         "key" : "event",
         "label" : "COCOAHEADS OTTAWA-GATINEAU",
-        "value" : "October Meeting"
+        "value" : "November Meeting"
       }
     ],
 	"secondaryFields" : [
@@ -40,20 +40,20 @@
       },
       {
         "key" : "meetingTime",
-        "label" : "THURSDAY October 13th",
+        "label" : "THURSDAY November 10th",
         "value" : "19:00-21:00"
       }
     ],
 	"auxiliaryFields" : [
         {
           "key" : "topic1",
-          "label" : "Richard M.",
-          "value" : "Firebase & iOS"
+          "label" : "Cam S.",
+          "value" : "Ensembles"
         },
         {
           "key" : "topic2",
-          "label" : "Mohamed E.",
-          "value" : "Core Data as a Framework",
+          "label" : "Josh S.",
+          "value" : "Messages and Kitura",
           "changeMessage" : "New topic: %@"
         }
     ],
@@ -61,7 +61,7 @@
       {
         "key" : "datetime",
         "label" : "WHEN",
-        "value" : "Thursday, October 13th, 2016 from 19:00 to 21:00"
+        "value" : "Thursday, November 10th, 2016 from 19:00 to 21:00"
       },
       {
         "key" : "location-detail",
@@ -70,13 +70,13 @@
       },
       {
         "key" : "topic1-detail",
-        "label" : "Richard Martin",
-        "value" : "Google Firebase is a mobile, server-side platform that helps developers quickly develop high-quality apps, and allows companies to grow their user base and earn more money. Firebase provides a comprehensive set of APIs for iOS, Android and web developers.\n\nFirebase is ideal for mobile startups who want a low cost way to quickly develop and market-validate an app. It can also find a home with established companies that want to quickly turn mobile apps for special events like promotional marketing campaigns.\n\nRichard Martin, a Silicon Valley veteran who has worked at Apple, Cisco and Broadcom, will deliver a detailed presentation on how he used Google Firebase as the backend for his latest iOS app.\n\nDevelopers will learn how to use Firebase as the backend for their apps.\n\nMobile startups will learn how to leverage this technology to solve customer problems instead of devoting their precious resources building a complex infrastructure for their app."
+        "label" : "Cam Stevenson",
+        "value" : "Ensembles makes adding sync to your iOS, macOS, and tvOS apps as straightforward as adding any other new feature, and you will save months of development time in the process. I'll do a quick demo of of the end result of using it and then discuss the features, pros and cons."
       },
       {
         "key" : "topic2-detail",
-        "label" : "Mohamed El-Halawani",
-        "value" : "Steps to create a CoreData model as framework and include it in your project."
+        "label" : "Josh Svatek",
+        "value" : "Building a simple Messages extension app using Kitura."
       },
       {
         "key" : "website",
