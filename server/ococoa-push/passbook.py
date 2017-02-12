@@ -17,9 +17,6 @@
 from google.appengine.ext import webapp
 from google.appengine.ext.webapp import util
 from google.appengine.ext import db
-from google.appengine.dist import use_library
-use_library('django', '1.2')
-from django.utils import simplejson as json
 from google.appengine.ext.webapp import template
 import os
 import datetime
