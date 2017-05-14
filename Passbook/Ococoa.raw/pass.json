@@ -5,7 +5,7 @@
   "teamIdentifier" : "V7QY36F2JR",
   "webServiceURL" : "https://ococoa-push.appspot.com/passbook/",
   "authenticationToken" : "4FC7A0A6-C5F1-4CDC-850E-0B2514383CC8",
-  "relevantDate" : "2017-04-13T19:00-05:00",
+  "relevantDate" : "2017-05-11T19:00-05:00",
   "locations" : [
     {
       "latitude"  :  45.420471,
@@ -13,7 +13,7 @@
     }
   ],
   "organizationName" : "Cocoaheads Ottawa-Gatineau",
-  "description" : "April 2017",
+  "description" : "May 2017",
   "foregroundColor" : "rgb(255, 255, 255)",
   "backgroundColor" : "rgb(60, 65, 76)",
   "labelColor" : "rgb(220, 220, 220)",
@@ -22,14 +22,14 @@
       {
         "key" : "meetingHeader",
         "label" : "COCOAHEADS",
-        "value" : "April 13th"
+        "value" : "May 11th"
       }
     ],
     "primaryFields" : [
       {
         "key" : "event",
         "label" : "COCOAHEADS OTTAWA-GATINEAU",
-        "value" : "April Meeting"
+        "value" : "May Meeting"
       }
     ],
 	"secondaryFields" : [
@@ -40,15 +40,20 @@
       },
       {
         "key" : "meetingTime",
-        "label" : "THURSDAY April 13th",
+        "label" : "THURSDAY May 11th",
         "value" : "19:00-21:00"
       }
     ],
 	"auxiliaryFields" : [
         {
           "key" : "topic1",
-          "label" : "Jonathan Guthrie",
-          "value" : "Perfect Workshop",
+          "label" : "Christina M.",
+          "value" : "Alamofire"
+        },
+        {
+          "key" : "topic2",
+          "label" : "Dabeluchi N.",
+          "value" : "Swift memory management",
           "changeMessage" : "New topic: %@"
         }
     ],
@@ -56,7 +61,7 @@
       {
         "key" : "datetime",
         "label" : "WHEN",
-        "value" : "Thursday, April 13th, 2017 from 19:00 to 21:00"
+        "value" : "Thursday, May 11th, 2017 from 19:00 to 21:00"
       },
       {
         "key" : "location-detail",
@@ -65,8 +70,13 @@
       },
       {
         "key" : "topic1-detail",
-        "label" : "Perfect Workshop",
-        "value" : "Bring your laptop and follow along as Jonathan Guthrie of Perfect.org leads us on a server-side Swift workshop."
+        "label" : "Christina Moulton",
+        "value" : "Using a router to organize your Alamofire API calls. Follow along at https://grokswift.com/router/"
+      },
+      {
+        "key" : "topic2-detail",
+        "label" : "Dabeluchi Ndubisi",
+        "value" : "Understanding how Swift does memory management, preventing reference cycles, detecting and debugging reference cycles in an application using Instruments. The talk will contain a short interactive demo of how to use Instruments to debug a simple application containing reference cycles."
       },
       {
         "key" : "website",
