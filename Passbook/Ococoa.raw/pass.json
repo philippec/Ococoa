@@ -5,7 +5,7 @@
   "teamIdentifier" : "V7QY36F2JR",
   "webServiceURL" : "https://ococoa-push.appspot.com/passbook/",
   "authenticationToken" : "4FC7A0A6-C5F1-4CDC-850E-0B2514383CC8",
-  "relevantDate" : "2017-05-11T19:00-05:00",
+  "relevantDate" : "2017-06-08T19:00-04:00",
   "locations" : [
     {
       "latitude"  :  45.420471,
@@ -13,7 +13,7 @@
     }
   ],
   "organizationName" : "Cocoaheads Ottawa-Gatineau",
-  "description" : "May 2017",
+  "description" : "June 2017",
   "foregroundColor" : "rgb(255, 255, 255)",
   "backgroundColor" : "rgb(60, 65, 76)",
   "labelColor" : "rgb(220, 220, 220)",
@@ -22,14 +22,14 @@
       {
         "key" : "meetingHeader",
         "label" : "COCOAHEADS",
-        "value" : "May 11th"
+        "value" : "June 8th"
       }
     ],
     "primaryFields" : [
       {
         "key" : "event",
         "label" : "COCOAHEADS OTTAWA-GATINEAU",
-        "value" : "May Meeting"
+        "value" : "June Meeting"
       }
     ],
 	"secondaryFields" : [
@@ -40,20 +40,15 @@
       },
       {
         "key" : "meetingTime",
-        "label" : "THURSDAY May 11th",
+        "label" : "THURSDAY June 8th",
         "value" : "19:00-21:00"
       }
     ],
 	"auxiliaryFields" : [
         {
           "key" : "topic1",
-          "label" : "Christina M.",
-          "value" : "Alamofire"
-        },
-        {
-          "key" : "topic2",
-          "label" : "Dabeluchi N.",
-          "value" : "Swift memory management",
+          "label" : "WWDC",
+          "value" : "New features and APIs",
           "changeMessage" : "New topic: %@"
         }
     ],
@@ -61,7 +56,7 @@
       {
         "key" : "datetime",
         "label" : "WHEN",
-        "value" : "Thursday, May 11th, 2017 from 19:00 to 21:00"
+        "value" : "Thursday, June 8th, 2017 from 19:00 to 21:00"
       },
       {
         "key" : "location-detail",
@@ -70,13 +65,8 @@
       },
       {
         "key" : "topic1-detail",
-        "label" : "Christina Moulton",
-        "value" : "Using a router to organize your Alamofire API calls. Follow along at https://grokswift.com/router/"
-      },
-      {
-        "key" : "topic2-detail",
-        "label" : "Dabeluchi Ndubisi",
-        "value" : "Understanding how Swift does memory management, preventing reference cycles, detecting and debugging reference cycles in an application using Instruments. The talk will contain a short interactive demo of how to use Instruments to debug a simple application containing reference cycles."
+        "label" : "WWDC Week",
+        "value" : "No formal talks this month, come for an open discussion about new features and APIs. Even better, some people will have installed the OS seeds on their devices and will probably do a live demo of some of the new shiny."
       },
       {
         "key" : "website",
