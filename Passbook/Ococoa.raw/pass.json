@@ -5,7 +5,7 @@
   "teamIdentifier" : "V7QY36F2JR",
   "webServiceURL" : "https://ococoa-push.appspot.com/passbook/",
   "authenticationToken" : "4FC7A0A6-C5F1-4CDC-850E-0B2514383CC8",
-  "relevantDate" : "2017-06-08T19:00-04:00",
+  "relevantDate" : "2017-07-13T19:00-04:00",
   "locations" : [
     {
       "latitude"  :  45.420471,
@@ -13,23 +13,23 @@
     }
   ],
   "organizationName" : "Cocoaheads Ottawa-Gatineau",
-  "description" : "June 2017",
-  "foregroundColor" : "rgb(255, 255, 255)",
-  "backgroundColor" : "rgb(60, 65, 76)",
+  "description" : "July 2017",
+  "foregroundColor" : "rgb(255, 20, 20)",
+  "backgroundColor" : "rgb(0, 0, 255)",
   "labelColor" : "rgb(220, 220, 220)",
   "eventTicket" : {
     "headerFields" : [
       {
         "key" : "meetingHeader",
         "label" : "COCOAHEADS",
-        "value" : "June 8th"
+        "value" : "July 13th"
       }
     ],
     "primaryFields" : [
       {
         "key" : "event",
         "label" : "COCOAHEADS OTTAWA-GATINEAU",
-        "value" : "June Meeting"
+        "value" : "July Meeting"
       }
     ],
 	"secondaryFields" : [
@@ -40,15 +40,15 @@
       },
       {
         "key" : "meetingTime",
-        "label" : "THURSDAY June 8th",
+        "label" : "THURSDAY July 13th",
         "value" : "19:00-21:00"
       }
     ],
 	"auxiliaryFields" : [
         {
           "key" : "topic1",
-          "label" : "WWDC",
-          "value" : "New features and APIs",
+          "label" : "Andrew M.",
+          "value" : "Clean Reactive Architecture",
           "changeMessage" : "New topic: %@"
         }
     ],
@@ -56,7 +56,7 @@
       {
         "key" : "datetime",
         "label" : "WHEN",
-        "value" : "Thursday, June 8th, 2017 from 19:00 to 21:00"
+        "value" : "Thursday, July 13th, 2017 from 19:00 to 21:00"
       },
       {
         "key" : "location-detail",
@@ -65,8 +65,8 @@
       },
       {
         "key" : "topic1-detail",
-        "label" : "WWDC Week",
-        "value" : "No formal talks this month, come for an open discussion about new features and APIs. Even better, some people will have installed the OS seeds on their devices and will probably do a live demo of some of the new shiny."
+        "label" : "Andrew Mackarous",
+        "value" : "How do you choose an architecture for a new iOS project? There are quite a few new architectures to choose from these days, a popular one being MVVM. This talk is for people that find MVVM not exactly what they're looking for, or those who are interested in learning about a new architecture. RxVIP is what we call our new architecture at Trōv. We've taken the 'Clean Swift' VIP architecture, and adapted it for reactive programming using RxSwift. Find out more at http://thecache.trov.com/rxvip/"
       },
       {
         "key" : "website",
@@ -86,7 +86,7 @@
       {
         "key" : "backgroundPicture",
         "label" : "BACKGROUND PICTURE",
-        "value" : "WWDC 2016 Logo by Apple"
+        "value" : "WWDC 2017 Logo by Apple"
       },
       {
         "key" : "suggestPicture",
