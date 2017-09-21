@@ -5,15 +5,15 @@
   "teamIdentifier" : "V7QY36F2JR",
   "webServiceURL" : "https://ococoa-push.appspot.com/passbook/",
   "authenticationToken" : "4FC7A0A6-C5F1-4CDC-850E-0B2514383CC8",
-  "relevantDate" : "2017-07-13T19:00-04:00",
+  "relevantDate" : "2017-09-14T19:00-04:00",
   "locations" : [
     {
-      "latitude"  :  45.420471,
-      "longitude" : -75.692780
+      "latitude"  :  45.4333011,
+      "longitude" : -75.6973574
     }
   ],
   "organizationName" : "Cocoaheads Ottawa-Gatineau",
-  "description" : "July 2017",
+  "description" : "September 2017",
   "foregroundColor" : "rgb(255, 20, 20)",
   "backgroundColor" : "rgb(0, 0, 255)",
   "labelColor" : "rgb(220, 220, 220)",
@@ -22,34 +22,33 @@
       {
         "key" : "meetingHeader",
         "label" : "COCOAHEADS",
-        "value" : "July 13th"
+        "value" : "September 14th"
       }
     ],
     "primaryFields" : [
       {
         "key" : "event",
         "label" : "COCOAHEADS OTTAWA-GATINEAU",
-        "value" : "July Meeting"
+        "value" : "September Meeting"
       }
     ],
 	"secondaryFields" : [
       {
         "key" : "loc",
         "label" : "LOCATION",
-        "value" : "Shopify"
+        "value" : "Lightspeed"
       },
       {
         "key" : "meetingTime",
-        "label" : "THURSDAY July 13th",
+        "label" : "THURSDAY September 14th",
         "value" : "19:00-21:00"
       }
     ],
 	"auxiliaryFields" : [
         {
           "key" : "topic1",
-          "label" : "Andrew M.",
-          "value" : "Clean Reactive Architecture",
-          "changeMessage" : "New topic: %@"
+          "label" : "TBA",
+          "value" : "TBA"
         }
     ],
     "backFields" : [
@@ -61,12 +60,12 @@
       {
         "key" : "location-detail",
         "label" : "WHERE",
-        "value" : "Shopify (6th floor), 150 Elgin St, Ottawa, ON K2P 1L4"
+        "value" : "Lightspeed, 148 Dalhousie, Ottawa, ON K1N 7C4"
       },
       {
         "key" : "topic1-detail",
-        "label" : "Andrew Mackarous",
-        "value" : "How do you choose an architecture for a new iOS project? There are quite a few new architectures to choose from these days, a popular one being MVVM. This talk is for people that find MVVM not exactly what they're looking for, or those who are interested in learning about a new architecture. RxVIP is what we call our new architecture at Trōv. We've taken the 'Clean Swift' VIP architecture, and adapted it for reactive programming using RxSwift. Find out more at http://thecache.trov.com/rxvip/"
+        "label" : "TBA",
+        "value" : "TBA"
       },
       {
         "key" : "website",
