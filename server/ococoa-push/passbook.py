@@ -22,6 +22,7 @@ import os
 import datetime
 from urlparse import urlparse
 import logging
+import json
 
 class RegisteredDevice(db.Model):
     deviceLibraryIdentifier = db.StringProperty()
