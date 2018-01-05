@@ -5,15 +5,15 @@
   "teamIdentifier" : "V7QY36F2JR",
   "webServiceURL" : "https://ococoa-push.appspot.com/passbook/",
   "authenticationToken" : "4FC7A0A6-C5F1-4CDC-850E-0B2514383CC8",
-  "relevantDate" : "2017-09-14T19:00-04:00",
+  "relevantDate" : "2017-10-12T19:00-04:00",
   "locations" : [
     {
-      "latitude"  :  45.4333011,
-      "longitude" : -75.6973574
+      "latitude"  :  45.420471,
+      "longitude" : -75.692780
     }
   ],
   "organizationName" : "Cocoaheads Ottawa-Gatineau",
-  "description" : "September 2017",
+  "description" : "October 2017",
   "foregroundColor" : "rgb(255, 20, 20)",
   "backgroundColor" : "rgb(0, 0, 255)",
   "labelColor" : "rgb(220, 220, 220)",
@@ -22,33 +22,40 @@
       {
         "key" : "meetingHeader",
         "label" : "COCOAHEADS",
-        "value" : "September 14th"
+        "value" : "October 12th"
       }
     ],
     "primaryFields" : [
       {
         "key" : "event",
         "label" : "COCOAHEADS OTTAWA-GATINEAU",
-        "value" : "September Meeting"
+        "value" : "October Meeting"
       }
     ],
 	"secondaryFields" : [
       {
         "key" : "loc",
         "label" : "LOCATION",
-        "value" : "Lightspeed"
+        "value" : "Shopify"
       },
       {
         "key" : "meetingTime",
-        "label" : "THURSDAY September 14th",
+        "label" : "THURSDAY October 12th",
         "value" : "19:00-21:00"
       }
     ],
 	"auxiliaryFields" : [
         {
           "key" : "topic1",
-          "label" : "TBA",
-          "value" : "TBA"
+          "label" : "Josh S.",
+          "value" : "Missing sample code",
+          "changeMessage" : "New topic: %@"
+        },
+        {
+          "key" : "topic2",
+          "label" : "Nick B.",
+          "value" : "Voice control",
+          "changeMessage" : "New topic: %@"
         }
     ],
     "backFields" : [
@@ -60,12 +67,17 @@
       {
         "key" : "location-detail",
         "label" : "WHERE",
-        "value" : "Lightspeed, 148 Dalhousie, Ottawa, ON K1N 7C4"
+        "value" : "Shopify (6th floor), 150 Elgin St, Ottawa, ON K2P 1L4"
       },
       {
         "key" : "topic1-detail",
-        "label" : "TBA",
-        "value" : "TBA"
+        "label" : "Josh Svatek",
+        "value" : "I was sad about the missing sample code for the Advanced UIKit Animation talk at this year’s WWDC, so I went ahead to try to build it. You will gain the most from this talk if you have watched (or re-watched) WWDC session 230: https://developer.apple.com/videos/play/wwdc2017/230/"
+      },
+      {
+        "key" : "topic2-detail",
+        "label" : "Nick Barfoot",
+        "value" : "Controlling your apps with voice and Google Home."
       },
       {
         "key" : "website",
