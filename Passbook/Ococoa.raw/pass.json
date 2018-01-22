@@ -5,7 +5,7 @@
   "teamIdentifier" : "V7QY36F2JR",
   "webServiceURL" : "https://ococoa-push.appspot.com/passbook/",
   "authenticationToken" : "4FC7A0A6-C5F1-4CDC-850E-0B2514383CC8",
-  "relevantDate" : "2017-10-12T19:00-04:00",
+  "relevantDate" : "2018-01-11T19:00-05:00",
   "locations" : [
     {
       "latitude"  :  45.420471,
@@ -13,7 +13,7 @@
     }
   ],
   "organizationName" : "Cocoaheads Ottawa-Gatineau",
-  "description" : "October 2017",
+  "description" : "January 2018",
   "foregroundColor" : "rgb(255, 20, 20)",
   "backgroundColor" : "rgb(0, 0, 255)",
   "labelColor" : "rgb(220, 220, 220)",
@@ -22,14 +22,14 @@
       {
         "key" : "meetingHeader",
         "label" : "COCOAHEADS",
-        "value" : "October 12th"
+        "value" : "January 11th"
       }
     ],
     "primaryFields" : [
       {
         "key" : "event",
         "label" : "COCOAHEADS OTTAWA-GATINEAU",
-        "value" : "October Meeting"
+        "value" : "January Meeting"
       }
     ],
 	"secondaryFields" : [
@@ -40,21 +40,15 @@
       },
       {
         "key" : "meetingTime",
-        "label" : "THURSDAY October 12th",
+        "label" : "THURSDAY January 11th",
         "value" : "19:00-21:00"
       }
     ],
 	"auxiliaryFields" : [
         {
           "key" : "topic1",
-          "label" : "Josh S.",
-          "value" : "Missing sample code",
-          "changeMessage" : "New topic: %@"
-        },
-        {
-          "key" : "topic2",
-          "label" : "Nick B.",
-          "value" : "Voice control",
+          "label" : "Kevin T.",
+          "value" : "Creating a Developer Program",
           "changeMessage" : "New topic: %@"
         }
     ],
@@ -62,7 +56,7 @@
       {
         "key" : "datetime",
         "label" : "WHEN",
-        "value" : "Thursday, July 13th, 2017 from 19:00 to 21:00"
+        "value" : "Thursday, January 11th, 2018 from 19:00 to 21:00"
       },
       {
         "key" : "location-detail",
@@ -71,13 +65,8 @@
       },
       {
         "key" : "topic1-detail",
-        "label" : "Josh Svatek",
-        "value" : "I was sad about the missing sample code for the Advanced UIKit Animation talk at this year’s WWDC, so I went ahead to try to build it. You will gain the most from this talk if you have watched (or re-watched) WWDC session 230: https://developer.apple.com/videos/play/wwdc2017/230/"
-      },
-      {
-        "key" : "topic2-detail",
-        "label" : "Nick Barfoot",
-        "value" : "Controlling your apps with voice and Google Home."
+        "label" : "Kevin Toms",
+        "value" : "Creating the API Developer program for the Philips Hue, an Internet-Of-Things device. Lessons learned from building a new API developer program in an company that is not digital-native."
       },
       {
         "key" : "website",
