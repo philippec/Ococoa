@@ -5,7 +5,7 @@
   "teamIdentifier" : "V7QY36F2JR",
   "webServiceURL" : "https://ococoa-push.appspot.com/passbook/",
   "authenticationToken" : "4FC7A0A6-C5F1-4CDC-850E-0B2514383CC8",
-  "relevantDate" : "2018-01-11T19:00-05:00",
+  "relevantDate" : "2018-02-08T19:00-05:00",
   "locations" : [
     {
       "latitude"  :  45.420471,
@@ -13,7 +13,7 @@
     }
   ],
   "organizationName" : "Cocoaheads Ottawa-Gatineau",
-  "description" : "January 2018",
+  "description" : "February 2018",
   "foregroundColor" : "rgb(255, 20, 20)",
   "backgroundColor" : "rgb(0, 0, 255)",
   "labelColor" : "rgb(220, 220, 220)",
@@ -22,14 +22,14 @@
       {
         "key" : "meetingHeader",
         "label" : "COCOAHEADS",
-        "value" : "January 11th"
+        "value" : "February 8th"
       }
     ],
     "primaryFields" : [
       {
         "key" : "event",
         "label" : "COCOAHEADS OTTAWA-GATINEAU",
-        "value" : "January Meeting"
+        "value" : "February Meeting"
       }
     ],
 	"secondaryFields" : [
@@ -40,15 +40,20 @@
       },
       {
         "key" : "meetingTime",
-        "label" : "THURSDAY January 11th",
+        "label" : "THURSDAY February 8th",
         "value" : "19:00-21:00"
       }
     ],
 	"auxiliaryFields" : [
         {
           "key" : "topic1",
-          "label" : "Kevin T.",
-          "value" : "Creating a Developer Program",
+          "label" : "Christina M.",
+          "value" : "Conversations & Chatbot Intents"
+        },
+        {
+          "key" : "topic2",
+          "label" : "Raul R..",
+          "value" : "FunctionalTableData",
           "changeMessage" : "New topic: %@"
         }
     ],
@@ -56,7 +61,7 @@
       {
         "key" : "datetime",
         "label" : "WHEN",
-        "value" : "Thursday, January 11th, 2018 from 19:00 to 21:00"
+        "value" : "Thursday, February 8th, 2018 from 19:00 to 21:00"
       },
       {
         "key" : "location-detail",
@@ -65,8 +70,13 @@
       },
       {
         "key" : "topic1-detail",
-        "label" : "Kevin Toms",
-        "value" : "Creating the API Developer program for the Philips Hue, an Internet-Of-Things device. Lessons learned from building a new API developer program in an company that is not digital-native."
+        "label" : "Christina Moulton",
+        "value" : "When building a chatbot voice interface it can be challenging to create conversational interactions since most of the tools are focused on brief transactions. I’ll give a brief demo of adding a chatbot to an iOS app using Amazon Lex. Then I’ll share lessons learned while creating more interactive flows including maintaining context and handling flows with many steps."
+      },
+      {
+        "key" : "topic2-detail",
+        "label" : "Raul Riera",
+        "value" : "Building iOS apps using FunctionalTableData. A beginners guide to creating UITableView and UICollectionView apps using a declarative approach."
       },
       {
         "key" : "website",
