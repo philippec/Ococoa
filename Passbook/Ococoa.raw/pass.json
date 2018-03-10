@@ -13,7 +13,7 @@
     }
   ],
   "organizationName" : "Cocoaheads Ottawa-Gatineau",
-  "description" : "February 2018",
+  "description" : "March 2018",
   "foregroundColor" : "rgb(255, 20, 20)",
   "backgroundColor" : "rgb(0, 0, 255)",
   "labelColor" : "rgb(220, 220, 220)",
@@ -22,14 +22,14 @@
       {
         "key" : "meetingHeader",
         "label" : "COCOAHEADS",
-        "value" : "February 8th"
+        "value" : "March 8th"
       }
     ],
     "primaryFields" : [
       {
         "key" : "event",
         "label" : "COCOAHEADS OTTAWA-GATINEAU",
-        "value" : "February Meeting"
+        "value" : "March Meeting"
       }
     ],
 	"secondaryFields" : [
@@ -40,20 +40,15 @@
       },
       {
         "key" : "meetingTime",
-        "label" : "THURSDAY February 8th",
+        "label" : "THURSDAY March 8th",
         "value" : "19:00-21:00"
       }
     ],
 	"auxiliaryFields" : [
         {
           "key" : "topic1",
-          "label" : "Christina M.",
-          "value" : "Conversations & Chatbot Intents"
-        },
-        {
-          "key" : "topic2",
-          "label" : "Raul R..",
-          "value" : "FunctionalTableData",
+          "label" : "Steve H.",
+          "value" : "DDMathParser",
           "changeMessage" : "New topic: %@"
         }
     ],
@@ -61,7 +56,7 @@
       {
         "key" : "datetime",
         "label" : "WHEN",
-        "value" : "Thursday, February 8th, 2018 from 19:00 to 21:00"
+        "value" : "Thursday, March 8th, 2018 from 19:00 to 21:00"
       },
       {
         "key" : "location-detail",
@@ -70,13 +65,8 @@
       },
       {
         "key" : "topic1-detail",
-        "label" : "Christina Moulton",
-        "value" : "When building a chatbot voice interface it can be challenging to create conversational interactions since most of the tools are focused on brief transactions. I’ll give a brief demo of adding a chatbot to an iOS app using Amazon Lex. Then I’ll share lessons learned while creating more interactive flows including maintaining context and handling flows with many steps."
-      },
-      {
-        "key" : "topic2-detail",
-        "label" : "Raul Riera",
-        "value" : "Building iOS apps using FunctionalTableData. A beginners guide to creating UITableView and UICollectionView apps using a declarative approach."
+        "label" : "DDMathParser, with Steve Hume",
+        "value" : "DDMathParser is a flexible framework for things beyond a calculator. It is all Swift now but was originally all Obj-C. Steve  will show you how he has used the framework to solve some problems in his own apps. Please feel free to read ahead on GitHub, it will not spoil the talk."
       },
       {
         "key" : "website",
