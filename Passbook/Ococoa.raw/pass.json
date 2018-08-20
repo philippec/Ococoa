@@ -5,7 +5,7 @@
   "teamIdentifier" : "V7QY36F2JR",
   "webServiceURL" : "https://ococoa-push.appspot.com/passbook/",
   "authenticationToken" : "4FC7A0A6-C5F1-4CDC-850E-0B2514383CC8",
-  "relevantDate" : "2018-07-12T19:00-04:00",
+  "relevantDate" : "2018-08-09T19:00-04:00",
   "locations" : [
     {
       "latitude"  :  45.420471,
@@ -13,7 +13,7 @@
     }
   ],
   "organizationName" : "Cocoaheads Ottawa-Gatineau",
-  "description" : "July 2018",
+  "description" : "August 2018",
   "foregroundColor" : "rgb(255, 20, 20)",
   "backgroundColor" : "rgb(0, 0, 255)",
   "labelColor" : "rgb(220, 220, 220)",
@@ -22,14 +22,14 @@
       {
         "key" : "meetingHeader",
         "label" : "COCOAHEADS",
-        "value" : "July 12th"
+        "value" : "August 9th"
       }
     ],
     "primaryFields" : [
       {
         "key" : "event",
         "label" : "COCOAHEADS OTTAWA-GATINEAU",
-        "value" : "July Meeting"
+        "value" : "August Meeting"
       }
     ],
 	"secondaryFields" : [
@@ -40,22 +40,23 @@
       },
       {
         "key" : "meetingTime",
-        "label" : "THURSDAY July 12th",
+        "label" : "THURSDAY August 9th",
         "value" : "19:00-21:00"
       }
     ],
 	"auxiliaryFields" : [
         {
           "key" : "topic1",
-          "label" : "TBD",
-          "value" : "TBD"
+          "label" : "Christina M.",
+          "value" : "Siri Shortcuts",
+          "changeMessage" : "New topic: %@"
         }
     ],
     "backFields" : [
       {
         "key" : "datetime",
         "label" : "WHEN",
-        "value" : "Thursday, July 12th, 2018 from 19:00 to 21:00"
+        "value" : "Thursday, August 9th, 2018 from 19:00 to 21:00"
       },
       {
         "key" : "location-detail",
@@ -64,8 +65,8 @@
       },
       {
         "key" : "topic1-detail",
-        "label" : "TBD",
-        "value" : "To be determined."
+        "label" : "Let Them Say What They Want: Adding Siri Shortcuts",
+        "value" : "Siri Shortcuts help to improve your user experience by making actions available with Siri in iOS, watchOS, CarPlay and HomePod. We can set up our apps to give easy access to frequent actions without needing to open the app. Even better, iOS can suggest frequently used actions pro-actively using notifications or the lock screen.\nWe’ll see how to add custom Siri Shortcuts to our apps, how to expose them so that Siri can recommend them, and how to let users set up their own voice commands to access their favourite Shortcuts."
       },
       {
         "key" : "website",
