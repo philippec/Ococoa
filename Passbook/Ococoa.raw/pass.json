@@ -5,15 +5,15 @@
   "teamIdentifier" : "V7QY36F2JR",
   "webServiceURL" : "https://ococoa-push.appspot.com/passbook/",
   "authenticationToken" : "4FC7A0A6-C5F1-4CDC-850E-0B2514383CC8",
-  "relevantDate" : "2018-11-08T19:00-04:00",
+  "relevantDate" : "2018-12-13T19:00-05:00",
   "locations" : [
     {
-      "latitude"  :  45.433378,
-      "longitude" : -75.694970
+      "latitude"  :  45.420471,
+      "longitude" : -75.692780
     }
   ],
   "organizationName" : "Cocoaheads Ottawa-Gatineau",
-  "description" : "November 2018",
+  "description" : "December 2018",
   "foregroundColor" : "rgb(255, 20, 20)",
   "backgroundColor" : "rgb(0, 0, 255)",
   "labelColor" : "rgb(220, 220, 220)",
@@ -22,56 +22,51 @@
       {
         "key" : "meetingHeader",
         "label" : "COCOAHEADS",
-        "value" : "November 8th"
+        "value" : "December 13th"
       }
     ],
     "primaryFields" : [
       {
         "key" : "event",
         "label" : "COCOAHEADS OTTAWA-GATINEAU",
-        "value" : "November Meeting"
+        "value" : "December Meeting"
       }
     ],
 	"secondaryFields" : [
       {
         "key" : "loc",
         "label" : "LOCATION",
-        "value" : "Lightspeed Ottawa"
+        "value" : "Shopify"
       },
       {
         "key" : "meetingTime",
-        "label" : "THURSDAY November 8th",
+        "label" : "THURSDAY December 13th",
         "value" : "19:00-21:00"
       }
     ],
 	"auxiliaryFields" : [
-      {
-        "key" : "topic0",
-        "label" : "Lightspeed",
-        "value" : "148 Dalhousie"
-      },
-      {
-        "key" : "topic1",
-        "label" : "Chris JF",
-        "value" : "Open Source 101",
-        "changeMessage" : "New topic: %@"
-      }
+        {
+          "key" : "topic1",
+          "label" : "Ben S.",
+          "value" : "Fastlane",
+          "changeMessage" : "New topic: %@"
+        }
     ],
     "backFields" : [
       {
         "key" : "datetime",
         "label" : "WHEN",
-        "value" : "Thursday, November 8th, 2018 from 19:00 to 21:00"
+        "value" : "Thursday, December 13th, 2018 from 19:00 to 21:00"
       },
       {
         "key" : "location-detail",
         "label" : "WHERE",
-        "value" : "Lightspeed Ottawa, 148 Dalhousie, Ottawa, K1N 7C4"
+        "value" : "Shopify (6th floor), 150 Elgin St, Ottawa, ON K2P 1L4"
       },
       {
         "key" : "topic1-detail",
-        "label" : "Open Source 101",
-        "value" : "Come brush up on the basics of Open Source and learn about the myths and gotchas when using third party projects in your code.­"
+        "label" : "Fastlane, with Ben Sarrazin",
+        "value" : "Ben will show us how to use Fastlane for better, stronger, faster iOS development.­"
       },
       {
         "key" : "website",
