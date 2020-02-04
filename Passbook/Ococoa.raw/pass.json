@@ -5,7 +5,7 @@
   "teamIdentifier" : "V7QY36F2JR",
   "webServiceURL" : "https://ococoa-push.appspot.com/passbook/",
   "authenticationToken" : "4FC7A0A6-C5F1-4CDC-850E-0B2514383CC8",
-  "relevantDate" : "2019-12-12T19:00-05:00",
+  "relevantDate" : "2020-01-09T19:00-05:00",
   "locations" : [
     {
       "latitude"  :  45.420471,
@@ -13,7 +13,7 @@
     }
   ],
   "organizationName" : "Cocoaheads Ottawa-Gatineau",
-  "description" : "December 2019",
+  "description" : "January 2020",
   "foregroundColor" : "rgb(255, 20, 20)",
   "backgroundColor" : "rgb(0, 0, 255)",
   "labelColor" : "rgb(220, 220, 220)",
@@ -22,14 +22,14 @@
       {
         "key" : "meetingHeader",
         "label" : "COCOAHEADS",
-        "value" : "December 12th"
+        "value" : "January 9th"
       }
     ],
     "primaryFields" : [
       {
         "key" : "event",
         "label" : "COCOAHEADS OTTAWA-GATINEAU",
-        "value" : "December Meeting"
+        "value" : "January Meeting"
       }
     ],
 	"secondaryFields" : [
@@ -40,28 +40,23 @@
       },
       {
         "key" : "meetingTime",
-        "label" : "THURSDAY December 12th",
+        "label" : "THURSDAY January 9th",
         "value" : "19:00-21:00"
       }
     ],
 	"auxiliaryFields" : [
         {
           "key" : "topic1",
-          "label" : "Steven S.",
-          "value" : "Polar",
+          "label" : "Joel A.",
+          "value" : "Intro to SQLite",
           "changeMessage" : "New topic: %@"
-        },
-        {
-          "key" : "topic2",
-          "label" : "Philippe C.",
-          "value" : "Book report"
         }
     ],
     "backFields" : [
       {
         "key" : "datetime",
         "label" : "WHEN",
-        "value" : "Thursday, December 12th, 2019 from 19:00 to 21:00"
+        "value" : "Thursday, January 9th, 2020 from 19:00 to 21:00"
       },
       {
         "key" : "location-detail",
@@ -70,13 +65,8 @@
       },
       {
         "key" : "topic1-detail",
-        "label" : "Polar: Creating Holiday Magic with SpriteKit, SceneKit and ARKit.",
-        "value" : "Steven Thompson"
-      },
-      {
-        "key" : "topic2-detail",
-        "label" : "Book report: A SwiftUI Kickstart",
-        "value" : "Philippe Casgrain"
+        "label" : "Intro to SQLite: Leveraging the power of SQL with Swift.",
+        "value" : "Joel Ashworth"
       },
       {
         "key" : "website",
