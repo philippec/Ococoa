@@ -5,15 +5,9 @@
   "teamIdentifier" : "V7QY36F2JR",
   "webServiceURL" : "https://ococoa-push.appspot.com/passbook/",
   "authenticationToken" : "4FC7A0A6-C5F1-4CDC-850E-0B2514383CC8",
-  "relevantDate" : "2020-01-09T19:00-05:00",
-  "locations" : [
-    {
-      "latitude"  :  45.420471,
-      "longitude" : -75.692780
-    }
-  ],
+  "relevantDate" : "2020-04-09T19:00-06:00",
   "organizationName" : "Cocoaheads Ottawa-Gatineau",
-  "description" : "January 2020",
+  "description" : "April 2020",
   "foregroundColor" : "rgb(255, 20, 20)",
   "backgroundColor" : "rgb(0, 0, 255)",
   "labelColor" : "rgb(220, 220, 220)",
@@ -22,51 +16,50 @@
       {
         "key" : "meetingHeader",
         "label" : "COCOAHEADS",
-        "value" : "January 9th"
+        "value" : "April 9th"
       }
     ],
     "primaryFields" : [
       {
         "key" : "event",
         "label" : "COCOAHEADS OTTAWA-GATINEAU",
-        "value" : "January Meeting"
+        "value" : "April Meeting"
       }
     ],
 	"secondaryFields" : [
       {
         "key" : "loc",
         "label" : "LOCATION",
-        "value" : "Shopify"
+        "value" : "Online"
       },
       {
         "key" : "meetingTime",
-        "label" : "THURSDAY January 9th",
+        "label" : "THURSDAY April 9th",
         "value" : "19:00-21:00"
       }
     ],
 	"auxiliaryFields" : [
         {
           "key" : "topic1",
-          "label" : "Joel A.",
-          "value" : "Intro to SQLite",
-          "changeMessage" : "New topic: %@"
+          "label" : "Philippe C.",
+          "value" : "MapKit JS"
         }
     ],
     "backFields" : [
       {
         "key" : "datetime",
         "label" : "WHEN",
-        "value" : "Thursday, January 9th, 2020 from 19:00 to 21:00"
+        "value" : "Thursday, April 9th, 2020 from 19:00 to 21:00"
       },
       {
         "key" : "location-detail",
         "label" : "WHERE",
-        "value" : "Shopify (6th floor), 150 Elgin St, Ottawa, ON K2P 1L4"
+        "value" : "Online: https://live.remo.co/e/cocoaheads-ottawa-april-2020"
       },
       {
         "key" : "topic1-detail",
-        "label" : "Intro to SQLite: Leveraging the power of SQL with Swift.",
-        "value" : "Joel Ashworth"
+        "label" : "MapKit JS in practice.",
+        "value" : "Philippe C."
       },
       {
         "key" : "website",
