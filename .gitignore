@@ -6,4 +6,5 @@ server/ococoa-push/static/test.html
 *.certSigningRequest
 Passbook/signpass
 *.pkpass
+apple_push_notification.p12
 apple_push_notification.pem
