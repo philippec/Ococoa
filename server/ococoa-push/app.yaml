@@ -30,5 +30,5 @@ handlers:
 - url: .*
   script: main.py
 
-automatic_scaling:
-  max_instances: 1
+# automatic_scaling:
+#   max_instances: 1
